@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader>
+		<fileDesc xml:id="origin14804518926997681143"/>
+	</teiHeader>
+	<text xml:lang="de">
+		<front>
+
+	Urheberrecht<lb/>
+	<byline>
+	<docAuthor>Prof. Dr. Katharina de la Durantaye und Prof. Dr. Benjamin Raue *<lb/></docAuthor>
+	</byline>
+
+	<div type="abstract">Urheberrecht und Zugang in einer digitalen Welt<lb/> -Urheberrechtliche Fragestellungen des Zugangs für<lb/> Gedächtnisinstitutionen und die Digital Humanities -Einleitung<lb/> Das Urheberrecht gewährt dem Urheber Ausschließlichkeitsrechte an Werken. Techni-<lb/>sche und werkvermittelnde Leistungen werden durch Leistungsschutzrechte ge-<lb/>schützt. Wo diese Rechte anfangen und aufhören, wer ein Werk unter welchen Um-<lb/>ständen und auf welche Weise nutzen darf, sind Kernfragen des Urheberrechts. Es<lb/> muss einen Ausgleich schaffen zwischen Exklusivitäts-und Zugangsinteressen. 1<lb/> In der analogen Welt wurden Zugangsfragen im Urheberrecht dennoch selten pro-<lb/>blematisiert. Der Eigentümer eines Buches konnte es selbstverständlich aufschlagen<lb/> und lesen, ohne den Urheber um Erlaubnis bitten zu müssen. Der analoge Werkgenuss<lb/> war urheberrechtlich irrelevant. Das Urheberrecht mussten im Wesentlichen professio-<lb/>nelle Verwerter beachten. Private und wissenschaftliche Nutzer konnten es hingegen<lb/> weitgehend ignorieren.<lb/> Die Digitalisierung hat die Verhältnisse grundlegend geändert und den Anwen-<lb/>dungsbereich des Urheberrechts erheblich ausgedehnt: 2 Wer ein digitales Werkstück<lb/> nutzt, vervielfältigt es in aller Regel jedenfalls im Arbeitsspeicher seines Geräts. Er<lb/> nimmt damit eine Handlung vor, für die er grundsätzlich der Zustimmung des Urhe-<lb/>bers bedarf. 3 Urheberrecht ist Alltagsrecht geworden. Das stellt das Urheberrecht stär-<lb/>ker als früher vor die Herausforderung, die berechtigten Interessen der Urheber und<lb/> I.<lb/></div>
+
+	<byline>
+	<affiliation>* Katharina de la Durantaye ist Inhaberin des Lehrstuhls für Bürgerliches Recht und Privates<lb/> Medienrecht an der Europa-Universität Viadrina; Benjamin Raue ist Inhaber der Professur für<lb/> Zivilrecht, Recht der Informationsgesellschaft und des Geistigen Eigentums sowie Direktor<lb/> des Instituts für Recht und Digitalisierung (IRDT) an der Universität Trier.<lb/></affiliation>
+	</byline>
+
+	1 Dazu ausführlich:
+	<reference>Peukert, GRUR-Beilage 2014, 77 ff.<lb/> 2 Dazu etwa: Hofmann, ZGE 2016, 482, 498; Becker, ZGE 2016, 239, 273; Raue, ZGE 2014,<lb/> 387, 389.<lb/> 3 Zur Frage, ob der Erwerb eines (digitalen) Werkexemplars mit dem Erwerb eines dinglichen<lb/> Genussrechts verbunden ist, vgl.: Kuschel, Der Erwerb digitaler Werkexemplare zur privaten<lb/> Nutzung, 2019.<lb/></reference>
+
+	<idno>DOI: 10.5771/2699-1284-2020-1-83<lb/></idno>
+
+	<reference>https://doi.org/10.5771/2699-1284-2020-1-83, am 11.07.2025, 10:55:52<lb/> Open Access -<lb/>-</reference>
+
+	<byline>
+	<affiliation>https://www.nomos-elibrary.de/de/agb<lb/> de la Durantaye und Raue • Urheberrecht und Zugang<lb/></affiliation>
+	</byline>
+
+	<reference>https://doi.org/10.5771/2699-1284-2020-1-83, am 11.07.2025, 10:55:52<lb/> Open Access -<lb/>-</reference>
+
+	<byline>
+	<affiliation>https://www.nomos-elibrary.de/de/agb<lb/> de la Durantaye und Raue • Urheberrecht und Zugang<lb/></affiliation>
+	</byline>
+
+	<reference>https://doi.org/10.5771/2699-1284-2020-1-83, am 11.07.2025, 10:55:52<lb/> Open Access -<lb/>-</reference>
+
+	<byline>
+	<affiliation>https://www.nomos-elibrary.de/de/agb<lb/> de la Durantaye und Raue • Urheberrecht und Zugang<lb/></affiliation>
+	</byline>
+
+	<reference>https://doi.org/10.5771/2699-1284-2020-1-83, am 11.07.2025, 10:55:52<lb/> Open Access -<lb/>-</reference>
+
+	<ptr type="web">https://www.nomos-elibrary.de/de/agb</ptr>
+
+		</front>
+	</text>
+</tei>

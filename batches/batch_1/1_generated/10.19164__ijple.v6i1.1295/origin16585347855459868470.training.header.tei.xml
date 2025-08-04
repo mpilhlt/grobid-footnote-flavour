@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader>
+		<fileDesc xml:id="origin16585347855459868470"/>
+	</teiHeader>
+	<text xml:lang="en">
+		<front>
+<lb/>
+	<docTitle>
+	<titlePart>The Power of Teaching Police through the Prism of Human Rights 1<lb/></titlePart>
+	</docTitle>
+
+	<byline>
+	<docAuthor>Sean Molloy 2</docAuthor>
+	</byline>
+
+	Abstract<lb/>
+	<div type="abstract">As part of their training in England and Wales, police recruits are required to engage with a<lb/> complex mix of law, often with no prior background in legal education. In addition, they must<lb/> learn, understand, and apply the content of a highly descriptive national police curriculum<lb/> (NPC). The combination of these tasks, amongst other things, can limit the extent to which<lb/> police training can cultivate critical thinking, a central objective of efforts to professionalise the<lb/> police in recent times. In this article and based on the author&apos;s experience of teaching law to<lb/> police recruits, the challenges of the current approach to police training are explored through<lb/> Freire&apos;s pedagogy of the oppressed and what he terms the banking model of education. After<lb/> drawing connections between this model and the current approach to police training, a human<lb/> rights-based approach to police teaching is offered as an example of Freire&apos;s preferred problem-<lb/>solving method. Central to this model is utilising the views of recruits regarding the role of the<lb/> police in balancing rights to help understand the law as it exists.<lb/></div>
+
+	Keywords:
+	<keyword>Police Pedagogy; Pedagogy of the Oppressed; College of Policing; Police<lb/> Education Qualification Framework; Stop and Search; Human Rights<lb/></keyword>
+
+	<div type="abstract">The training and education of police recruits in England and Wales was historically<lb/> &apos;provided through a patchwork of local provision, known as the Initial Police<lb/> Learning and Development Programme.&apos; 3 In 2011, the Home Secretary commissioned<lb/> Peter Neyroud, then Chief Executive of the National Policing Improvement Agency,<lb/> to undertake a review of police leadership and training. During a subsequent Home<lb/> Affairs committee review, Neyroud stated the &apos;…police service needs to move from<lb/> being a service that acts professionally to becoming a professional service.&apos; 4 Based on<lb/> his review, he outlined the principles of policing in the 21st Century as ensuring the<lb/> police are democratically accountable, legitimate, evidence-based, nationally (and<lb/> internationally) coherent, capable, competent, and cost-effective. 5 In 2016 and in<lb/> response, the UK College of Policing (CoP)-the professional body that oversees the<lb/> police in England and Wales-published the Police Education Qualification<lb/> Framework (PEQF), which provides a framework for degree-level entry qualifications<lb/> and sets out three entry routes for new probationer constables: 6<lb/></div>
+
+	<reference>3 Mike Hough and Elizabeth A. Stanko &apos;Designing Degree-Level Courses for Police Recruits in England and Wales: Some<lb/> Issues and Challenges&apos; [2005] Policing, 14(1): 31-42.<lb/> For history see M Mahruf C Shohel and others, &apos;Police Education in the United Kingdom: Challenges and Future<lb/> Directions.&apos; In: Nugmanova, M., Mikkola, H., Rozanov, A., and Komleva, V. (eds) Education, Human Rights and Peace in<lb/> Sustainable Development. Intech Open, 2020.<lb/> 4 Peter Neyroud, Review of Police Leadership and Training (2011). London: Home Office, at 129.<lb/> 5 Ibid.<lb/></reference>
+
+	<note type="copyright">6 See Pauline Ramshaw and Sarah Soppitt, &apos;Educating the recruited and recruiting the educated: Can the new<lb/> Police Education Qualifications Framework in England and Wales succeed where others have faltered.&apos; [2018]<lb/></note>
+
+	<reference>Police Science &amp; Management, 20(4): 243-250; Jyoti Belur and others, &apos;A Systematic Review of Police<lb/> Recruit Training Programmes&apos; [2019] Policing 14(1): 76-90.</reference>
+
+		</front>
+	</text>
+</tei>

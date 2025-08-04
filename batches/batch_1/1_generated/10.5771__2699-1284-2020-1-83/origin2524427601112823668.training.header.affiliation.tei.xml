@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+
+						<affiliation>
+							<marker>*</marker>
+							<orgName type="department">Katharina de la Durantaye ist Inhaberin des Lehrstuhls für Bürgerliches Recht und Privates<lb/> Medienrecht</orgName> an der
+							<orgName type="institution">Europa-Universität Viadrina</orgName>;
+							<orgName type="institution">Benjamin Raue ist Inhaber der Professur für<lb/> Zivilrecht</orgName>,
+							<orgName type="department">Recht der Informationsgesellschaft</orgName> und des
+							<orgName type="department">Geistigen Eigentums sowie Direktor<lb/> des Instituts für Recht und Digitalisierung (IRDT</orgName>) an der
+							<orgName type="institution">Universität Trier.<lb/> https</orgName>:
+							<orgName type="department">//www.nomos-elibrary.de/de/agb de la Durantaye und Raue • Urheberrecht und Zugang<lb/> https://www.nomos-elibrary.de/de/agb de la Durantaye und Raue • Urheberrecht und Zugang<lb/> https://www.nomos-elibrary.de/de/agb de la Durantaye und Raue • Urheberrecht und Zugang</orgName>
+						</affiliation>
+
+						</author>
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</tei>

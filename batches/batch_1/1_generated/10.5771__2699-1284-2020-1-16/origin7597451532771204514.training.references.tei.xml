@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+<listBibl>
+	<bibl><author>BGBl. I</author> <date>2006</date>, S. <title level="a">2587-2588; zu § 52b UrhG a.F. ausführlich: König, Die Wiedergabe von Werken an elektronischen Leseplätzen</title>, <date>2015</date>, S. <biblScope unit="page">1 ff</biblScope>.</bibl>
+	<bibl>Vgl.: <title level="m">Loewenheim-Loewenheim/Nordemann, Handbuch des Urheberrechts, 2. Aufl. 2010, § 26 Rn</title>. <biblScope unit="volume">50</biblScope>.</bibl>
+	<bibl>Vgl.: <author>Grages, Verwaiste Werke</author>: <title level="m">Lizenzierung in Abwesenheit des Rechtsinhabers</title>, <date>2013</date>, S. <title level="a">1 ff.; Köbler, Verwaiste Werke im digitalen Zeitalter aus bibliothekarisch-juristischer Sicht</title>, <date>2012</date>, S. <biblScope unit="page">1 ff</biblScope>.</bibl>
+	<bibl>Vgl.: <title level="m">Kubis, ZUM 2006</title>, <biblScope unit="volume">370</biblScope>, <biblScope unit="page">370</biblScope> ff.; <editor>Ott, GRUR-Int</editor>. <date>2007</date>, <biblScope unit="volume">562</biblScope>, <biblScope unit="volume">562</biblScope> ff.</bibl>
+	<bibl>Vgl.: <title level="m">De la Durantaye</title>, <title level="j">ZUM</title> <date>2011</date>, <biblScope unit="volume">538</biblScope>, <title level="a">538 ff.; de la Durantay</title>, <title level="j">ZUM</title> <date>2011</date>, <biblScope unit="page">777</biblScope>, <biblScope unit="page">777 ff</biblScope>.</bibl>
+	<bibl>Vgl.: <title level="m">Spindler/Schuster-Heckmann</title>, <date>Recht der elektronischen Medien, 4. Aufl. 2019</date>, <publisher>§ 137l UrhG Rn</publisher>. <biblScope unit="volume">17</biblScope>.</bibl>
+	<bibl>Vgl.: <publisher>Spindler/Schuster-Heckmann</publisher>, <date>Recht der elektronischen Medien, 4. Aufl. 2019</date>, <title level="m">§ 137l UrhG Rn</title>. <biblScope unit="volume">23</biblScope> f.</bibl>
+	<bibl><author>ABl</author>. <date>vom 27.10.2012</date>, Nr. <title level="m">L 299/5; dazu: Talke, Verwaiste Werke: Regelungsmöglichkeiten auf europäischer Ebene und Umsetzung im Deutschen Recht</title>, <date>2012</date>, S. <biblScope unit="page">1 ff</biblScope>.</bibl>
+	<bibl>Vgl.: <title level="m">Steinhauer, Recht als Risiko für das kulturelle Gedächtnis: ein blinder Fleck der Tech-nikfolgenabschätzung des digitalen Wandels, in: Klimpel, Mit gutem Recht erinnern: Gedan-ken zur Änderung der rechtlichen Rahmenbedingungen des kulturellen Erbes in der digita-len Welt</title>, <date>2018</date>, S. <biblScope unit="page">125-136</biblScope>.</bibl>
+	<bibl><title level="j">Zu konzeptionellen Fragen, vgl.: Steinhauer, Bibliotheksdienst</title> <biblScope unit="volume">49</biblScope> (<date>2015</date>), <biblScope unit="volume">1101</biblScope>, <biblScope unit="page">1101-1113</biblScope>.</bibl>
+	<bibl><title level="m">Gesetz über die Deutsche Nationalbibliothek (DNBG) vom 22. Juni 2006, BGBl. I 2006, S. 1338; zu den Problemen des Gesetzes, vgl</title>.: <publisher>Steinhauer</publisher>, <title level="j">Dialog mit Bibliotheken</title> <biblScope unit="volume">28</biblScope> (<date>2016</date>), <biblScope unit="volume">31</biblScope>, <biblScope unit="page">31-36</biblScope>.</bibl>
+	<bibl>Vgl.: <author>Heckmann/Weber, AfP</author> <date>2008</date>, <biblScope unit="page">269</biblScope>, <biblScope unit="page">269</biblScope> ff.; Steinhauer, K&amp;R <date>2009</date>, <biblScope unit="volume">161</biblScope>, <biblScope unit="page">161</biblScope> ff.; <title level="a">Steinhau-er /Euler, Pflichtexemplare im digitalen Zeitalter -ist alles geregelt, oder besteht Nachbesse-rungsbedarf?</title>, in: <title level="m">Hinte/Steinhauer, Die Digitale Bibliothek und ihr Recht -ein Stiefkind der Informationsgesellschaft?: Kulturwissenschaftliche Aspekte, technische Hintergründe und rechtliche Herausforderungen des digitalen kulturellen Speichergedächtnisses</title>, <date>2014</date>, S. <biblScope unit="page">109-140</biblScope>.</bibl>
+
+		</listBibl>
+	</back>
+	</text>
+</TEI>

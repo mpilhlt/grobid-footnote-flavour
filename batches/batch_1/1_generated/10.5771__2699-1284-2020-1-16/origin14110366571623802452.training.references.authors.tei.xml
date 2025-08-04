@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+
+
+						<author><surname>BGBl</surname>. <middlename>I</middlename></author>
+
+						<author><surname>Grages</surname>, <forename>Verwaiste</forename> <surname>Werke</surname></author>
+
+						<author><surname>ABl</surname></author>
+
+						<author><surname>Heckmann</surname><forename>/</forename><surname>Weber</surname>, <forename>AfP</forename></author>
+
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</TEI>
