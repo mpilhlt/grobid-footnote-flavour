@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <tei xml:space="preserve">
 	<teiHeader>
-		<fileDesc xml:id="origin16502605995327808060"/>
+		<fileDesc xml:id="origin8327067160489435514"/>
 	</teiHeader>
 	<text xml:lang="en">
 		<front>
@@ -35,8 +35,19 @@
 
 	<reference>University of Bologna Law Review<lb/> [Vol.4:2 2019]<lb/></reference>
 
-	<idno>https://doi.org/10.6092/issn.2531-6133/10402</idno>
+	<idno>https://doi.org/10.6092/issn.2531-6133/10402<lb/></idno>
 
+	1. INTRODUCTION<lb/> &quot;[P]erhaps the most important single book . . . in the history of the<lb/> common law&quot; is Sir William Blackstone&apos;s Commentaries on the Laws of<lb/> † Professor,
+	<byline>
+	<affiliation>Regent University School of Law (US). B.A. Yale University, J.D. University of<lb/> Virginia.</affiliation>
+	</byline>
+
+	The author thanks
+	<byline>
+	<docAuthor>Mark Cartledge, Doug Cook, Alyson Crisbie, Lou Hensler,<lb/> Mike Hernandez, Timothy and Meredith Pettman, Paul Shakeshaft</docAuthor>
+	</byline>
+
+	, the good people of<lb/> the Regent University Law Library, and his wife Kelly for their help.
 		</front>
 	</text>
 </tei>
