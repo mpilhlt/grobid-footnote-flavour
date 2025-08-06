@@ -1,0 +1,264 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+
+
+						<author><forename>DANIEL</forename> <middlename>J</middlename>. <surname>BOORSTIN</surname></author>
+
+						<author><forename>Albert</forename> <middlename>W</middlename>. <surname>Alschuler</surname></author>
+
+						<author><forename>Joseph</forename> <middlename>W</middlename>. <surname>McKnight</surname>, <surname>Blackstone</surname><forename>:</forename> <surname>Quasi-Jurisprudent</surname>, 13 <forename>SW</forename> <middlename>L</middlename>.<middlename>J</middlename></author>
+
+						<author><forename>See</forename> <surname>Wilfrid</surname> <forename>Prest</forename></author>
+
+						<author><surname>McKnight</surname></author>
+
+						<author><forename>See</forename> <surname>Emily</surname> <forename>Kadens</forename></author>
+
+						<author><forename>See</forename> <surname>McKnight</surname></author>
+
+						<author><forename>DAVID</forename> <surname>LIEBERMAN</surname></author>
+
+						<author><forename>See</forename> <surname>Robert</surname> <forename>C</forename>. <surname>Berring</surname></author>
+
+						<author><surname>Prest</surname></author>
+
+						<author><surname>See</surname> <forename>S</forename>. <middlename>F</middlename>. <middlename>C</middlename>. <surname>Milsom</surname></author>
+
+						<author><surname>Id</surname></author>
+
+						<author><forename>WILLIAM</forename> <surname>BLACKSTONE</surname>, <forename>COMMENTARIES</forename> <surname>ON</surname> THE <surname>LAWS</surname> OF <surname>ENGLAND ; Carli</surname> <forename>N</forename>. <surname>Conklin</surname></author>
+
+						<author><forename>Alan</forename> <surname>Watson</surname></author>
+
+						<author><surname>HENRY SUMNER MAINE</surname></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><surname>Id</surname>. <surname>See</surname> <forename>THOMAS</forename> <surname>AQUINAS</surname>, <forename>THE</forename> <surname>SUMMA THEOLOGICA 209</surname></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><surname>Id</surname>. <surname>Id</surname></author>
+
+						<author><surname>Id</surname>. <surname>Id</surname></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><surname>Id</surname>. <surname>Id</surname></author>
+
+						<author><surname>Id</surname></author>
+
+						<author><forename>Richard</forename> <middlename>A</middlename>. <surname>Posner</surname>, <surname>Blackstone</surname> and <surname>Bentham</surname>, 19 <forename>J</forename>.<middlename>L</middlename>. &amp; <surname>ECON</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><forename>See</forename> <surname>McKnight</surname></author>
+
+						<author><forename>See</forename> <surname>Michael</surname> <forename>Lobban</forename></author>
+
+						<author><surname>McKnight</surname> ; <forename>Harold</forename> <middlename>J</middlename>. <surname>Berman</surname> &amp; <forename>Charles</forename> <middlename>J</middlename>. <surname>Reid</surname>, <suffix>Jr</suffix>.</author>
+
+						<author><forename>H</forename>. <middlename>L</middlename>. <middlename>A</middlename>. <surname>Hart</surname></author>
+
+						<author><surname>Berman</surname> &amp; <forename>Reid</forename> <middlename>;</middlename> <forename>John</forename> <middlename>W</middlename>. <surname>Cairns</surname>, <surname>Blackstone</surname>, an <surname>English</surname></author>
+
+						<author><surname>Watson</surname></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><forename>Wilfrid</forename> <surname>Prest</surname></author>
+
+						<author><forename>See</forename> <surname>Milsom</surname></author>
+
+						<author><surname>See</surname> <forename>ALEXANDER PASSERIN D&apos;</forename><surname>ENTRÈVES</surname></author>
+
+						<author><forename>See</forename> <surname>MAINE</surname></author>
+
+						<author><surname>Id</surname></author>
+
+						<author><surname>See</surname> <forename>BARRY</forename> <surname>NICHOLAS</surname>, <forename>AN INTRODUCTION TO ROMAN</forename> <surname>LAW</surname></author>
+
+						<author><surname>See</surname> <forename>D&apos;</forename><surname>ENTRÈVES</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><forename>Nicole</forename> <surname>Graham</surname></author>
+
+						<author><surname>See</surname> <forename>D&apos;</forename><surname>ENTRÈVES</surname></author>
+
+						<author><surname>EDWARD GIBBON</surname>, <forename>THE DECLINE AND FALL OF THE ROMAN</forename> <surname>EMPIRE</surname></author>
+
+						<author><forename>See</forename> <surname>Milsom</surname></author>
+
+						<author><surname>See</surname> <forename>PREST</forename></author>
+
+						<author><forename>See</forename> <surname>Raymond</surname> <forename>D</forename>. <surname>Tumbleson</surname></author>
+
+						<author><surname>See</surname> <forename>NIGEL</forename> <surname>ATKINSON</surname>, <forename>RICHARD HOOKER AND THE AUTHORITY OF</forename> <surname>SCRIPTURE ; Harold</surname> <forename>J</forename>. <surname>Berman</surname></author>
+
+						<author><forename>RICHARD</forename> <surname>HOOKER</surname></author>
+
+						<author><surname>See</surname> <forename>W</forename>.<middlename>J</middlename>. TORRANCE <surname>KIRBY</surname>, <forename>RICHARD</forename> <surname>HOOKER ; Richard Hooker</surname> . <middlename>.</middlename> .</author>
+
+						<author><surname>See</surname> <forename>ROBERT</forename> <middlename>K</middlename>. <surname>FAULKNER</surname>, <forename>RICHARD HOOKER AND THE POLITICS OF A CHRISTIAN</forename> <surname>ENGLAND</surname></author>
+
+						<author><surname>See</surname> <forename>W</forename>.<middlename>J</middlename>. <surname>Torrance Kirby</surname></author>
+
+						<author><surname>HOOKER</surname></author>
+
+						<author><forename>See</forename> <surname>Kirby</surname> <forename>;</forename> <middlename>S</middlename>. <surname>THORNTON</surname>, <forename>RICHARD</forename> <surname>HOOKER</surname></author>
+
+						<author><forename>NIGEL</forename> <surname>VOAK</surname>, <forename>RICHARD</forename> <surname>HOOKER</surname> AND <surname>REFORMED THEOLOGY 117</surname></author>
+
+						<author><forename>Rowan</forename> <surname>Williams</surname></author>
+
+						<author><surname>Id</surname></author>
+
+						<author><surname>KIRBY</surname></author>
+
+						<author><surname>See</surname> <forename>THORNTON</forename></author>
+
+						<author><forename>See</forename> <surname>ATKINSON</surname></author>
+
+						<author><surname>See</surname> <forename>THORNTON</forename></author>
+
+						<author><surname>FAULKNER</surname></author>
+
+						<author><surname>See</surname> <forename>KIRK</forename></author>
+
+						<author><surname>See</surname> <forename>THORNTON</forename></author>
+
+						<author><forename>See</forename> <surname>FAULKNER</surname></author>
+
+						<author><surname>See</surname> <forename>THORNTON</forename></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>While for Blackstone ; See</surname> <forename>D</forename>. SEABORN <surname>DAVIES</surname>, <forename>THE</forename> <surname>BIBLE</surname> <forename>IN</forename> <middlename>ENGLISH</middlename> <surname>LAW</surname></author>
+
+						<author><surname>BOORSTIN</surname></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><forename>See</forename> <surname>Berman</surname> <forename>&amp;</forename> <surname>Reid</surname></author>
+
+						<author><forename>See</forename> <surname>Berman</surname></author>
+
+						<author><surname>See</surname> <forename>W</forename>. <middlename>M</middlename>. <surname>SPELLMAN</surname></author>
+
+						<author><forename>See</forename> <surname>SPELLMAN</surname></author>
+
+						<author><forename>See</forename> <surname>James</surname> <forename>R</forename>. <surname>Jacob</surname> &amp; <forename>Margaret</forename> <middlename>C</middlename>. <surname>Jacob</surname></author>
+
+						<author><surname>SPELLMAN</surname></author>
+
+						<author><forename>See</forename> <surname>Jacob</surname> <forename>&amp;</forename> <surname>Jacob</surname></author>
+
+						<author><surname>See</surname> <forename>THORNTON</forename></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>See</surname> <forename>JOSEPH</forename> <surname>BUTLER</surname></author>
+
+						<author><surname>See</surname> <forename>MOSSNER</forename></author>
+
+						<author><forename>See</forename> <surname>ATKINSON</surname></author>
+
+						<author><forename>JOSEPH</forename> <surname>BUTLER</surname></author>
+
+						<author><surname>See</surname> <forename>MOSSNER</forename></author>
+
+						<author><forename>JAMES</forename> <surname>BOSWELL</surname>, <forename>THE LIFE OF SAMUEL</forename> <surname>JOHNSON</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><forename>Craig</forename> <middlename>A</middlename>. <surname>Stern</surname> &amp; <surname>Gregory</surname> <forename>M</forename>. <surname>Jones</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>Cf</surname>. <surname>Helmholz</surname></author>
+
+						<author><forename>See</forename> <surname>LIEBERMAN</surname></author>
+
+						<author><forename>See</forename> <surname>Lobban</surname></author>
+
+						<author><forename>See</forename> <surname>LIEBERMAN</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><forename>See</forename> <surname>Lobban</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><forename>See</forename> <surname>LIEBERMAN</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><forename>See</forename> <surname>LIEBERMAN</surname></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><surname>MAINE</surname></author>
+
+						<author><forename>See</forename> <surname>LIEBERMAN</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><forename>Allen</forename></author>
+
+						<author><forename>See</forename> <surname>Lobban</surname></author>
+
+						<author><surname>Prest</surname></author>
+
+						<author><surname>Kadens</surname></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><forename>See</forename> <surname>Wilfrid</surname> <forename>Prest</forename></author>
+
+						<author><surname>Posner</surname></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><forename>See</forename> <surname>Lobban</surname></author>
+
+						<author><surname>See</surname> <forename>BOORSTIN</forename></author>
+
+						<author><surname>BLACKSTONE</surname></author>
+
+						<author><surname>See</surname>, <forename>e</forename>.<middlename>g</middlename>., <surname>JOHN</surname> CHIPMAN <surname>GRAY</surname></author>
+
+						<author><forename>William</forename> <middlename>S</middlename>. <surname>Brewbaker</surname> <forename>III</forename>, <forename>Found</forename> <surname>Law</surname></author>
+
+						<author><surname>See</surname>, <forename>e</forename>.<middlename>g</middlename>., <surname>Frankland</surname> &amp; <forename>Moore</forename> <middlename>v</middlename>. <surname>Regina</surname></author>
+
+						<author><surname>Apparently</surname></author>
+
+						<author><surname>Finnis</surname></author>
+
+						<author><surname>See</surname> <forename>RICHARD</forename> <middlename>A</middlename>. <surname>POSNER</surname></author>
+
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</TEI>
