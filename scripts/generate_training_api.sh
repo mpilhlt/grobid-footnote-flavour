@@ -27,6 +27,7 @@ find "$INPUT_DIR" -name '*.pdf' | while read -r x; do
 
     curl --silent --location 'https://lfoppiano-grobid-dev-dh-law.hf.space/api/createTraining' \
          --form "input=@${x}" \
+         --form 'flavor="article/dh-law-footnotes"' \
          --output "$output"
 done
 
