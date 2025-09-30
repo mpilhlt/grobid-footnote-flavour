@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+
+
+						<author><forename>P</forename>. akaliyski, ch. <surname>Welzel</surname>, <forename>J</forename>. <surname>Hien</surname></author>
+
+						<author>© <surname>The</surname> <forename>Author</forename> ; <forename>Uniwersytetu</forename> <surname>Wrocławskiego</surname> and <forename>Wydawnictwo</forename> <middlename>&quot;</middlename><surname>Szermierz</surname></author>
+
+						<author><forename>J</forename>. <surname>Fullerton</surname></author>
+
+						<author><surname>development</surname></author>
+
+						<author><forename>F</forename>. <surname>Morata</surname>, <forename>s</forename>.<middlename>i</middlename>. sandoval</author>
+
+						<author><forename>P</forename>. <surname>Lissoń</surname></author>
+
+						<author>k. sobieraj</author>
+
+						<author><forename>J</forename>. <middlename>s</middlename>. <surname>Przyborowicz</surname></author>
+
+						<author>akaliyski <forename>P</forename>., <surname>Welzel ch</surname>., <surname>Hien</surname> <forename>J</forename>.</author>
+
+						<author>capra <forename>F</forename>., <surname>Henderson</surname> <forename>H</forename>.</author>
+
+						<author><surname>Fullerton</surname> <forename>J</forename>.</author>
+
+						<author><surname>Jakubiec</surname> <forename>M</forename>.</author>
+
+						<author><surname>Lissoń</surname> <forename>P</forename>.</author>
+
+						<author><forename>Maruszkin</forename> <middlename>r</middlename>.</author>
+
+						<author><surname>Morata</surname> <forename>F</forename>., sandoval s.i.</author>
+
+						<author><surname>nowak</surname> <forename>B</forename>.</author>
+
+						<author><surname>Przyborowicz</surname> <forename>J</forename>. <middlename>s</middlename>.</author>
+
+						<author>sikora a.</author>
+
+						<author>sobieraj k.</author>
+
+						<author>zięba r.</author>
+
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</TEI>

@@ -1,0 +1,429 @@
+French medievalists have displayed an early interest in the 
+potentialities of the computer, and Michel Mollat probably de -
+serves credit for the first application of the new techniques 
+to medieval data in France( 1) . Since then, the National Archives, 
+the National Center for Scientific Research (C .N .R .S .) and 
+several of its laboratories (notably the Institut de Recherche 
+et d ' Histoire des Textes -I .R .H .T . -) and some universities, 
+where computing facilities are available, have sponsored the 
+development of computer techniques applied to medieval data, 
+the specificity of which has rendered the task much more dif-
+ficult than it was foreseen . It must be added that close con-
+tacts with experimented foreign research centres (such as the 
+Centre de Traitement Electronique des Documents Medievaux 
+-CETEDOC -at the University of Louvain in Belgium) have some-
+
+times smoothed the way to innovation. 
+
+Medievalists have concentrated their efforts an documentary and 
+textual applications of the computer . There are many reasons to 
+this situation : lack of satisfying statistical data ready for 
+use, and wealth of archives material extremely difficult to 
+handle are two prominent reasons . In any case, archives is al -
+ways the first problem which the medievalist meets . The National 
+Archives are conscious of this fact, and their Service d'Infor-
+matique (directed by I . Cloulas) is currently developing a pro-
+gram of indexation of the XIA series (the Paris Parliament ar -
+chives), offering an easy access to the namesof all persons and 
+places mentioned in the process files of the Paris Parliament 
+between 1350 and 1363 (2) . 
+
+But useful as it is, this indexation is not a content analysis. 
+°A more ambitious project has been elaborated in dose connection 
+
+with the National Archives by the Centre d'Etude d'Histoire 
+Juridique, directed by Pierre-Clement Timbal, Mrs . Josette Metman 
+being in charge of computer processing . The solution adopted to 
+deal with the arrets (sentences) of the Paris Parliament during 
+the second half of the fourteenth century has been to build a 
+dictionary of concepts summarized by key-words, the thesaurus, 
+the content of each document being described only by words bor -
+rowed from the thesaurus . Obviously, the thesaurus has been 
+built in reference to the source on which the Centre d'Etude 
+d'Histoire Juridique is currently working, but it may prove use-. 
+ful to students of law history of later medieval France in 
+general (3) . On the other hand, it is true that the specificities 
+of medieval vocabulary are obscured, hidden behind the updated 
+
+lexicon of key-words, and that the content analysis, precise as 
+
+it is, cannot pretend to be exhaustive, for it remains dependent 
+on a selection of facts or concepts : but the programs, derived 
+from the documentary SOCRATE system, are highly efficient, and 
+this project has already produced appreciated results . 
+
+-4 -
+
+In fact, content analysis proves specially difficult for the 
+medievalist, since he can never take for granted the equivalence 
+between medieval and modern words . That is why, if we turn our 
+attention towards texts in which the technical element is not 
+as overwhelming as in juridical sentences, it becomes necessary 
+to have recourse to more sophisticated devices than the use of 
+a thesaurus( 4 ) . In this field, Mrs . Lucie Fossier and the 
+I .R .H .T . have made important contributions in pointing out the 
+interest of extracting key-words from the medieval text itself, 
+and of taking into account semantic relationships between words 
+in recording not only the key-words and their attributes, but 
+also syntactic relations between them( 5) . This method gives 
+very satisfying results when applied to cartularies and diplom-
+atic documents in general, and it is not as heavy and burdensome 
+to use as full-text recording is .. 
+
+But for documents with a high literary or lexical interest, it 
+remains necessary to record full texts, with all the disadvant-
+ages it implies in terms of preparation and Input of the data. 
+Being concerned here only with French researches, I shall not 
+deal with the programs of the CETEDOC of the University of 
+Louvain, though French medievalists have made use of them (6) . 
+Mrs . Fossier played an important Part in the birth of one of the 
+sections of the Centre de Recherches Appliquees ä la Linguistique 
+(C .R .A .L .) at the University of Nancy II : this section is devoted 
+to the automatic processing of diplomatic documents of the early 
+Middle Ages and is now directed by Michel Parisse e ) . The docu-
+ments being usually of small length (charters etc . . .), they are 
+recorded in full text . The first task alloted to the Computer 
+is to produce a listing in which each line corresponds to one 
+word of the original document . It isthen possible to "enrich" 
+the text in coding several sorts of informations (diplomatical, 
+onomastical, chronological and so on), word by word : these addi-
+tions need far less time since punched cards have been dropped 
+out, informations being conveyed through a Computer terminal 
+with screen and teletype . From the "enriched" text, several 
+types of vocabularies and concordances may be obtained : alpha-
+betical or chronological dictionaries, frequency tables, ono-
+mastical repertories and so on . A systematic publication of the 
+
+results has started already ( 8 ) . 
+
+Convenient for shorter texts, all methods which imply a large 
+amount of coding are to be dismissed for Tonger texts, except 
+if the historian wants to pay a special attention to philolo-
+gical or grammatical problems . Readymade programs for textual 
+data and concordances generators are available everywhere, most 
+notably in France at the Centre de Lexicologie Politique of the 
+Ecole Normale Superieure de Saint-Cloud (9) . But once again, the 
+medievalist is heavily penalized by the specificity of his data: 
+the total contempt for a regular orthograph which characterizes 
+both medieval authors and scribes makes it difficult to use 
+standard programs . That is why the Equipe de Traitement automa-
+tique des Sources du Bas Moyen Age, working at Paris I under the 
+
+-5 
+
+direction of Bernard Guenee has developed a new concordance 
+generator speciall adapted to the difficulties of medieval 
+orthograph, ALINE (1o) . It seems possible to combine such an 
+approach with more radical documentary processing, since it 
+remains impossible to apply full-text recording and process-
+ing to large archives series : a full-text processing of a 
+sample of documents will allow the extraction of the key-words 
+and will help to define the chief concepts ; then the document-
+ary processing may take place in better conditions . This solu -
+tion is experimented on the JJ series of the National Archives 
+(lettres de remission, i .e . letters of pardon) by Mrs . Claude 
+Gauvard, with the help of ALINE. 
+
+Documentary treatments are not necessarily based upon existing 
+texts . It is also possible to collect and store informations 
+and then to ask questions in following syntactic and semantic 
+procedures : this requires the elaboration of a . network of connec-
+tions 
+between the different pieces of information, and, to a 
+certain extent, we reach here the fringes of artificial intel -
+ligence research . Such a project has been developed by G .P. 
+Zarri in order to handle data of miscellaneous origins and 
+varied natures gathered by C . Bozzolo on the "love ' court" of 
+King Charles VI for the Equipe de Recherche sur L'Humanisme 
+Frangais des XIVe et XVe siecles directed by Gilbert Ouy : this 
+is a very promising project (11) . 
+
+Statistical methods have not benefited from the Same interest. 
+Medieval data with their usual scantiness are puzzling for the 
+statistician, since lacunae mar even the best series of data 
+and impose the recourse to solutions too sophisticated for the 
+value of the results . Besides, no institution comparable to the 
+I .R .H .T . or the C .R .A .L . has given the necessary impulse to re -
+searches in this field : these researches are usually conducted 
+by isolated scholars endowed with only small computing facili-
+°ties . One possible exception is the Ecole des Hautes Etudes en 
+Sciences Sociales, though its computing centre has attracted 
+modern historians (especially demographers) rather than medieval -
+ists . It is nevertheless to this centre that we owe what is by 
+far the most accomplished work in this category, the study of 
+the fiorentine Catasto of 1427 (a franco-american project in 
+fact) made by David Herlihy (University of Wisconsin) and Chri -
+stiane Klapisch (E .H .E .S .S .) . It is difficult to give a fair 
+assessment of their achievement, since only partial results are 
+available at the moment (12) . But if they were to be judged from 
+their different papers, their results ought to be particularly 
+important for demography and social history (population mobil-
+ity, repartition of the working men in different trades etc . . .); 
+they have had recourse to the most up-to-date methods of factor-
+ial analysis, and they have paid special attention to automatic 
+mapping . 
+
+-6 -
+
+Large series of archives have often prompted medievalists to 
+engage themselves in computerized treatments . Elizabeth Carpen-
+tier used the Computer to master the great quantities of infor-
+mations contained in the Catasto of Orvieto (13) , whereas 
+Mrs . Zerner has tried to adapt her sources (census made in 1414 
+for nearly fifty towns and villages of the Comptat Venaissin) 
+to the constraints imposed by the Computer upon its users. 
+Miss Billot is also interested in urban history and is using 
+the OSIRIS package for at least part of her work on the town of 
+Chartres in the later Middle Ages ; and Jacqueline Guiral has 
+coded and recorded the data she collected in the customs ac-
+counts of the harbour of Valencia for the second half of the 
+fifteenth century (14) : these two researches are still in Pro-
+gress . But results are already on hand for the wills of Lyon in 
+the fourteenth and fifteenth centuries which have been studied 
+by Marie-Therese Lorgin (15 ) : these results are a good example 
+of what may be achieved by a limited but discriminate treatment 
+of such a heterogeneous and bulky source. 
+
+But if sources are not easily available or adaptable, it is 
+always possible to build a "metasource" with materials of dif-
+ferent origins . This is especially true in the case of prosopo-
+graphy and automatic collective biographies, though the border 
+between documentary and statistical treatments becomes invisib-
+le here . Thanks to a close analysis of the suppliques and 
+lettres communes of the Avignonese popes, a group of scholars 
+working under the direction of Bernard Guillemain has been able 
+to apply documentary techniques to the pontifical archives( 16 ). 
+Part of the efforts and time of the Equipe de Traitement Auto-
+matique des Sources du Bas Moyen Age has been also devoted to 
+automatic prosopography . In the course of her thesis on the 
+members of the Paris Parliament in the later Middle Ages, Fran-
+Goise Autrand has reconstructed the biographies of 676 indivi-
+duals( 17 ) ; and 1 am working myself an a set of 750 english 
+historians who lived between 1300 and 1600 : there is a lot of 
+classifying, cross-tabulation and indexation to be done on such 
+collections, but factorial analysis will also be used (18) since 
+it has produced very interesting results in the study of the (19) 
+biographies of the canons of Laon made by Mrs . Helene Millet 
+The Same course will be followed for the collections of bio-
+graphies which are being prepared by Alain Demurger (the baillis 
+of the King of France in the fifteenth century) and by Mrs. 
+Elisabeth Mornet (Danish clerics with a university education). 
+Factorial analysis seems to be a very convenient technique (20) 
+for the historian, for it enables him to depict and to summarize 
+his documentation, as well as it provides him with a secure 
+guidance for interpretation : another successful application of 
+factorial analysis to historical data which deserves notice is 
+Mrs . Fran9oise Micheau's thesis on translations from the 
+arabic (21 
+
+-7 
+
+Surprisingly enough, fiscal history does not seem to have bene -
+fited from the computer potentialities as much as other sectors. 
+Nevertheless, a remarkable success has been achieved by Jacques 
+Lefort who has been able to discover the rate of taxation em-
+ployed in the Byzantine Empire during the fourteenth century by 
+
+comparing several rolls of imposition (praktika) : this is a good 
+
+example of how the computer may,help the historian in bringing . 
+to light a part of reality which the traditional historian would 
+have thought lost for ever (22) . 
+
+This survey is far from complete (23) . A better idea of what is 
+going on among French medievalists interested by quantification 
+and computerization will be obtained when the results of the 
+inquiry supervised by Lucie Fossier with the help of Christiane 
+Klapisch, Jacques Lefort and myself will have found their way to 
+the column of Computer and Medieval Data Progressing . The publi-
+cation of the reports read at the Rome colloquium in 1975 will 
+also provide many new informations on the researches of F .Autrand, 
+L. Fossier, Ch . Klapisch, J . Lefort, M . Parisse, J . Verger, 
+M. Zerner and many others . But much is still to be done : access 
+to machines with good performing capacities remains sometimes 
+difficult, especially in provincial universities, and financial 
+support is largely inadequate : this is partly due to the fact 
+that accounting systems in computing centres have been devised 
+to meet the mathematician's or physicist's needs, and are very 
+unfavourable to historians who are great consumers of reading 
+and printing time, and comparatively small consumers of calculus 
+time . But the most important drawback is still the lack of infor-
+mation, and even more seriously, the lack of formation of most 
+historians : in that respect, if medievalists are not worse than 
+their colleagues working on other periods, they are not better . .. 
+
+(1) This was a study of the accounts of the harbour of Saint-Malo 
+in collaboration with Jean Delumeau. 
+
+(2) "Application x lA : fichier des noms des parties en proces de-
+
+vant le Parlement de Paris de 1350 ä 1363", Direction des 
+Archives de France, Note d'Information du Service de 1'In-
+formatique, 7, 1975, and "Experiences et Realisations en 
+matiere de recherche documentaire", ibidem,9, 1977, p .6-7. 
+
+(3) The description of the project is given in : J . Metman, 
+D . Portal, A . Stiers, " Documentation et Informatique . Une 
+Application du systeme Socrate aux archives judiciaires 
+(Parlement de Paris)", in : Consilium Magnum, 1473-1973, 
+Commemoration du 500e anniversaire de la Creation du Parle-
+ment de Grand Conseil de Malines, Bruxelles 1977, p .85-172 . 
+
+-8 -
+
+(4) For a survey of the different approaches to content analysis 
+and documentary processing in relevance to medieval data, 
+see L . Fossier and G .-P . Zarri, L ' indexation automatique des 
+sources documentaires anciennes, I .R .H .T ., Paris 1975 
+
+(5) See L . Fossier, "Ordinateur et Histoire Medievale", in: 
+Linguistica Matematica e calcolatori . Atti del convegno e 
+della prima scuola internazionale, Pisa 1970, Firenze 1973, 
+p .269-298, and L . Fossier and M . Crehange, "Essai d'ex-
+ploitation sur ordinateur des sources diplomatiques medie-
+vales", Annales E .S .C ., 1970 (I), p .249-284. 
+
+(6) See for instance M . Mollat and P . Tombeur, Conciles oecu-
+meniques medievaux : Les conciles de Latran I ä Latran IV, 
+Louvain 1974, et M . Mollat and P . Tombeur, Les conciles de 
+Lyon I et Lyon II, Louvain 1974. 
+
+(7) L . Fossier, G . Contamine, J . Graff, P . Bichard-Breaud, Le 
+traitement automatique des documents diplomatiques du Haut 
+Moyen Age, (Cahiers du CRAL, 1ere .serie, 2I), Nancy 1973. 
+Other projects of the C .R .A .L . are dealing with automatic 
+translation, textual analysis of the Bible etc . . .. 
+
+(8) Chartres originales anterieures ä II2I conservees dans le 
+d " epartement de la Meurthe-et-Moselle, (Cahiers du C .R .A .L ., 
+Iere . serie, 28), Nancy 1977 : each volume contains all the 
+charters deposited in one department, but several volumes 
+will be necessary for Paris. 
+
+(9) For an example of the highly sophisticated results achieved 
+with the programs of the centre, see Des Tracts en Mai 68. 
+Mesures de Vocabulaire et de Contenus, Paris 1975 ; and the 
+programs are described in Enregistrement et Traitement auto-
+matique des Textes, (Calcul et Sciences Humaines, C .N .R .S .), 
+Paris 1975. 
+
+(10) See J .-Ph . Genet, F . Hucher, J . Mondelli and E . Valensi, 
+"Un programme de traitement automatique des textes : ALINE " , 
+Bulletin du Centre d'Analyse du Discours de 1'Universite de 
+Lille III, 1974, p .96-121, and J .-Ph . Genet, "Ordinateur, 
+lexique, contexte", forthcoming in : Actes du Colloque sur le 
+Traitement automatique des Sources du Moyen-Age, Rome 1975, 
+Ecole Frangaise de Rome 1978, p .297-317. 
+
+(11) See G .-P . Zarri, M . Ornato, C . Bozzolo, Projet Reseda: 
+rapport sur les recherches effectuees du Ier . Octobre 1975 
+au Ier . Avril 1976, C .N .R .S ., Paris 1976 ; and G .-P . Zarri, 
+M . Ornato, A . Zwiebel, L . Zarri-Baldi, C . Bozzolo, Projet 
+Reseda : rapport sur les recherches effectuees du Ier . Octo-
+bre 1976 au Ier . Avril 1977, C .N .R .S ., Paris 1977. 
+
+(12) D . Herlihy, "Vieillir ä Florence au Quattrocento", Annales 
+E .S .C ., XXIV, 1969 (6), p .1338-1353, "Editing for the Com-
+puter : the fiorentine Catasto of 1427", American Council of 
+Learned Societies Newsletter, XXII, 1971, p .1-7, and "Map-
+ping Households in Medieval Italy " , The Catholic Historical 
+Review, LVIII, 1972 (1), p .1-24 ; Ch . Klapisch, "Fiscalite 
+
+-9 -
+
+et demographie en Toscane (1427-1430)", Annales E .S .C ., 
+XXIV, 1969 (6), p .1313-1337, "Household and Family in 
+Tuscany in 1427", in P . Laslett and R . Wall, Household and 
+Family in past times, Cambridge 1972, p .267-283, and Ch. 
+Klapisch and M . Demonet, "A uno pane e uno vino" . La famille 
+rurale toscane au debut du XVe siecle", Annales E .S .C ., 
+XXVII, 1972 (4-5), p .873-9o2 . The general survey of the 
+results will normally appear in 1978. 
+
+(13) Mrs . Carpentier's thesis is still unpublished : see a valua -
+ble report by Ch . Klapisch an the formal soutenance in 
+Revue Historique, 517, 1976 (1), p .244-247. 
+
+(14) Cf . Y . Aufray and J . Guiral, "Les peages du Royaume de 
+Valence (1494)", in : Melanges de la Casa de Velasquez, 
+XII, 1976. 
+
+(15) See M .-Th . Lor9in, "Pratique Successorale et Conjoncture 
+demographique", Bulletin du Centre d'Histoire Economique 
+et Sociale de la Region Lyonnaise, 1975 (4), p .39-62, and 
+"La Pratique Successorale en Ville et au Village", ibidem, 
+1976 (4), p .55-74 ; also "Retraite des veuves et filles au 
+couvent", quelques aspects de la condition feminine ä la 
+fin du Moyen Age", Annales de Demographie Historique, 1977, 
+p .86-94. 
+
+(16) This project is presented in B . Guiliemain, "L'informatique 
+aux Archives du vatican", Compte-Rendus de 1'Academie des 
+Inscriptions et Belles-Lettres, 1977, p .86-94. 
+
+(17) See her report in Actes du Colloque . . ., op .cit . supra, 
+forthcoming 1978. 
+
+(18) For general remarks of the method of collective biographies, 
+see J .-Ph . Genet, "La biographie collective des micropopula-
+tions : une methode de traitement, 1 ' analyse factorielle", 
+forthcoming (in German) in : Franz Irsigler (Hrsg .), Quanti-
+tative Methoden in der Wirtschafts-und Sozialgeschichte der 
+Vorneuzeit, Stuttgart 1978 (= Historisch-Sozialwissenschaft-
+liche Forschungen, Vol . IV) . Classifying and cross-tabula-
+tions are being dune with the BDP4 package, a package special-
+ly designed for a small Computer (Philips P .880) : see X . De-
+banne, BDP4 : systeme de programme, Paris 1976. 
+
+(19) H . Millet, Les chanoines du chapitre cathedral de Laon, 
+1272-1412, 2 vol ., Paris 1977, typ. 
+
+(20) The best introduction to factor analysis is J .P . Benzecri, 
+L'analyse des donnees, 2 vo ., Paris 1973. 
+
+(21) F . Micheau, Traductions imprimees d'oeuvres arabes en Occi-
+dent, Paris 1974, .typ. 
+
+(22) J . Lefort, " Fiscalite medievale et informatique : recherche 
+sur les baremes pour 1'imposition des paysans byzantins au 
+XlVeme siecle", Revue Historique 1974 (4), p .315-356 . 
+
+-10 -
+
+(23) Let us mention briefly important projects such as the inven-
+tory of French medieval libraries (I .R .H .T . : Miss Genevois), 
+automatic edition of the catalogue of Saint-Victor (Veronika 
+Gerz von Buren) etc . . . . 
+
+Irsigler (University of Trier) stressed that the conference was 
+planned to achieve two goals . First, to overcome the analytieal 
+deficiencies and the problems of often faint research questions 
+within quantitative history as had already been outlined at the 
+earlier ZiF conference in 1976 and proved by the QUANTUM documen-
+tation published in 1977 . Second the sections aimed at presenting 
+new developments in sociological research which could be applied 
+in historical social science too. 
+
+In the section an "Methodological Developments as Foundation for 
+a new Encounter between History and Sociology" (chair : Wolfgang 
+Sick, QUANTUM) two papers were presented : Theodor Harder (Univer -
+sity of Bielefeld) on "Data, Theory, and Model : A Dynamic Per -
+spective " , Manfred Küchler (University of Frankfurt) on "Complex 
+Data Analysis in Practical Research : Multivariate Analyzing of 
+Nominal-Scaled Data " . Theodor Harder gave a paper on theory, data, 
+models, and real world . Harder portrayed a wide range of dynamic 
+non static models and theories of social science phenomenon . He 
+stressed the potentials these new models have for historical pro-
+cesses . But these methods have not yet been widely used within 
+historical social science . Manfred Küchler presented a 'paper de-
+scribing his DIEC-model for analyzing nominal scaled data . This 
+approach combines the Goodman and Harder models and makes it 
+possible to explain variances in a dependent dichotomous variable 
+by the combined effects of more than one dichotomous independent 
+variables . In the discussion it was stressed that especially 
+historical data are often available only as categorical data and 
+that therefore models based on low levels of measurement would be 
+very appropriate for historical research . Examples from historical 
+research mentioned by the audience made apparent the potentials of 
+this kind of data analysis techniques . 
+

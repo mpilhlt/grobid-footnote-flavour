@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader/>
+	<text xml:lang="en">
+			<head>Urheberrecht<lb/></head>
+
+			<p>Ass. iur. Gianna Iacino, LL.M., Dr. iur. Paweł Kamocki, Dr. phil. Keli Du, Prof. Dr.<lb/> Christof Schöch, Prof. Dr. Andreas Witt, Philippe Genêt and Dr. José Calvo Tello *<lb/> Legal status of Derived Text Formats<lb/> -2 nd deliverable of Text+ AG Legal and Ethical Issues -<lb/>This document was created in the context of the work of the association German<lb/> National Research Data Infrastructure (NFDI) e.V. NFDI is financed by the Federal<lb/> Republic of Germany and the 16 federal states, and the consortium Text+ is funded by<lb/> the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) -project<lb/> number 460033370. The authors would like to thank for the funding and support.<lb/> Furthermore, thanks also include all institutions and actors who are committed to the<lb/> association and its goals.<lb/></p>
+
+			<head>Introduction<lb/></head>
+
+			<p>A key aspect of many Digital Humanities projects is the use of texts as research<lb/> data. Text and Data Mining (TDM) is an umbrella term for a range of methods<lb/> I.<lb/></p>
+
+			<p>role throughout this analysis.<lb/></p>
+
+			<head>B. What are derived text formats (DTFs)<lb/></head>
+
+			<p>DTFs have been described as extracted features for non-consumptive research. <ref type="biblio">4</ref> They<lb/> are systematically generated representations of a base text, which allow the application<lb/> II.<lb/></p>
+
+			<p>constraints (this could be the case of some product descriptions or user manuals).<lb/></p>
+
+			<p>Public domain texts can be freely copied and shared, so there is limited practical<lb/> interest in deriving DTFs from them (at least in the context of copyright concerns); but<lb/> since they can also be freely modified, deriving and sharing DTFs from such texts is<lb/> not in any way restricted by copyright law.<lb/></p>
+
+			<figure>III.<lb/> 1.<lb/> 2.<lb/> a)<lb/> b)<lb/> 10.5771/2699-1284-2024-3-149 -am 11.08.2025, 18:08:59. https://www.nomos-elibrary.de/de/agb -Open Access -<lb/>Article 2 InfoSoc Directive:<lb/> Member States shall provide for the exclusive right to authorise or prohibit direct or indirect, tempo<lb/> rary or permanent reproduction by any means and in any form, in whole or in part: (a) for authors, of<lb/> their works (...).<lb/> § 16(1) UrhG:<lb/> ʻRight of reproductionʼ means the right to produce copies of the work, whether on a temporary or on<lb/> a permanent basis and regardless of by which means of procedure or in which quantity they are made.<lb/> Creating DTFs under statutory exceptions<lb/> The reproductions necessary to derive a DTF can therefore only be lawfully made<lb/> reform.<lb/> Exception for TDM for Scientifc research purposes ( § 60 d UrhG)<lb/> Although first introduced into German law in 2018, § 60d UrhG, containing the<lb/> exception for Text and Data Mining (TDM) for scientific research purposes, owes its<lb/> current wording to Article 3 of the 2019 DSM Directive. It can be summarised as fol<lb/> lows:<lb/> b)<lb/> the TDM exceptions (see above) provide a much more convenient and secure basis for this activity.<lb/></figure>
+
+			<head>DTF and the integrity right<lb/></head>
+
+			<p>Although rarely discussed in the context of new technologies, moral rights of authors<lb/> should not be absent from the discussion on DTFs. The so-called integrity right is<lb/> recognised by Article 6bis of the Berne Convention. In Germany, it can be found in<lb/> § 14 UrhG. The texts read as follows:<lb/></p>
+
+			<head>Article 6bis(1) of the Berne Convention:<lb/></head>
+
+			<p>(1) Independently of the author&apos;s economic rights, and even after the transfer of the said rights, the<lb/> author shall have the right to (...) object to any distortion, mutilation or other modification of, or<lb/> other derogatory action in relation to, the said work, which would be prejudicial to his honor or<lb/> reputation.<lb/></p>
+
+			<head>§ 14 UrhG:<lb/></head>
+
+			<p>The author has the right to prohibit the distortion or any other derogatory treatment of his or her<lb/> work which is capable of prejudicing the author&apos;s legitimate intellectual or personal interests in the<lb/> work.<lb/></p>
+
+			<p>It seems possible that some DTFs, in particular Transformative DTFs with shuffled<lb/> of the rightholder or within the scope of a statutory copyright exception.<lb/></p>
+
+			<head>DTFs and the &quot;reconstructability&quot; criterion<lb/></head>
+
+			<p>As mentioned above, according to the CJEU snippets are to be regarded as partial<lb/> reproductions if they are original or if their &quot;cumulative effect (.</p>
+
+			<figure>..) may lead to the<lb/> b)<lb/> 164<lb/> Iacino et al. • Legal status of Derived Text Formats<lb/> WTO, Report of the Panel, WT/DS160/R, 15 June 2000, para 6.229.<lb/> Martin Senftleben, The International Three-Step Test: A Model Provision for EC Fair<lb/> Use Legislation, 1 (2010) Journal of Intellectual Property, Information Technology and<lb/> E-Commerce Law, Vol. 1, No.</figure>
+
+			<figure type="table">2, pp. 67-82.<lb/> Gervais, Daniel J., Towards a New Core International Copyright Norm: The Reverse<lb/> Three-Step Test. Available at SSRN: https://ssrn.com/abstract=499924.<lb/> BeckOK UrhR/Grübler, 42. Ed. 1.5.2024, UrhG § 60c Rn<lb/> Dreier/Schulze/Dreier, 7. Aufl. 2022, UrhG § 60c Rn. 1<lb/> First formulated in A. Elster, Gewerblicher rechtsschutz, umfassend Urheber-und<lb/> Verlagsrecht, Patent-und Musterschutztrecht, Warenzeichenrecht und Wettbewerbs<lb/> recht, De Gruyter, 1921.<lb/> N. Carlini et al., &quot;Extracting Training Data from Large Language Models&quot; in: Pro<lb/> ceedings of the 30th USENIX Security Symposium (August 11-13, 2021), USENIX<lb/> Association, 2021, pp. 2633-2650.<lb/> Keli Du (2024), &quot;Rekonstruierbarkeit von abgeleiteten Textformaten&quot;, https://events.g<lb/> wdg.de/event/607/contributions/1408/.<lb/> M. Senftleben, &quot;Flexibility Grave -Partial Reproduction Focus and Closed System<lb/> Fetishism in CJEU, Pelham&quot;, IIC, 2020, 51, pp.751 -769.<lb/> Calvo Tello, José, Mathias Göbel, Ubbo Veentjer, Stefan E. Funk, Nanette Rißler-<lb/>Pipika, and Keli Du. 2025 (accepted). &apos;FAIR Derived Data in TEI and Its Publication<lb/> in the TextGrid Repository&apos;. jTEI.<lb/> Burnard, Lou. 2004. &apos;Metadata for Corpus Work&apos;. In Developing Linguistic Corpora:<lb/> A Guide to Good Practice, edited by Martin Wynne. Oxford: AHDS Literature, Lan<lb/> guages and Linguistics. https://ota.ox.ac.uk/documents/creating/dlc/chapter3.htm.<lb/> Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Apple<lb/> ton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016. &apos;The FAIR Guiding<lb/> Principles for Scientific Data Management and Stewardship&apos;. Scientific Data 3 (March).<lb/> https://doi.org/10.1038/sdata.2016.18.<lb/> 171<lb/> Iacino et al. • Legal status of Derived Text Formats<lb/> 171<lb/> RuZ 5. Jg. 3/2024</figure>
+
+
+	</text>
+</tei>

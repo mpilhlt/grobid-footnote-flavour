@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader>
+		<fileDesc xml:id="origin10100122731147877284"/>
+	</teiHeader>
+	<text xml:lang="en">
+		<front>
+
+	167<lb/>
+	<reference>Iacino et al. • Legal status of Derived Text Formats 167<lb/> RuZ 5. Jg. 3/2024<lb/> 10.5771/2699-1284-2024-3-149 -am 11.08.2025, 18:08:59.</reference>
+
+	<ptr type="web">https://www.nomos-elibrary.de/de/agb</ptr>
+
+	-Open Access -<lb/>
+	<docTitle>
+	<titlePart>regulated. However, it appears that in certain cases TDM outputs may still contain<lb/></titlePart>
+	</docTitle>
+
+	<byline>
+	<docAuthor>G. Iacino, P. Kamocki, P. Leinen,</docAuthor>
+	</byline>
+
+	<docTitle>
+	<titlePart>Assessment of the Impact of the DSM-Directive on Text+<lb/></titlePart>
+	</docTitle>
+
+	<byline>
+	<docAuthor>F. Barth, J. Calvo Tello, K. Du, P. Genêt, L. Keller, J. Knappen, Liste der Abgeleiteten<lb/></docAuthor>
+	</byline>
+
+	Textformate (working title), forthcoming, 2025. 170<lb/>
+	<reference>Iacino et al. • Legal status of Derived Text Formats<lb/> 10.5771/2699-1284-2024-3-149 -am 11.08.2025, 18:08:59.</reference>
+
+	<ptr type="web">https://www.nomos-elibrary.de/de/agb</ptr>
+
+	<div type="abstract">-Open Access -<lb/>J. Baudry (2023). Non-consumptive research use, an analysis of the legal situation, on<lb/> Couperin.org, https://www.couperin.org/le-consortium/actus/non-consumptive-resea<lb/> rch-use/.<lb/></div>
+
+	<byline>
+	<docAuthor>© Gianna Iacino, Paweł Kamocki, Keli Du, Christof Schöch,<lb/> Andreas Witt, Philippe Genêt and José Calvo Tello</docAuthor>
+	</byline>
+
+	172<lb/>
+	<reference>Iacino et al. • Legal status of Derived Text Formats<lb/> 10.5771/2699-1284-2024-3-149 -am 11.08.2025, 18:08:59.</reference>
+
+	<ptr type="web">https://www.nomos-elibrary.de/de/agb</ptr>
+
+	-Open Access -
+		</front>
+	</text>
+</tei>

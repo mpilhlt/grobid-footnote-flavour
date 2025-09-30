@@ -1,5 +1,6 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve">
+	<teiHeader>
     <fileDesc>
       <titleStmt>
         <title level="a">German Intelligence during the Second World War: The Canary Islands as a Case Study</title>
@@ -48,7 +49,7 @@
         <desc>Generated with createTraining API</desc>
       </change>
     </revisionDesc>
-  </teiHeader>
+	</teiHeader>
   <text xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
 			<front>German History Vol. 42, No. 4, pp. 540-558 <lb/>Advance Access publication 8 November 2024 <lb/>© The Author(s) 2024. Published by Oxford University Press on behalf of the German History Society. <lb/>This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial License <lb/></front>
 
@@ -56,5 +57,4 @@
 
 
 	</text>
-
 </TEI>
