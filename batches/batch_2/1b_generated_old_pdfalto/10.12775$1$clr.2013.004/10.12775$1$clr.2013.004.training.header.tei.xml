@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader>
+		<fileDesc xml:id="origin10565413806965628914"/>
+	</teiHeader>
+	<text xml:lang="en">
+		<front>
+<lb/>
+	Comparative Law Review<lb/>
+	<date>15 2013<lb/></date>
+
+	<byline>
+	<affiliation>Nicolaus Copernicus University<lb/></affiliation>
+	</byline>
+
+	<idno>http://dx.doi.org/10.12775/CLR.2013.004<lb/></idno>
+
+	<byline>
+	<docAuthor>Mirosław Bączyk <lb/></docAuthor>
+	</byline>
+
+	<docTitle>
+	<titlePart>DAS PROBLEM DES SCHADENERSATZES FÜR DEN<lb/> SOG. VERTANEN URLAUB IN DER RECHTSPRECHUNG<lb/> DER POLNISCHEN GERICHTE</titlePart>
+	</docTitle>
+
+	Abstract
+		</front>
+	</text>
+</tei>

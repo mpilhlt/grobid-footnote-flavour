@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+
+
+						<author><surname>Cronin</surname>, <forename>C</forename>.</author>
+
+						<author><forename>Per</forename> <surname>Lord Bingham ; Bingham</surname>, <forename>L</forename>.</author>
+
+						<author><surname>Arthurs</surname>, <forename>S</forename>., <surname>Cooperman</surname>, <forename>M</forename>., <surname>Gallagher</surname>, <forename>J</forename>., <surname>Grealy</surname>, <forename>F</forename>., <surname>Lunney</surname>, <forename>J</forename>., <surname>Marrs</surname>, <forename>R</forename>. and <surname>Roe</surname>, <forename>R</forename>.<middlename>L</middlename>.</author>
+
+						<author><forename>&gt;</forename>, <surname>McQuoid-Mason</surname>, <forename>D</forename>.<middlename>J</middlename>.</author>
+
+						<author><forename>Elaine</forename> <surname>Campbell</surname></author>
+
+						<author><surname>Hargreaves</surname>, <forename>I</forename>.</author>
+
+						<author><surname>Secker</surname> <forename>J</forename> and <surname>Morrison</surname> <forename>C</forename>.</author>
+
+						<author><surname>Wakaruk</surname>, <forename>A</forename>., <surname>Gareau-Brennan</surname>, <forename>C</forename>., <surname>Pietrosanu</surname>, <forename>P</forename>.</author>
+
+						<author><surname>Gibbs</surname> <forename>G</forename></author>
+
+						<author><surname>Arthurs</surname>, <forename>S</forename>., <surname>Cooperman</surname>, <forename>M</forename>., <surname>Gallagher</surname>, <forename>J</forename>., <surname>Grealy</surname>, <forename>F</forename>., <surname>Lunney</surname>, <forename>J</forename>., <surname>Marrs</surname>, <forename>R</forename>. and <surname>Roe</surname>, <forename>R</forename>.<middlename>L</middlename>.</author>
+
+						<author><surname>Wallace</surname>, <forename>A</forename>., &amp; <surname>Perdue</surname>, <forename>B</forename>.</author>
+
+						<author><surname>Thomas</surname>. <middlename>L</middlename>.</author>
+
+						<author><surname>Grimes</surname>. <middlename>R</middlename>, <surname>McQuoid-Mason</surname>. <middlename>D</middlename>, <forename>O</forename><surname>&apos;Brien</surname>. <middlename>E</middlename>, <surname>Zimmer</surname>.<middlename>J</middlename>.</author>
+
+						<author><surname>McQuoid-Mason</surname>, <forename>D</forename>. <middlename>J</middlename>.</author>
+
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</TEI>
