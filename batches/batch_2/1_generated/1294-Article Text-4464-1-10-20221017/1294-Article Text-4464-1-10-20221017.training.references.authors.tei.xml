@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+
+
+						<author><forename>Sarah</forename> <surname>Nason</surname></author>
+
+						<author>3 <surname>Genn</surname> et al</author>
+
+						<author><forename>Tom</forename> <surname>Bingham</surname></author>
+
+						<author><surname>Ibid</surname></author>
+
+						<author><forename>Catherine</forename> <surname>Jennings</surname></author>
+
+						<author><forename>Duncan</forename> <surname>Watts</surname></author>
+
+						<author><forename>George</forename></author>
+
+						<author><surname>Statista</surname></author>
+
+						<author><forename>Sarah</forename> <surname>Nason</surname> and <forename>Liam</forename> <surname>Edwards</surname></author>
+
+						<author><forename>Frances</forename> <surname>Gibb</surname></author>
+
+						<author><forename>Andrew</forename> <surname>Marr</surname></author>
+
+						<author><surname>Harrison</surname></author>
+
+						<author><surname>Wintersteiger</surname></author>
+
+						<author><surname>UNGA</surname></author>
+
+						<author><forename>Hugh</forename> <surname>Starkey</surname></author>
+
+						<author>36 <surname>Commons</surname> <forename>Library</forename></author>
+
+						<author><forename>The</forename> <surname>Commons</surname> <forename>Library</forename></author>
+
+						<author><forename>Legal</forename> <surname>Services</surname> <forename>Board</forename></author>
+
+						<author><forename>R (</forename><surname>Miller</surname> and <surname>others</surname></author>
+
+						<author><forename>The</forename> <surname>Bingham</surname> <forename>Centre</forename></author>
+
+						<author><surname>The</surname> <forename>Media</forename> <surname>Leader</surname></author>
+
+						<author><surname>Aitchinson</surname></author>
+
+						<author><surname>Ministry</surname> of <forename>Justice</forename></author>
+
+						<author><forename>M A</forename> <surname>Olatokun</surname></author>
+
+						<author><forename>Alan</forename> <surname>Renwick</surname></author>
+
+						<author><forename>Wendy</forename> <surname>Williams</surname></author>
+
+						<author><surname>Wintersteiger</surname> et al</author>
+
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</TEI>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader>
+		<fileDesc xml:id="origin11292492141873259424"/>
+	</teiHeader>
+	<text xml:lang="en">
+		<front>
+<lb/>
+	<docTitle>
+	<titlePart>-3 -<lb/>DEMOGRAPHIC HISTORY IN THE UNITED STATES:<lb/> THE FIRST FIFTEEN YEARS<lb/></titlePart>
+	</docTitle>
+
+	<byline>
+	<docAuthor>Mary Jo Maynes</docAuthor>
+	</byline>
+
+	+<lb/>
+	<docTitle>
+	<titlePart>From the modest and recent beginning -a collection of articles<lb/> on the theme of &quot; Historical Population Studies &quot; in Daedalus in</titlePart>
+	</docTitle>
+
+		</front>
+	</text>
+</tei>

@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+
+
+						<author><forename>I</forename> .<middlename>R</middlename> .<middlename>H</middlename> .T ; <forename>I</forename> . <surname>Cloulas</surname></author>
+
+						<author><forename>F</forename> .<surname>Autrand</surname>, <forename>L</forename>. <surname>Fossier</surname>, <forename>Ch</forename> . <surname>Klapisch</surname>, <forename>J</forename> . <surname>Lefort</surname>, <forename>M</forename> . <surname>Parisse</surname>, <forename>J</forename> . <surname>Verger</surname>, <forename>M</forename>.</author>
+
+						<author><forename>J</forename> . <surname>Metman</surname>, <forename>D</forename> . <surname>Portal</surname>, <forename>A</forename> . <surname>Stiers</surname></author>
+
+						<author><forename>L</forename> . <surname>Fossier</surname> and <forename>G .-P</forename> . <surname>Zarri</surname></author>
+
+						<author><forename>See</forename> <middlename>L</middlename> . <surname>Fossier</surname>, <forename>&quot;</forename><surname>Ordinateur</surname> et <surname>Histoire Medievale</surname> <forename>;</forename> <middlename>L</middlename> . <surname>Fossier</surname> and <forename>M</forename> . <surname>Crehange</surname></author>
+
+						<author><surname>See for instance</surname> <forename>M</forename> . <surname>Mollat</surname> and <forename>P</forename> . <surname>Tombeur</surname></author>
+
+						<author><forename>L</forename> . <surname>Fossier</surname>, <forename>G</forename> . <surname>Contamine</surname>, <forename>J</forename> . <surname>Graff</surname>, <forename>P</forename> . <surname>Bichard-Breaud</surname></author>
+
+						<author><forename>See J .-Ph</forename> . <surname>Genet</surname>, <forename>F</forename> . <surname>Hucher</surname>, <forename>J</forename> . <surname>Mondelli</surname> and <forename>E</forename> . <surname>Valensi</surname></author>
+
+						<author><forename>See G .-P</forename> . <surname>Zarri</surname>, <forename>M</forename> . <surname>Ornato</surname>, <forename>C</forename> . <surname>Bozzolo</surname> <forename>; G .-P</forename> . <surname>Zarri</surname>, <forename>M</forename> . <surname>Ornato</surname>, <forename>A</forename> . <surname>Zwiebel</surname>, <forename>L</forename> . <surname>Zarri-Baldi</surname>, <forename>C</forename> . <surname>Bozzolo</surname></author>
+
+						<author><forename>D</forename> . <surname>Herlihy ; Annales</surname> <forename>E</forename> .<middlename>S</middlename> .<middlename>C</middlename> . ; <surname>Ch</surname> . <surname>Klapisch</surname> ; <forename>M</forename> . <surname>Demonet</surname></author>
+
+						<author><surname>Mrs</surname></author>
+
+						<author><surname>Cf</surname> . <middlename>Y</middlename> . <surname>Aufray</surname> and <forename>J</forename> . Guiral</author>
+
+						<author><surname>See</surname> <forename>M .-Th</forename></author>
+
+						<author><surname>Ph</surname> . <surname>Genet</surname></author>
+
+						<author><forename>H</forename> . <surname>Millet</surname></author>
+
+						<author><forename>F</forename> . <surname>Micheau</surname></author>
+
+						<author><forename>J</forename> . <surname>Lefort</surname></author>
+
+						<author><forename>I</forename> .<middlename>R</middlename> .<middlename>H</middlename> .<middlename>T</middlename> .</author>
+
+						<author><surname>Irsigler</surname></author>
+
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</TEI>
