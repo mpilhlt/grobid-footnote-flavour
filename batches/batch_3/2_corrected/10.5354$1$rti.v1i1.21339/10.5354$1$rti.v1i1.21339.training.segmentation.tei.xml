@@ -7,11 +7,15 @@
         <persName xml:id="kazuyo">Kazuyo</persName>
         <resp>Annotator</resp>
       </respStmt>
+      <respStmt>
+        <persName xml:id="cboulanger">Christian Boulanger</persName>
+        <resp>Annotator</resp>
+      </respStmt>
     </titleStmt>
     <editionStmt>
       <edition>
-        <date when="2025-10-14T14:44:52.197Z">10/14/2025 3:44:52 PM</date>
-        <title>corrections</title>
+        <date when="2025-10-17T15:21:59.759Z">17.10.2025 17:21:59</date>
+        <title>Second round of corrections</title>
       <idno type="fileref">10.5354$1$rti.v1i1.21339</idno></edition>
     </editionStmt>
     <publicationStmt>
@@ -43,6 +47,9 @@
   <revisionDesc>
     <change when="2025-10-04T16:26:05.680333Z" status="draft">
       <desc>Generated with createTraining API</desc>
+    </change>
+    <change when="2025-10-17T15:22:25.769Z" status="draft" who="#cboulanger">
+      <desc>Document done</desc>
     </change>
   </revisionDesc>
 </teiHeader>
@@ -211,4 +218,5 @@
 	</text>
 
 
+  
   </TEI>

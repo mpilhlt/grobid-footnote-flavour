@@ -1,48 +1,55 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title level="a">Unknown Title</title>
-      </titleStmt>
-      <editionStmt>
-        <edition>
-          <date when="2025-10-04T16:34:03.743840Z">04.10.2025 16:34:03</date>
-          <title>grobid.training.segmentation [article/dh-law-footnotes]</title>
-          <idno type="fileref">10.5354$1$rti.v1i2.25648</idno>
-        </edition>
-      </editionStmt>
-      <publicationStmt>
-        <publisher/>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-        </availability>
-        <date type="publication"/>
-        <idno type="DOI">10.5354/rti.v1i2.25648</idno>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl>. (). Unknown Title. , (), . DOI: 10.5354/rti.v1i2.25648</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <appInfo>
-        <application version="1.0" ident="pdf-tei-editor" type="editor">
-          <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
-        </application>
-        <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-10-04T16:34:03.743840Z" type="extractor">
-          <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
-          <label type="revision">0707645</label>
-          <label type="flavor">article/dh-law-footnotes</label>
-          <label type="variant-id">grobid.training.segmentation</label>
-          <ref target="https://github.com/kermitt2/grobid"/>
-        </application>
-      </appInfo>
-    </encodingDesc>
-    <revisionDesc>
-      <change when="2025-10-04T16:34:03.743840Z" status="draft">
-        <desc>Generated with createTraining API</desc>
-      </change>
-    </revisionDesc>
-  </teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title level="a">Unknown Title</title>
+      <respStmt>
+        <persName xml:id="cboulanger">Christian Boulanger</persName>
+        <resp>Annotator</resp>
+      </respStmt>
+      <respStmt>
+        <persName xml:id="kazuyo">Kazuyo</persName>
+        <resp>Annotator</resp>
+      </respStmt>
+    </titleStmt>
+    <editionStmt>
+      <edition>
+        <date when="2025-10-15T12:19:59.821Z">10/15/2025 1:19:59 PM</date>
+        <title>corrections</title>
+      <idno type="fileref">10.5354$1$rti.v1i2.25648</idno></edition>
+    </editionStmt>
+    <publicationStmt>
+      <publisher/>
+      <availability>
+        <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+      </availability>
+      <date type="publication"/>
+      <idno type="DOI">10.5354/rti.v1i2.25648</idno>
+    </publicationStmt>
+    <sourceDesc>
+      <bibl>. (). Unknown Title. , (), . DOI: 10.5354/rti.v1i2.25648</bibl>
+    </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+    <appInfo>
+      <application version="1.0" ident="pdf-tei-editor" type="editor">
+        <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
+      </application>
+      <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-10-04T16:34:03.743840Z" type="extractor">
+        <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+        <label type="revision">0707645</label>
+        <label type="flavor">article/dh-law-footnotes</label>
+        <label type="variant-id">grobid.training.segmentation</label>
+        <ref target="https://github.com/kermitt2/grobid"/>
+      </application>
+    </appInfo>
+  </encodingDesc>
+  <revisionDesc>
+    <change when="2025-10-04T16:34:03.743840Z" status="draft">
+      <desc>Generated with createTraining API</desc>
+    </change>
+  </revisionDesc>
+</teiHeader>
   <text xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
 			<front>V o l u m e n 1 / N °2 / 2 0 1 2 <lb/>R <lb/>E <lb/>V <lb/>I <lb/>S <lb/>T A <lb/>T R IB U N A <lb/>INTERNACIONAL <lb/>Publicación del Departamento de <lb/>Derecho Internacional <lb/>I S S N 0 719 -210X <lb/>Comité Editorial <lb/>Gonzalo Aguilar <lb/>José Carlos Fernández Rosas <lb/>Claudio Grossman <lb/>Mattias Kumm <lb/>Hugo Llanos <lb/>Cecilia Medina <lb/>Elina Mereminskaya <lb/>Mónica Pinto <lb/>Revista Tribuna Internacional <lb/>Publicación del Departamento de Derecho <lb/>Internacional de la Facultad de Derecho de <lb/>la Universidad de Chile <lb/>Volumen 1 / N°2 / 2012 <lb/>www.tribunainternacional.uchile.cl <lb/>ISSN: 0719-210X <lb/>Diseño y producción: <lb/>Gráfica Metropolitana <lb/>contacto@graficametropolitana.cl <lb/>www.graficametropolitana.cl <lb/>Printed in Chile / Impreso en Chile <lb/>Rector de la Universidad de Chile <lb/>Víctor Pérez Vera <lb/>Av. Alameda Libertador Bernardo <lb/>O&apos;Higgins 1058, Santiago <lb/>Representante legal <lb/>Roberto Nahum Anuch <lb/>Decano de la Facultad de Derecho <lb/>de la Universidad de Chile <lb/>Director Responsable <lb/>Mario Ramírez Necochea <lb/>Editora de Contenidos <lb/>Claudia Sarmiento Ramírez <lb/>ÍNDICE <lb/>Artículos <lb/>Justicia internacional penal: un pilar del Estado de Derecho internacional <lb/>9 <lb/>Gonzalo Aguilar Cavallo <lb/>El derecho societario en la Unión Europea <lb/>47 <lb/>Massimiliano Castellari <lb/>Los Derechos Económicos, Sociales y Culturales en la Organización <lb/>71 <lb/>Mundial del Comercio <lb/>Holger P. Hestermeyer <lb/>La situación actual de los migrantes menores a la luz del derecho <lb/>107 <lb/>internacional público <lb/>Rita Lages <lb/>La Responsabilidad de Proteger: el rol de la comunidad internacional <lb/>129 <lb/>Hugo Ignacio Llanos Mardones <lb/>El desarme y la regulación de armamentos <lb/>141 <lb/>Edmundo Vargas Carreño <lb/>La importancia de Mercosur frente a los cambios y perspectivas <lb/>159 <lb/>de su institucionalidad jurídica <lb/>Iris Vittini y Ana María Moure <lb/>Recensiones <lb/>&quot;Law and revolution. The Formation of The Western Legal Tradition&quot;, <lb/>183 <lb/>de Harold J. Berman (1983. Traducción al español, 1995), <lb/>por Mario Arnello Romo <lb/>47 <lb/>Revista Tribuna Internacional <lb/>Volumen 1, Nº 2, 2012 / pp. 47-70 <lb/>ISSN 0719-210X <lb/>El derecho societario en la Unión Europea <lb/>Corporate law within the European Union <lb/>Massimiliano Castellari <lb/></front>
 
@@ -55,4 +62,6 @@
 
 	</text>
 
-</TEI>
+
+  
+  </TEI>
