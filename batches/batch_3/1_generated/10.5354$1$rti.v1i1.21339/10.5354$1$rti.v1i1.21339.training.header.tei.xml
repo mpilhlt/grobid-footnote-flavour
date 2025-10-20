@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader>
+		<fileDesc xml:id="origin15805739391476663261"/>
+	</teiHeader>
+	<text xml:lang="es">
+		<front>
+
+	57<lb/>
+	<docTitle>
+	<titlePart>LA MUJER EN EL MUNDO ACTUAL<lb/></titlePart>
+	</docTitle>
+
+	<byline>
+	<docAuthor>Mario Ramírez Necochea 1<lb/></docAuthor>
+	</byline>
+
+	<reference>Rodrigo, de 7 años, trata de jugar a las cartas con su hermanita<lb/> Silvia, de 5, y entablan el siguiente diálogo:<lb/> S: No me gusta que el rey valga más que la reina.<lb/> R: Pero si el rey es hombre. ¿Quieres que valga menos que una<lb/> mujer?<lb/> S: No; quiero que valgan lo mismo<lb/> R: Esos naipes no existen; tienes que jugar con lo míos o… te dejo<lb/> sin jugar.<lb/></reference>
+
+	CAPÍTULO PRIMERO:
+	<byline>
+	<docAuthor>EL PATRIARCADO<lb/></docAuthor>
+	</byline>
+
+	<byline>
+	<affiliation>En el mundo actual, después de un siglo de celebraciones del Día<lb/> Internacional de la Mujer 2 , está culminando el proceso de liberación<lb/> femenina.<lb/> Desde la antigüedad más remota, la mayor fuerza física del hombre<lb/> y la función maternal de la mujer determinaron las relaciones de<lb/> poder y la distribución de los roles en la pareja humana.<lb/></affiliation>
+	</byline>
+
+	<div type="abstract">El hombre era el proveedor y protector de la familia; la mujer por<lb/> su parte, condicionada por sus embarazos y lactancia, asumió na-<lb/>turalmente la crianza y las labores domésticas y al depender de su<lb/> pareja se adaptó a la cultura patriarcal, desarrollando una actitud de<lb/> sumisión y obediencia tan apreciada por el ego masculino.</div>
+
+		</front>
+	</text>
+</tei>

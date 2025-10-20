@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+
+						<affiliation>
+							<orgName type="institution">INTERNACIONAL</orgName>
+							<lb/>
+							<address>
+								<addrLine>Publicación del Departamento de<lb/> Derecho Internacional<lb/> I S S N 0 719 -210X<lb/> Revista Tribuna Internacional<lb/> Publicación del</addrLine>
+							</address>
+							<orgName type="department">Departamento de Derecho<lb/> Internacional de la Facultad de Derecho de<lb/> la Universidad de Chile<lb/> Chile / Impreso en Chile<lb/> Rector de la Universidad de Chile</orgName>
+							<lb/>
+							<address>
+								<addrLine>Víctor Pérez Vera<lb/> Av. Alameda Libertador Bernardo<lb/> O&apos;Higgins 1058</addrLine>,
+								<addrLine>Santiago<lb/> Representante legal<lb/> Decano de la Facultad de Derecho<lb/> de la Universidad de Chile<lb/> Director Responsable<lb/> Editora de Contenidos<lb/> El derecho societario en la Unión Europea<lb/> 47<lb/> Massimiliano Castellari<lb/> Los Derechos Económicos</addrLine>,
+								<addrLine>Sociales y Culturales en la Organización<lb/> 71<lb/> Mundial del Comercio<lb/> El desarme</addrLine>
+							</address>
+							<orgName type="laboratory">y la regulación de armamentos<lb/> Recensiones<lb/> &quot;Law and revolution. The Formation of The Western Legal Tradition&quot;</orgName>,
+							<lb/>
+							<address>
+								<addrLine>183<lb/> de Harold</addrLine>
+							</address>
+						</affiliation>
+
+						</author>
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</tei>
