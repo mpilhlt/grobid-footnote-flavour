@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+
+
+						<author><forename>A</forename></author>
+
+						<author><forename>Rome</forename> <surname>Statute</surname></author>
+
+						<author><forename>I</forename>.</author>
+
+						<author><forename>G</forename>.<middlename>A</middlename>. <surname>Res</surname></author>
+
+						<author><forename>R</forename>. <middlename>S</middlename>. <surname>Clark</surname></author>
+
+						<author><forename>G</forename>.<middlename>A</middlename>. <surname>Res</surname></author>
+
+						<author><surname>Id</surname></author>
+
+						<author><forename>See J.-M</forename>. <surname>Henckaerts</surname>, &amp; <forename>L</forename>. <surname>Doswald-Beck</surname></author>
+
+						<author><surname>See</surname> <forename>J</forename>. <middlename>G</middlename>. <surname>Stewart</surname> ; <forename>L</forename>. <surname>Moir</surname></author>
+
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</TEI>

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader>
+		<fileDesc xml:id="origin4257333922623833122"/>
+	</teiHeader>
+	<text xml:lang="en">
+		<front>
+<lb/>
+	<reference>Dogmatyka Prawa • 2024, t. 1, nr 2, s. 27-37<lb/> Legal Dogmatics • 2024, vol. 1, no. 2, pp. 27-37<lb/></reference>
+
+	<idno>ISSN 2956-9885<lb/> DOI.10.34767/DP.2024.02.02<lb/></idno>
+
+	<docTitle>
+	<titlePart>Tomasz Knepka<lb/></titlePart>
+	</docTitle>
+
+	<byline>
+	<docAuthor>Uniwersytet Kazimierza Wielkiego w Bydgoszczy<lb/></docAuthor>
+	</byline>
+
+	ORCID:
+	<idno>0000-0002-6848-8239<lb/></idno>
+
+	<byline>
+	<docAuthor>Tomasz Knepka</docAuthor>
+	</byline>
+
+	|
+	<idno>DOI.10.34767/DP.2024.02.02</idno>
+
+	| The polish financial supervision authority in the european union's financial…<lb/>
+	<docTitle>
+	<titlePart>The polish financial supervision<lb/> authority in the european union's<lb/> financial supervision architecture</titlePart>
+	</docTitle>
+
+		</front>
+	</text>
+</tei>

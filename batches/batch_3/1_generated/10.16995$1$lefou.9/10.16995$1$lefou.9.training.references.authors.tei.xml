@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+
+
+						<author><surname>Ebd</surname></author>
+
+						<author><forename>Quentin</forename> <surname>Meillassoux</surname></author>
+
+						<author><forename>Federico</forename> <surname>Luisetti</surname></author>
+
+						<author><surname>Ebd</surname>., <forename>S</forename>.</author>
+
+						<author><forename>Michel</forename> <surname>Foucault</surname></author>
+
+						<author><surname>Ebd</surname>., <forename>S</forename>. <middlename>167</middlename>. <forename>Corinne</forename> <surname>Kaszner</surname></author>
+
+					</analytic>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+</TEI>
