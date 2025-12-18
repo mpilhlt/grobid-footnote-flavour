@@ -1,8 +1,8 @@
 # Grobid-footnote-flavour
 
-**Work in progress** 
+This repo contains training data and other resources for building a [Grobid](https://github.com/kermitt2/grobid) flavour that can deal with references in footnotes, which is a common practice in law and the humanities.
 
-Data and workflow for developing a new flavour for supporting documents from Law and Digital Humanities in [Grobid](https://github.com/kermitt2/grobid). 
+This project is a collaboration between Christian Boulanger ([mpilhlt](https://www.lhlt.mpg.de/boulanger#)) and Luca Foppiano ([ScienciaLAB](https://sciencialab.com/)).
 
 ## Data Structure
 
