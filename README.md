@@ -8,7 +8,7 @@ This project is a collaboration between Christian Boulanger ([mpilhlt](https://w
 
 The structure of the data will be based on batches and will follow this structure:
 
-```
+```text
 ├── batches
 │   └── batch_1
 │       ├── 0_input
