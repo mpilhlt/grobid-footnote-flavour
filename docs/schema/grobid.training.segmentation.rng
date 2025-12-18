@@ -291,6 +291,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       </optional>
       <optional>
         <attribute name="when"/>
+         <attribute name="who"/>
       </optional>
       <zeroOrMore>
         <ref name="desc"/>
