@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!--
+This schema validates GROBID *.traning.segmentation.tei.xml files
+-->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  ns="http://www.tei-c.org/ns/1.0"
+>
+  <start>
+    <ref name="TEI"/>
+  </start>
+  <define name="TEI">
+    <element name="TEI">
+      <zeroOrMore>
+        <choice>
+          <ref name="teiHeader"/>
+          <ref name="text"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="teiHeader">
+    <element name="teiHeader">
+      <zeroOrMore>
+        <choice>
+          <ref name="encodingDesc"/>
+          <ref name="fileDesc"/>
+          <ref name="revisionDesc"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="fileDesc">
+    <element name="fileDesc">
+      <zeroOrMore>
+        <choice>
+          <ref name="editionStmt"/>
+          <ref name="publicationStmt"/>
+          <ref name="sourceDesc"/>
+          <ref name="titleStmt"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="titleStmt">
+    <element name="titleStmt">
+      <zeroOrMore>
+        <choice>
+          <ref name="author"/>
+          <ref name="respStmt"/>
+          <ref name="title"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="title">
+    <element name="title">
+      <optional>
+        <attribute name="level"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="author">
+    <element name="author">
+      <zeroOrMore>
+        <ref name="persName"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="persName">
+    <element name="persName">
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="forename"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="surname"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="forename">
+    <element name="forename">
+      <text/>
+    </element>
+  </define>
+
+  <define name="surname">
+    <element name="surname">
+      <text/>
+    </element>
+  </define>
+
+  <define name="respStmt">
+    <element name="respStmt">
+      <zeroOrMore>
+        <choice>
+          <ref name="persName"/>
+          <ref name="resp"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="resp">
+    <element name="resp">
+      <text/>
+    </element>
+  </define>
+
+  <define name="editionStmt">
+    <element name="editionStmt">
+      <zeroOrMore>
+        <ref name="edition"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="edition">
+    <element name="edition">
+      <zeroOrMore>
+        <choice>
+          <ref name="date"/>
+          <ref name="idno"/>
+          <ref name="title"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="date">
+    <element name="date">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="when"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="idno">
+    <element name="idno">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="publicationStmt">
+    <element name="publicationStmt">
+      <zeroOrMore>
+        <choice>
+          <ref name="availability"/>
+          <ref name="date"/>
+          <ref name="idno"/>
+          <ref name="publisher"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="publisher">
+    <element name="publisher">
+      <text/>
+    </element>
+  </define>
+
+  <define name="availability">
+    <element name="availability">
+      <zeroOrMore>
+        <ref name="licence"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="licence">
+    <element name="licence">
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+
+  <define name="sourceDesc">
+    <element name="sourceDesc">
+      <zeroOrMore>
+        <ref name="bibl"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="bibl">
+    <element name="bibl">
+      <text/>
+    </element>
+  </define>
+
+  <define name="encodingDesc">
+    <element name="encodingDesc">
+      <zeroOrMore>
+        <ref name="appInfo"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="appInfo">
+    <element name="appInfo">
+      <zeroOrMore>
+        <ref name="application"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="application">
+    <element name="application">
+      <optional>
+        <attribute name="ident"/>
+      </optional>
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="version"/>
+      </optional>
+      <optional>
+        <attribute name="when"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="desc"/>
+          <ref name="label"/>
+          <ref name="ref"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="ref">
+    <element name="ref">
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+
+  <define name="desc">
+    <element name="desc">
+      <text/>
+    </element>
+  </define>
+
+  <define name="label">
+    <element name="label">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="revisionDesc">
+    <element name="revisionDesc">
+      <zeroOrMore>
+        <ref name="change"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="change">
+    <element name="change">
+      <optional>
+        <attribute name="status"/>
+      </optional>
+      <optional>
+        <attribute name="when"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="desc"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="text">
+    <element name="text">
+      <optional>
+        <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="body"/>
+          <ref name="front"/>
+          <ref name="listBibl"/>
+          <ref name="note"/>
+          <ref name="page"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="front">
+    <element name="front">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="lb">
+    <element name="lb">
+      <empty/>
+    </element>
+  </define>
+
+  <define name="page">
+    <element name="page">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="body">
+    <element name="body">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="listBibl">
+    <element name="listBibl">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="note">
+    <element name="note">
+      <optional>
+        <attribute name="place"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+</grammar>
