@@ -291,11 +291,16 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       </optional>
       <optional>
         <attribute name="when"/>
-         <attribute name="who"/>
       </optional>
-      <zeroOrMore>
-        <ref name="desc"/>
-      </zeroOrMore>
+      <optional>
+        <attribute name="who"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="desc"/>
+        </zeroOrMore>
+      </interleave>
     </element>
   </define>
 
@@ -304,15 +309,27 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <optional>
         <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
       </optional>
-      <zeroOrMore>
-        <choice>
+      <interleave>
+        <text/>
+        <zeroOrMore>
           <ref name="body"/>
+        </zeroOrMore>
+        <zeroOrMore>
           <ref name="front"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
           <ref name="listBibl"/>
+        </zeroOrMore>
+        <zeroOrMore>
           <ref name="note"/>
+        </zeroOrMore>
+        <zeroOrMore>
           <ref name="page"/>
-        </choice>
-      </zeroOrMore>
+        </zeroOrMore>
+      </interleave>
     </element>
   </define>
 
@@ -322,6 +339,9 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
         <text/>
         <zeroOrMore>
           <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
         </zeroOrMore>
       </interleave>
     </element>
