@@ -313,6 +313,15 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <interleave>
         <text/>
         <zeroOrMore>
+          <ref name="titlePage" />
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="toc" />
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="div" />
+        </zeroOrMore>
+        <zeroOrMore>
           <ref name="body"/>
         </zeroOrMore>
         <zeroOrMore>
@@ -326,6 +335,59 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
         </zeroOrMore>
         <zeroOrMore>
           <ref name="note"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="titlePage">
+    <element name="titlePage">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
+        </zeroOrMore>
+      </interleave>      
+    </element>
+  </define>
+
+  <define name="toc">
+    <element name="toc">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="div">
+    <element name="div">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>toc</value>
+            <value>acknowledgment</value>
+            <value>availability</value>
+            <value>funding</value>
+            <value>annex</value>
+          </choice>
+        </attribute>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
         </zeroOrMore>
         <zeroOrMore>
           <ref name="page"/>
