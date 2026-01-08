@@ -20,7 +20,7 @@ Parameters:
     --filepaths          Also search and replace in file paths (directories and filenames)
     --filepaths-only     Only modify file paths, skip file content changes (implies --filepaths)
     --dry-run            Show detailed report of what would be changed without making changes
-    --backup-path PATH   Custom path to store backup (default: <parent>/<basename>-backup)
+    --backup-path PATH   Custom path to store backup (default: <parent>/<basename>-backup-YYYYMMDD_HHMMSS)
     --restore            Restore target folder from backup (deletes backup after successful restore)
     --yes                Skip confirmation prompts
     path                 Target folder path (required)
@@ -409,7 +409,7 @@ Examples:
     parser.add_argument(
         '--backup-path',
         type=Path,
-        help='Path to store backup (default: <parent>/<basename>-backup)'
+        help='Path to store backup (default: <parent>/<basename>-backup-YYYYMMDD_HHMMSS)'
     )
 
     parser.add_argument(
@@ -468,7 +468,8 @@ Examples:
         if args.backup_path:
             backup_path = args.backup_path.resolve()
         else:
-            backup_path = target_path.parent / f"{target_path.name}-backup"
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            backup_path = target_path.parent / f"{target_path.name}-backup-{timestamp}"
 
         # Run search and replace
         sr = SearchReplace(
