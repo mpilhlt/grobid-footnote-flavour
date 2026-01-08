@@ -15,14 +15,15 @@ Features:
     - Recursive directory traversal
 
 Parameters:
-    --search REGEX      Regular expression pattern to search for (required unless --restore)
-    --replace EXPR      Replacement expression supporting regex backreferences (required unless --restore)
-    --filepaths         Also search and replace in file paths (directories and filenames)
-    --dry-run           Show detailed report of what would be changed without making changes
-    --backup-path PATH  Custom path to store backup (default: <parent>/<basename>-backup)
-    --restore           Restore target folder from backup (deletes backup after successful restore)
-    --yes               Skip confirmation prompts
-    path                Target folder path (required)
+    --search REGEX       Regular expression pattern to search for (required unless --restore)
+    --replace EXPR       Replacement expression supporting regex backreferences (required unless --restore)
+    --filepaths          Also search and replace in file paths (directories and filenames)
+    --filepaths-only     Only modify file paths, skip file content changes (implies --filepaths)
+    --dry-run            Show detailed report of what would be changed without making changes
+    --backup-path PATH   Custom path to store backup (default: <parent>/<basename>-backup)
+    --restore            Restore target folder from backup (deletes backup after successful restore)
+    --yes                Skip confirmation prompts
+    path                 Target folder path (required)
 
 Examples:
     # Dry run to preview changes with detailed output
@@ -33,6 +34,9 @@ Examples:
 
     # Replace in both file contents and file paths
     ./search_replace.py --search "old" --replace "new" --filepaths /path/to/folder
+
+    # Replace only in file paths, not in file contents
+    ./search_replace.py --search "old" --replace "new" --filepaths-only /path/to/folder
 
     # Replace with regex backreferences
     ./search_replace.py --search "(\d{4})-(\d{2})" --replace "\2/\1" /path/to/folder
@@ -84,6 +88,7 @@ class SearchReplace:
         target_path: Path,
         backup_path: Path = None,
         filepaths: bool = False,
+        filepaths_only: bool = False,
         dry_run: bool = False,
         skip_confirmation: bool = False,
     ):
@@ -91,7 +96,8 @@ class SearchReplace:
         self.replace = replace
         self.target_path = target_path
         self.backup_path = backup_path
-        self.filepaths = filepaths
+        self.filepaths = filepaths or filepaths_only  # filepaths_only implies filepaths
+        self.filepaths_only = filepaths_only
         self.dry_run = dry_run
         self.skip_confirmation = skip_confirmation
 
@@ -133,23 +139,24 @@ class SearchReplace:
                     new_rel_path_str = self.search_pattern.sub(self.replace, rel_path_str)
                     self.path_changes.append((file_path, new_rel_path_str))
 
-            # Check file content matches
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    lines = f.readlines()
+            # Check file content matches (skip if filepaths_only)
+            if not self.filepaths_only:
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        lines = f.readlines()
 
-                matches = []
-                for line_num, line in enumerate(lines, 1):
-                    if self.search_pattern.search(line):
-                        new_line = self.search_pattern.sub(self.replace, line)
-                        matches.append((line_num, line.rstrip('\n'), new_line.rstrip('\n')))
+                    matches = []
+                    for line_num, line in enumerate(lines, 1):
+                        if self.search_pattern.search(line):
+                            new_line = self.search_pattern.sub(self.replace, line)
+                            matches.append((line_num, line.rstrip('\n'), new_line.rstrip('\n')))
 
-                if matches:
-                    self.file_matches[file_path] = matches
+                    if matches:
+                        self.file_matches[file_path] = matches
 
-            except (UnicodeDecodeError, PermissionError):
-                # Skip binary files or files we can't read
-                continue
+                except (UnicodeDecodeError, PermissionError):
+                    # Skip binary files or files we can't read
+                    continue
 
     def report_changes(self):
         """Report what would be or will be changed."""
@@ -349,6 +356,9 @@ Examples:
   # Replace in both file contents and file paths
   %(prog)s --search "old" --replace "new" --filepaths /path/to/folder
 
+  # Replace only in file paths, not in file contents
+  %(prog)s --search "old" --replace "new" --filepaths-only /path/to/folder
+
   # Replace with regex backreferences
   %(prog)s --search "(\\d{4})-(\\d{2})" --replace "\\2/\\1" /path/to/folder
 
@@ -382,6 +392,12 @@ Examples:
         '--filepaths',
         action='store_true',
         help='Also search and replace in file paths (directories and filenames)'
+    )
+
+    parser.add_argument(
+        '--filepaths-only',
+        action='store_true',
+        help='Only modify file paths, skip file content changes (implies --filepaths)'
     )
 
     parser.add_argument(
@@ -461,6 +477,7 @@ Examples:
             target_path=target_path,
             backup_path=backup_path,
             filepaths=args.filepaths,
+            filepaths_only=args.filepaths_only,
             dry_run=args.dry_run,
             skip_confirmation=args.yes,
         )
