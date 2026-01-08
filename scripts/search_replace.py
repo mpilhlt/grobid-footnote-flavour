@@ -7,20 +7,20 @@ across multiple files in a directory tree, with built-in backup and restore func
 
 Features:
     - Regex-based search and replace in file contents
-    - Optional search and replace in filenames
+    - Optional search and replace in file paths (directories and filenames)
     - Automatic backup creation before making changes
     - Dry-run mode for previewing changes
     - Detailed or summary reporting
-    - Restore functionality from backups
+    - Restore functionality from backups with automatic cleanup
     - Recursive directory traversal
 
 Parameters:
     --search REGEX      Regular expression pattern to search for (required unless --restore)
     --replace EXPR      Replacement expression supporting regex backreferences (required unless --restore)
-    --filenames         Also search and replace in filenames
+    --filepaths         Also search and replace in file paths (directories and filenames)
     --dry-run           Show detailed report of what would be changed without making changes
     --backup-path PATH  Custom path to store backup (default: <parent>/<basename>-backup)
-    --restore           Restore target folder from backup
+    --restore           Restore target folder from backup (deletes backup after successful restore)
     --yes               Skip confirmation prompts
     path                Target folder path (required)
 
@@ -31,8 +31,8 @@ Examples:
     # Replace all occurrences in file contents
     ./search_replace.py --search "old_name" --replace "new_name" /path/to/folder
 
-    # Replace in both file contents and filenames
-    ./search_replace.py --search "old" --replace "new" --filenames /path/to/folder
+    # Replace in both file contents and file paths
+    ./search_replace.py --search "old" --replace "new" --filepaths /path/to/folder
 
     # Replace with regex backreferences
     ./search_replace.py --search "(\d{4})-(\d{2})" --replace "\2/\1" /path/to/folder
@@ -62,7 +62,9 @@ Notes:
     - Binary files and files that cannot be decoded as UTF-8 are skipped
     - If no matches are found, the backup is automatically removed
     - Backup path must not exist (prevents accidental overwrites)
-    - Filename changes are processed in reverse order to handle nested paths correctly
+    - Path changes are processed in reverse order to handle nested paths correctly
+    - New parent directories are created automatically when renaming paths
+    - After successful restore, the backup is automatically deleted
 """
 
 import argparse
@@ -81,7 +83,7 @@ class SearchReplace:
         replace: str,
         target_path: Path,
         backup_path: Path = None,
-        filenames: bool = False,
+        filepaths: bool = False,
         dry_run: bool = False,
         skip_confirmation: bool = False,
     ):
@@ -89,13 +91,13 @@ class SearchReplace:
         self.replace = replace
         self.target_path = target_path
         self.backup_path = backup_path
-        self.filenames = filenames
+        self.filepaths = filepaths
         self.dry_run = dry_run
         self.skip_confirmation = skip_confirmation
 
         # Results tracking
         self.file_matches: Dict[Path, List[Tuple[int, str, str]]] = {}
-        self.filename_changes: List[Tuple[Path, str]] = []
+        self.path_changes: List[Tuple[Path, str]] = []
 
     def create_backup(self) -> bool:
         """Create a backup of the target folder."""
@@ -123,12 +125,13 @@ class SearchReplace:
             if not file_path.is_file():
                 continue
 
-            # Check filename matches
-            if self.filenames:
-                filename = file_path.name
-                if self.search_pattern.search(filename):
-                    new_filename = self.search_pattern.sub(self.replace, filename)
-                    self.filename_changes.append((file_path, new_filename))
+            # Check path matches (full relative path from target)
+            if self.filepaths:
+                rel_path = file_path.relative_to(self.target_path)
+                rel_path_str = str(rel_path)
+                if self.search_pattern.search(rel_path_str):
+                    new_rel_path_str = self.search_pattern.sub(self.replace, rel_path_str)
+                    self.path_changes.append((file_path, new_rel_path_str))
 
             # Check file content matches
             try:
@@ -151,7 +154,7 @@ class SearchReplace:
     def report_changes(self):
         """Report what would be or will be changed."""
         total_file_changes = sum(len(matches) for matches in self.file_matches.values())
-        total_filename_changes = len(self.filename_changes)
+        total_path_changes = len(self.path_changes)
 
         if self.dry_run:
             print("=" * 80)
@@ -171,16 +174,16 @@ class SearchReplace:
                         print(f"    + {new_line}")
                 print()
 
-            if self.filename_changes:
-                print(f"FILENAME CHANGES ({total_filename_changes} files):")
+            if self.path_changes:
+                print(f"PATH CHANGES ({total_path_changes} files):")
                 print("-" * 80)
-                for file_path, new_filename in sorted(self.filename_changes):
+                for file_path, new_rel_path_str in sorted(self.path_changes):
                     rel_path = file_path.relative_to(self.target_path)
-                    print(f"  {rel_path.parent / file_path.name}")
-                    print(f"  -> {rel_path.parent / new_filename}")
+                    print(f"  {rel_path}")
+                    print(f"  -> {new_rel_path_str}")
                 print()
 
-            if not self.file_matches and not self.filename_changes:
+            if not self.file_matches and not self.path_changes:
                 print("No matches found.")
         else:
             print("=" * 80)
@@ -188,11 +191,11 @@ class SearchReplace:
             print("=" * 80)
             print(f"Files with content changes: {len(self.file_matches)}")
             print(f"Total content replacements: {total_file_changes}")
-            if self.filenames:
-                print(f"Filename changes: {total_filename_changes}")
+            if self.filepaths:
+                print(f"Path changes: {total_path_changes}")
             print()
 
-        return total_file_changes > 0 or total_filename_changes > 0
+        return total_file_changes > 0 or total_path_changes > 0
 
     def confirm_changes(self) -> bool:
         """Ask user for confirmation."""
@@ -220,13 +223,33 @@ class SearchReplace:
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")
 
-        # Apply filename changes (process in reverse order to handle nested paths)
-        for file_path, new_filename in sorted(self.filename_changes, reverse=True):
+        # Apply path changes (process in reverse order to handle nested paths)
+        # We need to rename from deepest to shallowest to avoid issues with parent dirs
+        old_dirs = set()
+        for file_path, new_rel_path_str in sorted(self.path_changes, reverse=True):
             try:
-                new_path = file_path.parent / new_filename
+                new_path = self.target_path / new_rel_path_str
+                # Create parent directories if they don't exist
+                new_path.parent.mkdir(parents=True, exist_ok=True)
+
+                # Track old parent directories for cleanup
+                old_parent = file_path.parent
+                while old_parent != self.target_path:
+                    old_dirs.add(old_parent)
+                    old_parent = old_parent.parent
+
                 file_path.rename(new_path)
             except Exception as e:
                 print(f"Error renaming {file_path}: {e}")
+
+        # Remove empty directories left behind (from deepest to shallowest)
+        for old_dir in sorted(old_dirs, reverse=True):
+            try:
+                if old_dir.exists() and old_dir.is_dir() and not any(old_dir.iterdir()):
+                    old_dir.rmdir()
+            except Exception:
+                # Directory not empty or other error, skip it
+                pass
 
         print("Changes applied successfully.")
 
@@ -299,6 +322,12 @@ def restore_from_backup(backup_path: Path, target_path: Path, skip_confirmation:
         print(f"Restoring from backup...")
         shutil.copytree(backup_path, target_path)
         print("Restore completed successfully.")
+
+        # Delete the backup after successful restore
+        print(f"Removing backup: {backup_path}")
+        shutil.rmtree(backup_path)
+        print("Backup removed.")
+
         return True
     except Exception as e:
         print(f"Error during restore: {e}")
@@ -317,8 +346,8 @@ Examples:
   # Replace all occurrences in file contents
   %(prog)s --search "old_name" --replace "new_name" /path/to/folder
 
-  # Replace in both file contents and filenames
-  %(prog)s --search "old" --replace "new" --filenames /path/to/folder
+  # Replace in both file contents and file paths
+  %(prog)s --search "old" --replace "new" --filepaths /path/to/folder
 
   # Replace with regex backreferences
   %(prog)s --search "(\\d{4})-(\\d{2})" --replace "\\2/\\1" /path/to/folder
@@ -350,9 +379,9 @@ Examples:
     )
 
     parser.add_argument(
-        '--filenames',
+        '--filepaths',
         action='store_true',
-        help='Also search and replace in filenames'
+        help='Also search and replace in file paths (directories and filenames)'
     )
 
     parser.add_argument(
@@ -431,7 +460,7 @@ Examples:
             replace=args.replace,
             target_path=target_path,
             backup_path=backup_path,
-            filenames=args.filenames,
+            filepaths=args.filepaths,
             dry_run=args.dry_run,
             skip_confirmation=args.yes,
         )
