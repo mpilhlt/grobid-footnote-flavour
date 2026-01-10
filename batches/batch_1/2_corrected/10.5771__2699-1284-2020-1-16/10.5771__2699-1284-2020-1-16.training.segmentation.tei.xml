@@ -1,4 +1,5 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0" space="preserve">
+<?xml-model href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/grobid.training.segmentation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
   <fileDesc>
     <titleStmt>
@@ -10,14 +11,19 @@
         </persName>
       </author>
       <respStmt>
-        <persName xml:id="cb">Christian Boulanger</persName>
-        <resp>Contributor</resp>
+        <persName xml:id="cboulanger">Christian Boulanger</persName>
+        <resp>Annotator</resp>
+      </respStmt>
+      <respStmt>
+        <persName xml:id="lfoppiano">Luca Foppiano</persName>
+        <resp>Annotator</resp>
       </respStmt>
     </titleStmt>
     <editionStmt>
       <edition>
-        <date when="2025-07-27T21:22:29.872Z">27.7.2025 23:22:29</date>
-        <title>Grobid document segmentation corrected</title>
+        <date when="2026-01-07T08:45:20.620Z">7.1.2026 09:45:20</date>
+        <title>Current GitHub Version</title>
+        <idno type="fileref">10.5771__2699-1284-2020-1-16</idno>
       </edition>
     </editionStmt>
     <publicationStmt>
@@ -34,15 +40,17 @@
   </fileDesc>
   <encodingDesc>
     <appInfo>
-      <application version="1.0" ident="grobid">
-        <label>https://grobid.readthedocs.io/</label>
+      <application version="1.0" ident="pdf-tei-editor" type="editor">
+        <label>PDF-TEI-Editor</label>
+        <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
       </application>
-      <application version="1.0" ident="pdf-tei-editor">
-        <label>https://github.com/mpilhlt/pdf-tei-editor</label>
-      </application>
-      <application version="1.0" ident="model">
-        <label>lfoppiano/grobid:latest-develop</label>
-        <desc>https://hub.docker.com/layers/lfoppiano/grobid/latest-develop/images/sha256-735fa2c8facb6f95adef5bf344f7223c2e20aadc9c048f624b83b19d3fbef07b</desc>
+      <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-07T14:15:00.573667Z" type="extractor">
+        <label>A machine learning software for extracting information from scholarly documents</label>
+        <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+        <label type="revision">e13aa19</label>
+        <label type="flavor">article/dh-law-footnotes</label>
+        <label type="variant-id">grobid.training.segmentation</label>
+        <ref target="https://github.com/kermitt2/grobid"/>
       </application>
     </appInfo>
   </encodingDesc>
@@ -55,6 +63,15 @@
     </change>
     <change when="2025-07-30T13:16:37.461Z" status="draft" who="#cb">
       <desc>Corrections</desc>
+    </change>
+    <change when="2025-08-28T08:48:25.935Z" status="draft" who="#cboulanger">
+      <desc>Gold</desc>
+    </change>
+    <change when="2025-07-14" status="published" who="#lfoppiano">
+      <desc>GitHub as of July 14th 2025</desc>
+    </change>
+    <change when="2026-01-07T08:52:12.791Z" status="published" who="#cboulanger">
+      <desc>Uploaded to GitHub</desc>
     </change>
   </revisionDesc>
 </teiHeader>
@@ -84,7 +101,7 @@
 
 			<body>Selbst der Bibliothekskatalog, ohne den ein bestimmtes Medium nicht gefunden <lb/>werden kann und damit auch nicht zugänglich ist, ist kein rechtsfreier Raum. Die we-<lb/>nigstens dienst-oder arbeitsrechtlich verbindliche Form der Formalerschließung auf <lb/>Grundlage von Regelwerken ist die Voraussetzung dafür, gesuchte Literatur sicher auf-<lb/>zufinden. 10 Die bei der Katalogisierung verarbeiteten personenbezogenen Daten helfen <lb/>durch individuierende Angaben wie berufliche Tätigkeit oder Geburtsdatum, die Wer-<lb/>ke einer bestimmten Person zweifelsfrei zu identifizieren und diese so der interessier-<lb/>ten Öffentlichkeit zugänglich zu machen. Inwieweit solche Angaben zulässig sind, ist <lb/>eine Frage des Datenschutzrechts. 11 Hier können unter Umständen der Grundsatz der <lb/>Datensparsamkeit und die durch Tiefenerschließung von Bibliotheksbestand möglichst <lb/>einfache Zugänglichkeit in Konflikt geraten. <lb/>Eigentum als Grundlage des Zugangs <lb/>In der Welt der gedruckten Bücher und der audiovisuellen Trägermedien bildete -von <lb/>sehr wenigen benutzungseinschränkenden Bestimmungen wie etwa solchen des Ju-<lb/>gendschutzes einmal abgesehen -allein das Eigentum am Bibliotheksbestand die <lb/>Grundlage, um über den konkreten Umfang des Zugangs zum Bibliotheksbestand zu <lb/>entscheiden. Bücher und andere körperliche Medien dienen, sofern die Bibliothek von <lb/>der öffentlichen Hand getragen wird, was in Deutschland die Regel ist, als öffentliche <lb/>Sachen dem meist in der Benutzungsordnung oder neuerdings auch in Bibliotheksge-<lb/>setzen verfügten Anstaltszweck, publizierte Inhalte der Öffentlichkeit zugänglich zu <lb/>machen. 12 In dieser Perspektive ist das Sacheigentum der Bibliothek kein Selbstzweck, <lb/>sondern ermöglicht vor allem im Bereich der Informations-und Wissenschaftsfreiheit <lb/>eine Grundrechtsverwirklichung der Nutzerinnen und Nutzer. Es ist insoweit ein <lb/>Freiheitsgarant im Bereich der Informationsversorgung. <lb/>Bildet das Sacheigentum am Bestand das Fundament der Bibliotheksarbeit, sind Zu-<lb/>gangsfragen im Wesentlichen Benutzungsfragen und beziehen sich darauf, wie die <lb/>Nutzerinnen und Nutzer einer Bibliothek mit dem Bestand umgehen. Auch wenn da-<lb/>bei die Probleme und Fragestellungen des Bibliotheksrechts letztlich auf die Eröffnung <lb/>und Regulierung von Zugangsmöglichkeiten gerichtet sind, so steht in der traditionel-<lb/>len Print-Bibliothek nicht der Zugang, sondern der Bestand im Zentrum der Aufmerk-<lb/>samkeit. <lb/>II. <lb/></body>
 <!-- mixed-reference -->
-		<listBibl>einer öffentlichen Einrichtung betreut, so bedürfen sie nicht der Eintragung in die Denkmal-<lb/>liste; sie unterliegen gleichwohl den Vorschriften dieses Gesetzes."; nach § 7 DSchG NW be-<lb/>steht eine allgemeine Erhaltungspflicht von Denkmälern im Rahmen des Zumutbaren. <lb/>10 Steinhauer, Regelwerke: Normative Werkkonzepte in Bibliotheks-und Rechtswissenschaft, <lb/>in: Danneberg/Gilbert/Spoerhase, Das Werk: zum Verschwinden und Fortwirken eines <lb/>Grundbegriffs, 2019, S. 237-256. <lb/>11 Vgl. Steinhauer, Datenschutz in Kultureinrichtungen, Bibliotheken und Archiven, in: <lb/>Specht/Mantz, Handbuch europäisches und deutsches Datenschutzrecht, Teil C. § 25 <lb/>Rn. 32-35. <lb/></listBibl>
+		<listBibl>einer öffentlichen Einrichtung betreut, so bedürfen sie nicht der Eintragung in die Denkmal-<lb/>liste; sie unterliegen gleichwohl den Vorschriften dieses Gesetzes.&quot;; nach § 7 DSchG NW be-<lb/>steht eine allgemeine Erhaltungspflicht von Denkmälern im Rahmen des Zumutbaren. <lb/>10 Steinhauer, Regelwerke: Normative Werkkonzepte in Bibliotheks-und Rechtswissenschaft, <lb/>in: Danneberg/Gilbert/Spoerhase, Das Werk: zum Verschwinden und Fortwirken eines <lb/>Grundbegriffs, 2019, S. 237-256. <lb/>11 Vgl. Steinhauer, Datenschutz in Kultureinrichtungen, Bibliotheken und Archiven, in: <lb/>Specht/Mantz, Handbuch europäisches und deutsches Datenschutzrecht, Teil C. § 25 <lb/>Rn. 32-35. <lb/></listBibl>
 
 			<note place="footnote">12 Vgl.: Kirchner, Grundriß des Bibliotheks-und Dokumentationsrechts, 2. Aufl. 1993, S. 113 f. <lb/></note>
 
@@ -218,4 +235,5 @@
 
 
 	</text>
-</TEI>
+
+	</TEI>
