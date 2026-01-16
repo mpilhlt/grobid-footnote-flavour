@@ -381,6 +381,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
             <value>availability</value>
             <value>funding</value>
             <value>annex</value>
+            <value>conflict</value>
           </choice>
         </attribute>
       </optional>
