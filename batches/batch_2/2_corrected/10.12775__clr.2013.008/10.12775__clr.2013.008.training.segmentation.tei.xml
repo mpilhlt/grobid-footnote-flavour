@@ -1,56 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pdf-tei-editor.panya.de/api/files/872ab" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/grobid.training.segmentation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title level="a">The Efficiency of Administrative Courts (in the Light of European and Polish Experiences)</title>
-        <author>
-          <persName>
-            <forename>Zbigniew</forename>
-            <surname>Kmieciak</surname>
-          </persName>
-        </author>
-      </titleStmt>
-      <editionStmt>
-        <edition>
-          <date when="2025-09-16T17:58:16.324376Z">16.09.2025 17:58:16</date>
-          <title>grobid.training.segmentation [article/dh-law-footnotes]</title>
-          <idno type="fileref">10.12775__clr.2013.008</idno>
-        </edition>
-      </editionStmt>
-      <publicationStmt>
-        <publisher>Uniwersytet Mikolaja Kopernika/Nicolaus Copernicus University</publisher>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-        </availability>
-        <date type="publication">2013</date>
-        <idno type="DOI">10.12775/clr.2013.008</idno>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl>Zbigniew Kmieciak. (2013). The Efficiency of Administrative Courts (in the Light of European and Polish Experiences). Comparative Law Review, 15(0), 135. DOI: 10.12775/clr.2013.008</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <appInfo>
-        <application version="1.0" ident="pdf-tei-editor" type="editor">
-          <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
-        </application>
-        <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-09-16T17:58:16.324376Z" type="extractor">
-          <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
-          <label type="revision">0707645</label>
-          <label type="flavor">article/dh-law-footnotes</label>
-          <label type="variant-id">grobid.training.segmentation</label>
-          <ref target="https://github.com/kermitt2/grobid"/>
-        </application>
-      </appInfo>
-    </encodingDesc>
-    <revisionDesc>
-      <change when="2025-09-16T17:58:16.324376Z" status="draft">
-        <desc>Generated with createTraining API</desc>
-      </change>
-    </revisionDesc>
-  </teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title level="a">The Efficiency of Administrative Courts (in the Light of European and Polish Experiences)</title>
+      <author>
+        <persName>
+          <forename>Zbigniew</forename>
+          <surname>Kmieciak</surname>
+        </persName>
+      </author>
+      <respStmt>
+        <persName xml:id="cboulanger">Christian Boulanger</persName>
+        <resp>Annotator</resp>
+      </respStmt>
+    </titleStmt>
+    <editionStmt>
+      <edition>
+        <date when="2025-09-16T17:58:16.324376Z">16.09.2025 17:58:16</date>
+        <title>GitHub Version</title>
+        <idno type="fileref">10.12775__clr.2013.008</idno>
+      </edition>
+    </editionStmt>
+    <publicationStmt>
+      <publisher>Uniwersytet Mikolaja Kopernika/Nicolaus Copernicus University</publisher>
+      <availability>
+        <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+      </availability>
+      <date type="publication">2013</date>
+      <idno type="DOI">10.12775/clr.2013.008</idno>
+    </publicationStmt>
+    <sourceDesc>
+      <bibl>Zbigniew Kmieciak. (2013). The Efficiency of Administrative Courts (in the Light of European and Polish Experiences). Comparative Law Review, 15(0), 135. DOI: 10.12775/clr.2013.008</bibl>
+    </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+    <appInfo>
+      <application version="1.0" ident="pdf-tei-editor" type="editor">
+        <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
+      </application>
+      <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-09-16T17:58:16.324376Z" type="extractor">
+        <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+        <label type="revision">0707645</label>
+        <label type="flavor">article/dh-law-footnotes</label>
+        <label type="variant-id">grobid.training.segmentation</label>
+        <ref target="https://github.com/kermitt2/grobid"/>
+      </application>
+    </appInfo>
+  </encodingDesc>
+  <revisionDesc>
+    <change when="2025-09-16T17:58:16.324376Z" status="draft">
+      <desc>Extraction</desc>
+    </change>
+    <change when="2025-10-25T08:41:09.675Z" status="published" who="#cboulanger">
+      <desc>Corrections Luca</desc>
+    </change>
+    <change when="2026-01-15T21:04:33.351Z" status="published" who="#cboulanger">
+      <desc>Added xml schema</desc>
+    </change>
+  </revisionDesc>
+</teiHeader>
   <text xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
 			<front>Comparative Law Review <lb/>15 2013 <lb/>Nicolaus Copernicus University <lb/>http://dx.doi.org/10.12775/CLR.2013.008 <lb/>Zbigniew Kmieciak  <lb/>THE EFFICIENCY OF ADMINISTRATIVE COURTS <lb/>(IN THE LIGHT OF EUROPEAN <lb/>AND POLISH EXPERIENCES) <lb/>Abstract <lb/>In the cassation-type model of administrative jurisdiction, administrative courts in principle <lb/>only investigate the administrative body&apos;s compliance with the law. The main weakness of this <lb/>adjudication model is that the same case is consecutively heard by administrative authorities <lb/>and administrative courts (of various instances), without a final decision being issued. However, <lb/>the stereotype of a court coined in another epoch as a purely cassation-type body must not obscure <lb/>the challenges of our times. A lot has changed in the world since then, and the ever-growing <lb/>dependence of the individual on administration (public service) is its visible symptom. Effective <lb/>protection of the interests of the former now requires the use of more diversified control tools <lb/>affording a remedy sooner and at a lower cost, and, in specific situations, also allowing <lb/>administrative courts to decide cases on their merits. <lb/>Keywords <lb/>Judicial review of administration -efficiency of administrative justice -proceedings before <lb/>administrative courts -cassation-type model of administrative jurisdiction -merits review <lb/> Prof. dr hab. Z. Kmieciak is the head of the Department of Comparative Administrative <lb/>Procedure at the Faculty of Law and Administration of University of Łódź and a judge of the <lb/>Supreme Administrative Court. He is also a member of the Committee of Legal Sciences <lb/>of the Polish Academy of Sciences and author of over 240 law publications -monographs, <lb/>workbooks, studies, commentaries, articles, case comments, and reviews. <lb/></front>
     
@@ -58,8 +67,6 @@
     
     <note place="headnote">Zbigniew Kmieciak <lb/></note>
 
-
-    
     <body>I. <lb/>One of the four basic requirements considered by the European <lb/>Committee on Legal Cooperation of the Council of Europe to be an element <lb/>of the right to judicial control of public administration is affording <lb/>an effective remedy. Other requirements that the Committee has placed <lb/>in this group of standards are: 1) an independent and impartial court <lb/>established by an act of parliament, which reviews at least the lawfulness <lb/>of the administrative act, 2) a fair hearing within a reasonable time, 3) fair <lb/>and public proceedings during which the dispute between a natural person <lb/>and an administrative authority is heard 1 . The list above, reflecting <lb/>the principles derived by the European Court of Human Rights in <lb/>Strasbourg (ECHR) from Article 6 sec. 1 of the European Convention on <lb/>Human Rights and Fundamental Freedoms (EC), has taken shape through <lb/>the provisions of the recommendation Rec(2004)20 of the Committee of <lb/>Ministers to Member States of the Council of Europe on the judicial review <lb/>of administrative acts. It links the effectiveness of judicial review with the <lb/>standards of providing the court with appropriate means of redress, <lb/>including the quashing of the disputed administrative act and referring it <lb/>back to the administrative authority to take a new decision that complies <lb/>with the judgement and, where appropriate, decide about compensation <lb/>and ensure effective e x e c u t i o n of the court&apos;s judgement, in compliance <lb/>with the Committee&apos;s recommendation Rec(2003)16 on the execution of <lb/>administrative and judicial decisions in the field of administrative law 2 . <lb/>According to the second of the recommendations referred to above, <lb/>the efficiency of judicial review is identified with both, achieving the <lb/>appropriate result of the review of the act (omission) of an administrative <lb/>authority and getting to a lawful state of affairs, following a court <lb/>judgement arising from the lodged plaint. From the point of view <lb/>of the former aspect, the review is efficient if the court, respecting the <lb/></body>
     
     <listBibl>1 Cf. Council of Europe&apos;s Project Group on Administrative Law, Principles of Administrative <lb/>Law Concerning the Relations Between Administrative Authorities and Private Persons, Strasbourg: <lb/>Council of Europe Pub. 1996, p. 29. <lb/>2 More on this in: J. Chlebny, Standardy Rady Europy i Europejskiego Trybunału Praw Człowieka <lb/>w procedurze administracyjnej i sądowoadministracyjnej [Standards of the Council of Europe and <lb/>of the European Court of Human Rights in Administrative and Administrative Court Procedure], <lb/>[in:] Z. Kmieciak (ed.), Postępowanie administracyjne w Europie [Administrative Procedure <lb/>in Europe], Warszawa: Wolters Kluwer Polska 2010, pp. 31-42. <lb/></listBibl>

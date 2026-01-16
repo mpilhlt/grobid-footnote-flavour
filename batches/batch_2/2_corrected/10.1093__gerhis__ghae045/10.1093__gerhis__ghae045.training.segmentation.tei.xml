@@ -1,3 +1,4 @@
+<?xml-model href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/grobid.training.segmentation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
   <fileDesc>
@@ -13,11 +14,15 @@
         <persName xml:id="lfoppiano">Luca Foppiano</persName>
         <resp>Annotator</resp>
       </respStmt>
+      <respStmt>
+        <persName xml:id="cboulanger">Christian Boulanger</persName>
+        <resp>Annotator</resp>
+      </respStmt>
     </titleStmt>
     <editionStmt>
       <edition>
-        <date when="2025-09-17T17:31:24.530390Z">17.09.2025 17:31:24</date>
-        <title>grobid.training.segmentation [article/dh-law-footnotes]</title>
+        <date when="2026-01-15T20:28:35.206Z">15.1.2026 21:28:35</date>
+        <title>GitHub Version</title>
         <idno type="fileref">10.1093__gerhis__ghae045</idno>
       </edition>
     </editionStmt>
@@ -49,10 +54,16 @@
   </encodingDesc>
   <revisionDesc>
     <change when="2025-09-17T17:31:24.530390Z" status="draft">
-      <desc>Generated with createTraining API</desc>
+      <desc>Extraction</desc>
     </change>
     <change when="2025-10-03T07:54:51.815Z" status="draft" who="#lfoppiano">
       <desc>in progress</desc>
+    </change>
+    <change when="2025-10-08T15:32:55.095Z" status="published" who="#lfoppiano">
+      <desc>Published on GitHub</desc>
+    </change>
+    <change when="2026-01-15T20:29:15.255Z" status="published" who="#cboulanger">
+      <desc>Added xml schema</desc>
     </change>
   </revisionDesc>
 </teiHeader>

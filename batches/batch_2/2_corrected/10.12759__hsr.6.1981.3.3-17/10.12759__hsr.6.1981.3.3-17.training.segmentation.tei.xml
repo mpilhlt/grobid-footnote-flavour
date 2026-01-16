@@ -1,63 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pdf-tei-editor.panya.de/api/files/872ab" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/grobid.training.segmentation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title level="a">Demographic history in the United States: The first fifteen years</title>
-        <author>
-          <persName>
-            <forename>Mary Jo</forename>
-            <surname>Maynes</surname>
-          </persName>
-        </author>
-      </titleStmt>
-      <editionStmt>
-        <edition>
-          <date when="2025-09-17T18:28:39.107010Z">17.09.2025 18:28:39</date>
-          <title>grobid.training.segmentation [default]</title>
-          <idno type="fileref">10.12759__hsr.6.1981.3.3-17</idno>
-        </edition>
-      </editionStmt>
-      <publicationStmt>
-        <publisher>GESIS - Leibniz Institute for the Social Sciences</publisher>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-        </availability>
-        <date type="publication">1981</date>
-        <idno type="DOI">10.12759/hsr.6.1981.3.3-17</idno>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl>Mary Jo Maynes. (1981). Demographic history in the United States: The first fifteen years. Historical Social Research, (), None. DOI: 10.12759/hsr.6.1981.3.3-17</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <appInfo>
-        <application version="1.0" ident="pdf-tei-editor" type="editor">
-          <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
-        </application>
-        <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-09-17T18:28:39.107010Z" type="extractor">
-          <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
-          <label type="revision">0707645</label>
-          <label type="flavor">default</label>
-          <label type="variant-id">grobid.training.segmentation</label>
-          <ref target="https://github.com/kermitt2/grobid"/>
-        </application>
-      </appInfo>
-    </encodingDesc>
-    <revisionDesc>
-      <change when="2025-09-17T18:28:39.107010Z" status="draft">
-        <desc>Generated with createTraining API</desc>
-      </change>
-    </revisionDesc>
-  </teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title level="a">Demographic history in the United States: The first fifteen years</title>
+      <author>
+        <persName>
+          <forename>Mary Jo</forename>
+          <surname>Maynes</surname>
+        </persName>
+      </author>
+    </titleStmt>
+    <editionStmt>
+      <edition>
+        <date when="2026-01-15T20:35:18.297427Z">15.01.2026 20:35:18</date>
+        <title>Extraction</title>
+        <idno type="fileref">10.12759__hsr.6.1981.3.3-17</idno>
+      </edition>
+    </editionStmt>
+    <publicationStmt>
+      <publisher>GESIS - Leibniz Institute for the Social Sciences</publisher>
+      <availability>
+        <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+      </availability>
+      <date type="publication">1981</date>
+      <idno type="DOI">10.12759/hsr.6.1981.3.3-17</idno>
+    </publicationStmt>
+    <sourceDesc>
+      <bibl>Mary Jo Maynes. (1981). Demographic history in the United States: The first fifteen years. Historical Social Research, (), None. DOI: 10.12759/hsr.6.1981.3.3-17</bibl>
+    </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+    <appInfo>
+      <application version="1.0" ident="pdf-tei-editor" type="editor">
+        <label>PDF-TEI Editor</label>
+        <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
+      </application>
+      <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2026-01-15T20:35:18.297427Z" type="extractor">
+        <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+        <label type="revision">536e79c</label>
+        <label type="flavor">article/dh-law-footnotes</label>
+        <label type="variant-id">grobid.training.segmentation</label>
+        <ref target="https://github.com/kermitt2/grobid"/>
+      </application>
+    </appInfo>
+  </encodingDesc>
+  <revisionDesc>
+    <change when="2026-01-15T19:35:18.297427Z" status="extraction">
+      <desc>Extraction</desc>
+    </change>
+  </revisionDesc>
+</teiHeader>
   <text xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
-
 			<front>-3 -<lb/>DEMOGRAPHIC HISTORY IN THE UNITED STATES: <lb/>THE FIRST FIFTEEN YEARS <lb/>Mary Jo Maynes + <lb/>From the modest and recent beginning -a collection of articles <lb/>on the theme of &quot; Historical Population Studies &quot; in Daedalus in <lb/>1968 -, the study of demographic history in the United States <lb/>has expanded dramatically . Any effort briefly to characterize <lb/>so lively a field is bound to be fragmentary . The essay is an <lb/>attempt to look at the evolution of, and some current directions <lb/>in, research on a few clusters of central problems . The works <lb/>discussed have been selected as exemplary of the field ; no <lb/>attempt will be made to be exhaustive in covering the numerous <lb/>and quite diverse collection of historical demographic works which <lb/>have been published by American scholars. <lb/></front>
-    
-    <body>The study of demographic history in the United States has come a <lb/>long way since its emergence in the mid-1960s . It was really only <lb/>then that American scholars of European and United States history <lb/>first began to ask the kinds of questions that were of concern to <lb/>French and British demographic historians, and to apply the <lb/>techniques for demographic historical analysis that they had de-<lb/>veloped .(1) In the spring of 1968, the editors of Daedalus, a &apos; <lb/>journal published by the American Academy of Arts and Sciences, <lb/>published a collection of articles on the theme of &quot;Historical <lb/>Population Studies&quot; as a means of introducing the American scholarly <lb/>community to this relatively new body of research . Only about half <lb/>of the authors represented in the collection were from the United <lb/>States, and it is fair to say that none of their studies could <lb/>truly be characterized as demographic history . These largely ten-<lb/>tative and exploratory essays represented rather a first attempt <lb/>to define some problem areas and to carve out a place for de-<lb/>mographic study in the emergent field of social history .(2) From <lb/>this modest and recent beginning, the study of demographic history <lb/>in the United States has expanded dramatically .(3) Any effort brief-<lb/>ly to characterize so lively a field is bound to be fragmentary . The <lb/>essay which follows is an attempt to look at the evolution of, and <lb/>some current directions in, research on a few clusters of central <lb/>problems . The works discussed have been selected as exemplary of the <lb/>field ; no attempt will be made to be exhaustive in covering the <lb/>numerous and quite diverse collection of historical demographic <lb/>works which have been published by American scholars. <lb/>The methods of historical demography were first applied in the United <lb/>States to an analysis of the immigrant British population of colonial <lb/></body>
-    
-    <front>+ Address all communications to : Mary Jo Maynes, Department of <lb/>History, University Of Minnesota, Minneapolis, MN S5455 USA <lb/></front>
+
+			<body>The study of demographic history in the United States has come a <lb/>long way since its emergence in the mid-1960s . It was really only <lb/>then that American scholars of European and United States history <lb/>first began to ask the kinds of questions that were of concern to <lb/>French and British demographic historians, and to apply the <lb/>techniques for demographic historical analysis that they had de-<lb/>veloped .(1) In the spring of 1968, the editors of Daedalus, a &apos; <lb/>journal published by the American Academy of Arts and Sciences, <lb/>published a collection of articles on the theme of &quot;Historical <lb/>Population Studies&quot; as a means of introducing the American scholarly <lb/>community to this relatively new body of research . Only about half <lb/>of the authors represented in the collection were from the United <lb/>States, and it is fair to say that none of their studies could <lb/>truly be characterized as demographic history . These largely ten-<lb/>tative and exploratory essays represented rather a first attempt <lb/>to define some problem areas and to carve out a place for de-<lb/>mographic study in the emergent field of social history .(2) From <lb/>this modest and recent beginning, the study of demographic history <lb/>in the United States has expanded dramatically .(3) Any effort brief-<lb/>ly to characterize so lively a field is bound to be fragmentary . The <lb/>essay which follows is an attempt to look at the evolution of, and <lb/>some current directions in, research on a few clusters of central <lb/>problems . The works discussed have been selected as exemplary of the <lb/>field ; no attempt will be made to be exhaustive in covering the <lb/>numerous and quite diverse collection of historical demographic <lb/>works which have been published by American scholars. <lb/>The methods of historical demography were first applied in the United <lb/>States to an analysis of the immigrant British population of colonial <lb/></body>
+
+			<front>+ Address all communications to : Mary Jo Maynes, Department of <lb/>History, University Of Minnesota, Minneapolis, MN S5455 USA <lb/></front>
 
 			<page>-4 -<lb/></page>
 
@@ -89,9 +88,9 @@
 
 			<page>-11 -<lb/></page>
 
-			<div type="acknowledgment">ACKNOWLEDGMENT <lb/>The author wishes to thank Cheryll Cody, Mike Frisch, Harvey Graff, <lb/>Dean May, Rus Menard, John Modell and Henry Williams for their help <lb/>in informing me about historical demographic projects in which they <lb/>are currently involved and about their areas of research. <lb/></div>
-    
-    <listBibl>FOOTNOTES <lb/>1 It should be noted at the outset that the essay will discuss <lb/>demographic historical work being done in the United States and <lb/>will exclude Canadian research . At times, the distinction becomes <lb/>arbitrary, but it is the case that the historiographic traditions <lb/>of the two North American nations are somewhat divergent, and a <lb/>discussion of Canadian achievements in historical demography would <lb/>require a separate treatment . As for the U .S . origins of demo-<lb/>graphic historical study, Michael Gordon, editor of two volumes of <lb/>articles on American family history, both entitled The American <lb/>Family in Social Historical Perspective (New York, 1973 1 and 1978 2 ), <lb/>claims in the introduction to the second edition that it was the <lb/>U .S . publication of Peter Laslett&apos;s The World We Have Lost, in <lb/>1965, that inspired many of the subsequent U .S . community studies <lb/>employing demographic historical techniques . Kenneth Lockridge, <lb/>one of the American pioneers in the field, recalls that it was <lb/>the work of Pierre Goubert which inspired his own . See K . Lock-<lb/>ridge, &quot;Historical Demography&quot;, in C .F . Delzell, ed ., The Future <lb/>of History (Nashville, Tenn ., 1977). <lb/>2 For a description in German of simultaneous developments in the <lb/>broader area of social history in the United States, see J. <lb/>Modell, &quot;Die &apos;Neue Sozialgeschichte&apos; in Amerika&quot;, Geschichte and <lb/>Gesellschaft 1 (1975), 155-170. <lb/>3 A recent bibliography published under the auspices of the Journal <lb/>of Family History, G . Soliday&apos;s History of the Family and Kin-<lb/>ship : A Select International Bibliography (Millwood, N .Y ., 1980) <lb/>gives some indication of the extent of American contribution to <lb/>historical demographic research. <lb/>4 The demographic history of Native American people, it should be <lb/>noted, has been of less concern to historians, and only recently <lb/>has substantial attention begun to be paid to it . For a recent <lb/>. <lb/>bibliography, see H . Dobyns, Native American Historical Demography: <lb/>A Critical Bibliography (Bloomington, Ind ., 1976). <lb/>5 &quot;Notes on Life in the Plymouth Colony&quot;, William and Mary Quarterly <lb/>22 (1965), 264-286 ; &quot;Families in Colonial Bristol, Rhode Island: <lb/>An Exercise in Historical Demography&quot;, William and Mary Quarterly <lb/>25 (1968), 40-57 ; A Little Commonwealth : Family Life in the <lb/>Plymouth Colony (Oxford, 1970). <lb/>6 &quot;The Population of Dedham, Massachusetts, 1636-1736&quot;, Economic <lb/>History Review 19 (1966), 318-344 ; A New England Town : The First <lb/>Hundred Years (New York, 1970). <lb/>7 &quot;Family Structure in Seventeenth-Century Andover, Massachusetts &quot; , <lb/>William and Mary Quarterly 23 (1966), 234-256 ; Four Generations: <lb/>Population, Land and Family in Colonial Andover, Massachusetts <lb/>(Ithaca, N .Y ., 1970) . <lb/></listBibl>
+			<div type="acknowledgement">ACKNOWLEDGMENT <lb/>The author wishes to thank Cheryll Cody, Mike Frisch, Harvey Graff, <lb/>Dean May, Rus Menard, John Modell and Henry Williams for their help <lb/>in informing me about historical demographic projects in which they <lb/>are currently involved and about their areas of research. <lb/></div>
+
+			<listBibl>FOOTNOTES <lb/>1 It should be noted at the outset that the essay will discuss <lb/>demographic historical work being done in the United States and <lb/>will exclude Canadian research . At times, the distinction becomes <lb/>arbitrary, but it is the case that the historiographic traditions <lb/>of the two North American nations are somewhat divergent, and a <lb/>discussion of Canadian achievements in historical demography would <lb/>require a separate treatment . As for the U .S . origins of demo-<lb/>graphic historical study, Michael Gordon, editor of two volumes of <lb/>articles on American family history, both entitled The American <lb/>Family in Social Historical Perspective (New York, 1973 1 and 1978 2 ), <lb/>claims in the introduction to the second edition that it was the <lb/>U .S . publication of Peter Laslett&apos;s The World We Have Lost, in <lb/>1965, that inspired many of the subsequent U .S . community studies <lb/>employing demographic historical techniques . Kenneth Lockridge, <lb/>one of the American pioneers in the field, recalls that it was <lb/>the work of Pierre Goubert which inspired his own . See K . Lock-<lb/>ridge, &quot;Historical Demography&quot;, in C .F . Delzell, ed ., The Future <lb/>of History (Nashville, Tenn ., 1977). <lb/>2 For a description in German of simultaneous developments in the <lb/>broader area of social history in the United States, see J. <lb/>Modell, &quot;Die &apos;Neue Sozialgeschichte&apos; in Amerika&quot;, Geschichte and <lb/>Gesellschaft 1 (1975), 155-170. <lb/>3 A recent bibliography published under the auspices of the Journal <lb/>of Family History, G . Soliday&apos;s History of the Family and Kin-<lb/>ship : A Select International Bibliography (Millwood, N .Y ., 1980) <lb/>gives some indication of the extent of American contribution to <lb/>historical demographic research. <lb/>4 The demographic history of Native American people, it should be <lb/>noted, has been of less concern to historians, and only recently <lb/>has substantial attention begun to be paid to it . For a recent <lb/>. <lb/>bibliography, see H . Dobyns, Native American Historical Demography: <lb/>A Critical Bibliography (Bloomington, Ind ., 1976). <lb/>5 &quot;Notes on Life in the Plymouth Colony&quot;, William and Mary Quarterly <lb/>22 (1965), 264-286 ; &quot;Families in Colonial Bristol, Rhode Island: <lb/>An Exercise in Historical Demography&quot;, William and Mary Quarterly <lb/>25 (1968), 40-57 ; A Little Commonwealth : Family Life in the <lb/>Plymouth Colony (Oxford, 1970). <lb/>6 &quot;The Population of Dedham, Massachusetts, 1636-1736&quot;, Economic <lb/>History Review 19 (1966), 318-344 ; A New England Town : The First <lb/>Hundred Years (New York, 1970). <lb/>7 &quot;Family Structure in Seventeenth-Century Andover, Massachusetts &quot; , <lb/>William and Mary Quarterly 23 (1966), 234-256 ; Four Generations: <lb/>Population, Land and Family in Colonial Andover, Massachusetts <lb/>(Ithaca, N .Y ., 1970) . <lb/></listBibl>
 
 			<page>-12 -<lb/></page>
 

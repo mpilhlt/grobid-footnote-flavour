@@ -1,50 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pdf-tei-editor.panya.de/api/files/872ab" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/grobid.training.segmentation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title level="a">Unknown Title</title>
-      </titleStmt>
-      <editionStmt>
-        <edition>
-          <date when="2025-09-16T20:34:08.656688Z">16.09.2025 20:34:08</date>
-          <title>grobid.training.segmentation [article/dh-law-footnotes]</title>
-          <idno type="fileref">10.26321__s.marino.01.2025.06</idno>
-        </edition>
-      </editionStmt>
-      <publicationStmt>
-        <publisher/>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-        </availability>
-        <date type="publication"/>
-        <idno type="DOI">10.26321/s.marino.01.2025.06</idno>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl>10.26321/s.marino.01.2025.06</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <appInfo>
-        <application version="1.0" ident="pdf-tei-editor" type="editor">
-          <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
-        </application>
-        <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-09-16T20:34:08.656688Z" type="extractor">
-          <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
-          <label type="revision">0707645</label>
-          <label type="flavor">article/dh-law-footnotes</label>
-          <label type="variant-id">grobid.training.segmentation</label>
-          <ref target="https://github.com/kermitt2/grobid"/>
-        </application>
-      </appInfo>
-    </encodingDesc>
-    <revisionDesc>
-      <change when="2025-09-16T20:34:08.656688Z" status="draft">
-        <desc>Generated with createTraining API</desc>
-      </change>
-    </revisionDesc>
-  </teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title level="a">Cross-Border Private Enforcement of EU Competition Law: In Quest of Localization</title>
+      <author>
+        <persName>
+          <forename>Silvia</forename>
+          <surname>Marino</surname>
+        </persName>
+      </author>
+      <respStmt>
+        <persName xml:id="cboulanger">Christian Boulanger</persName>
+        <resp>Annotator</resp>
+      </respStmt>
+      <respStmt>
+        <persName xml:id="lfoppiano">Luca Foppiano</persName>
+        <resp>Annotator</resp>
+      </respStmt>      
+    </titleStmt>
+    <editionStmt>
+      <edition>
+        <date when="2026-01-16T06:40:35.778Z">16.1.2026 07:40:35</date>
+        <title>GitHub Version</title>
+        <idno type="fileref">10.26321__s.marino.01.2025.06</idno>
+      </edition>
+    </editionStmt>
+    <publicationStmt>
+      <publisher/>
+      <availability>
+        <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+      </availability>
+      <date type="publication">2013</date>
+      <idno type="DOI">10.26321/s.marino.01.2025.06</idno>
+    </publicationStmt>
+    <sourceDesc>
+      <bibl>Marino, Silvia, Cross-Border Private Enforcement of EU Competition Law: In Quest of Localization, 10.26321/s.marino.01.2025.06</bibl>
+    </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+    <appInfo>
+      <application version="1.0" ident="pdf-tei-editor" type="editor">
+        <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
+      </application>
+      <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-09-16T20:34:08.656688Z" type="extractor">
+        <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+        <label type="revision">0707645</label>
+        <label type="flavor">article/dh-law-footnotes</label>
+        <label type="variant-id">grobid.training.segmentation</label>
+        <ref target="https://github.com/kermitt2/grobid"/>
+      </application>
+    </appInfo>
+  </encodingDesc>
+  <revisionDesc>
+    <change when="2025-09-16T20:34:08.656688Z" status="extraction">
+      <desc>Extraction</desc>
+    </change>
+    <change when="2026-01-16T06:43:03.572Z" status="published" who="#lfoppiano">
+      <desc>GitHub version</desc>
+    </change>
+  </revisionDesc>
+</teiHeader>
   <text xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
     <titlePage>Freedom, Security &amp; Justice: <lb/>European Legal Studies <lb/>Rivista giuridica di classe A <lb/>2025, n. 1 <lb/>DIRETTRICE <lb/>Angela Di Stasi <lb/>Ordinario di Diritto Internazionale e di Diritto dell&apos;Unione europea, Università di Salerno <lb/>Titolare della Cattedra Jean Monnet 2017-2020 (Commissione europea) <lb/>&quot;Judicial Protection of Fundamental Rights in the European Area of Freedom, Security and Justice&quot; <lb/>CONSIGLIO SCIENTIFICO <lb/>Giandonato Caggiano, Ordinario f.r. di Diritto dell&apos;Unione europea, Università Roma Tre <lb/>Sergio Maria Carbone, Professore Emerito, Università di Genova <lb/>Roberta Clerici, Ordinario f.r. di Diritto Internazionale privato, Università di Milano <lb/>Nigel Lowe, Professor Emeritus, University of Cardiff <lb/>Paolo Mengozzi, Professore Emerito, Università &quot;Alma Mater Studiorum&quot; di Bologna -già Avvocato generale presso la Corte di giustizia dell&apos;UE <lb/>Massimo Panebianco, Professore Emerito, Università di Salerno <lb/>Nicoletta Parisi, Ordinario f.r. di Diritto Internazionale, Università di Catania -già Componente ANAC <lb/>Guido Raimondi, già Presidente della Corte EDU -già Presidente di Sezione della Corte di Cassazione <lb/>Silvana Sciarra, Professore Emerito, Università di Firenze -Presidente Emerito della Corte Costituzionale <lb/>Giuseppe Tesauro, Professore f.r. di Diritto dell&apos;UE, Università di Napoli &quot;Federico II&quot; -Presidente Emerito della Corte Costituzionale † <lb/>Antonio Tizzano, Professore Emerito, Università di Roma &quot;La Sapienza&quot; -Vice Presidente Emerito della Corte di giustizia dell&apos;UE <lb/>Ennio Triggiani, Professore Emerito, Università di Bari <lb/>Ugo Villani, Professore Emerito, Università di Bari <lb/>COMITATO EDITORIALE <lb/>Maria Caterina Baruffi, Ordinario di Diritto Internazionale, Università di Bergamo <lb/>Alfonso-Luis Calvo Caravaca, Catedrático Jubilado de Derecho Internacional Privado, Universidad Carlos III de Madrid <lb/>Ida Caracciolo, Ordinario di Diritto Internazionale, Università della Campania -Giudice dell&apos;ITLOS <lb/>Pablo Antonio Fernández-Sánchez, Catedrático de Derecho Internacional, Universidad de Sevilla <lb/>Inge Govaere, Director of the European Legal Studies Department, College of Europe, Bruges <lb/>Paola Mori, Ordinario f.r. di Diritto dell&apos;Unione europea, Università &quot;Magna Graecia&quot; di Catanzaro <lb/>Lina Panella, Ordinario f.r. di Diritto Internazionale, Università di Messina <lb/>Lucia Serena Rossi, Ordinario di Diritto dell&apos;UE, Università &quot;Alma Mater Studiorum&quot; di Bologna -già Giudice della Corte di giustizia dell&apos;UE <lb/>COMITATO DEI REFEREES <lb/>Bruno Barel, Associato f.r. di Diritto dell&apos;Unione europea, Università di Padova <lb/>Marco Benvenuti, Ordinario di Istituzioni di Diritto pubblico, Università di Roma &quot;La Sapienza&quot; <lb/>Francesco Buonomenna, Associato di Diritto dell&apos;Unione europea, Università di Salerno <lb/>Raffaele Cadin, Ordinario di Diritto Internazionale, Università di Roma &quot;La Sapienza&quot; <lb/>Ruggiero Cafari Panico, Ordinario f.r. di Diritto dell&apos;Unione europea, Università di Milano <lb/>Federico Casolari, Ordinario di Diritto dell&apos;Unione europea, Università &quot;Alma Mater Studiorum&quot; di Bologna <lb/>Luisa Cassetti, Ordinario di Istituzioni di Diritto Pubblico, Università di Perugia <lb/>Giovanni Cellamare, Ordinario f.r. di Diritto Internazionale, Università di Bari <lb/>Giuseppe D&apos;Angelo, Ordinario di Diritto ecclesiastico e canonico, Università di Salerno <lb/>Sara De Vido, Ordinario di Diritto Internazionale, Università Ca&apos; Foscari Venezia <lb/>Marcello Di Filippo, Ordinario di Diritto Internazionale, Università di Pisa <lb/>Rosario Espinosa Calabuig, Catedrática de Derecho Internacional Privado, Universitat de València <lb/>Caterina Fratea, Associato di Diritto dell&apos;Unione europea, Università di Verona <lb/>Ana C. Gallego Hernández, Profesora Ayudante de Derecho Internacional Público y Relaciones Internacionales, Universidad de Sevilla <lb/>Pietro Gargiulo, Ordinario f.r. di Diritto Internazionale, Università di Teramo <lb/>Francesca Graziani, Associato di Diritto Internazionale, Università della Campania &quot;Luigi Vanvitelli&quot; <lb/>Giancarlo Guarino, Ordinario f.r. di Diritto Internazionale, Università di Napoli &quot;Federico II&quot; <lb/>Elspeth Guild, Associate Senior Research Fellow, CEPS <lb/>Victor Luis Gutiérrez Castillo, Profesor de Derecho Internacional Público, Universidad de Jaén <lb/>Ivan Ingravallo, Ordinario di Diritto Internazionale, Università di Bari <lb/>Paola Ivaldi, Ordinario di Diritto Internazionale, Università di Genova <lb/>Luigi Kalb, Ordinario di Procedura Penale, Università di Salerno <lb/>Luisa Marin, Ricercatore di Diritto dell&apos;UE, Università dell&apos;Insubria <lb/>Simone Marinai, Associato di Diritto dell&apos;Unione europea, Università di Pisa <lb/>Fabrizio Marongiu Buonaiuti, Ordinario di Diritto Internazionale, Università di Macerata <lb/>Rostane Medhi, Professeur de Droit Public, Université d&apos;Aix-Marseille <lb/>Michele Messina, Ordinario di Diritto dell&apos;Unione europea, Università di Messina <lb/>Stefano Montaldo, Associato di Diritto dell&apos;Unione europea, Università di Torino <lb/>Violeta Moreno-Lax, Senior Lecturer in Law, Queen Mary University of London <lb/>Claudia Morviducci, Professore Senior di Diritto dell&apos;Unione europea, Università Roma Tre <lb/>Michele Nino, Ordinario di Diritto Internazionale, Università di Salerno <lb/>Criseide Novi, Associato di Diritto Internazionale, Università di Foggia <lb/>Anna Oriolo, Associato di Diritto Internazionale, Università di Salerno <lb/>Leonardo Pasquali, Ordinario di Diritto internazionale, Università di Pisa <lb/>Piero Pennetta, Ordinario f.r. di Diritto Internazionale, Università di Salerno <lb/>Francesca Perrini, Associato di Diritto Internazionale, Università di Messina <lb/>Gisella Pignataro, Associato di Diritto privato comparato, Università di Salerno <lb/>Emanuela Pistoia, Ordinario di Diritto dell&apos;Unione europea, Università di Teramo <lb/>Anna Pitrone, Associato di Diritto dell&apos;Unione europea, Università di Messina <lb/>Concetta Maria Pontecorvo, Ordinario di Diritto Internazionale, Università di Napoli &quot;Federico II&quot; <lb/>Pietro Pustorino, Ordinario di Diritto Internazionale, Università LUISS di Roma <lb/>Santiago Ripol Carulla, Catedrático de Derecho internacional público, Universitat Pompeu Fabra Barcelona <lb/>Angela Maria Romito, Associato di Diritto dell&apos;Unione europea, Università di Bari <lb/>Gianpaolo Maria Ruotolo, Ordinario di Diritto Internazionale, Università di Foggia <lb/>Teresa Russo, Associato di Diritto dell&apos;Unione europea, Università di Salerno <lb/>Alessandra A. Souza Silveira, Diretora do Centro de Estudos em Direito da UE, Universidad do Minho <lb/>Ángel Tinoco Pastrana, Profesor de Derecho Procesal, Universidad de Sevilla <lb/>Sara Tonolo, Ordinario di Diritto Internazionale, Università degli Studi di Padova <lb/>Chiara Enrica Tuo, Ordinario di Diritto dell&apos;Unione europea, Università di Genova <lb/>Talitha Vassalli di Dachenhausen, Ordinario f.r. di Diritto Internazionale, Università di Napoli &quot;Federico II&quot; <lb/>Valentina Zambrano, Associato di Diritto Internazionale, Università di Roma &quot;La Sapienza&quot; <lb/>Alessandra Zanobetti, Ordinario f.r. di Diritto Internazionale, Università &quot;Alma Mater Studiorum&quot; di Bologna <lb/>COMITATO DI REDAZIONE <lb/>Angela Festa, Ricercatore di Diritto dell&apos;Unione europea, Università della Campania &quot;Luigi Vanvitelli&quot; <lb/>Anna Iermano, Associato di Diritto Internazionale, Università di Salerno <lb/>Daniela Marrani, Associato di Diritto Internazionale, Università di Salerno <lb/>Rossana Palladino (Coordinatore), Associato di Diritto dell&apos;Unione europea, Università di Salerno <lb/>Revisione linguistica degli abstracts a cura di <lb/>Francesco Campofreda, Dottore di ricerca in Diritto Internazionale, Università di Salerno <lb/>Rivista quadrimestrale on line &quot;Freedom, Security &amp; Justice: European Legal Studies&quot; www.fsjeurostudies.eu <lb/>Editoriale Scientifica, Via San Biagio dei Librai, 39 -Napoli <lb/>CODICE ISSN 2532-2079 -Registrazione presso il Tribunale di Nocera Inferiore n° 3 del 3 marzo 2017 <lb/>Indice-Sommario <lb/>2025, n. 1 <lb/>Editoriale <lb/>Le transizioni dell&apos;Occidente europeo: dalla traslatio imperii alla pace di Westphalia e oltre <lb/>Massimo Panebianco <lb/>p. 1 <lb/>Saggi e Articoli <lb/>Possibili sviluppi in tema di contrasto alle mutilazioni genitali femminili: la recente direttiva UE <lb/>2024/1385 e gli obblighi per il legislatore italiano <lb/>Silvia Angioi, Annachiara Rotondo <lb/>Il nuovo Regolamento (UE) 2024/3015 tra i più recenti strumenti della comunità internazionale <lb/>contro il lavoro forzato: vecchie soluzioni per vecchi schemi <lb/>Silvia Cantoni <lb/>La mano invisibile dell&apos;intelligenza artificiale e il principio di trasparenza nei rapporti B2C: la <lb/>tutela del consumatore nel mercato unico digitale <lb/>Francesco Deana <lb/>Does the EU Corporate Sustainability Due Diligence Directive protect indigenous peoples&apos; <lb/>right to food? Assessment and future prospects <lb/>Anna Facchinetti <lb/>Cross border private enforcement of EU competition law: in quest of localisation <lb/>Silvia Marino <lb/>I valori dell&apos;Unione europea e la loro tutela giurisdizionale <lb/>Criseide Novi <lb/>Alcune considerazioni in merito alla base giuridica della nuova direttiva sui lavori resi tramite <lb/>piattaforme digitali <lb/>Alfredo Rizzo <lb/>Commenti e Note <lb/>Verein Klimaseniorinnen and others v. Switzerland between human rights protection and <lb/>human rights justification <lb/>Nicolò Paolo Alessi <lb/>p. 10 <lb/>p. 45 <lb/>p. 66 <lb/>p. 86 <lb/>p. 111 <lb/>p. 136 <lb/>p. 189 <lb/>p. 210 <lb/>La libertà di stampa e il contenuto dell&apos;ordine pubblico quale limite alla circolazione delle <lb/>sentenze nello spazio giudiziario europeo <lb/>Roberto Dante Cogliandro <lb/>Contrasto alla povertà e cooperazione internazionale nell&apos;area euro-mediterranea <lb/>Giuseppe Emanuele Corsaro <lb/>Illeciti commessi dall&apos;intelligenza artificiale: aspetti di giurisdizione e legge applicabile nel <lb/>quadro normativo dell&apos;Unione europea <lb/>Curzio Fossati <lb/>L&apos;integrazione differenziata nello spazio Schengen: profili &quot;costituzionali&quot; di legittimità <lb/>democratica <lb/>Maria Patrin <lb/>p. 237 <lb/>p. 255 <lb/>p. 281 <lb/>p. 304 <lb/></titlePage>
     
