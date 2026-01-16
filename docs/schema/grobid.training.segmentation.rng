@@ -377,7 +377,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
         <attribute name="type">
           <choice>
             <value>toc</value>
-            <value>acknowledegment</value>
+            <value>acknowledgement</value>
             <value>availability</value>
             <value>funding</value>
             <value>annex</value>
