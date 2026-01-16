@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pdf-tei-editor.panya.de/api/files/872ab" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/grobid.training.segmentation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
   <fileDesc>
@@ -24,7 +23,7 @@
     <editionStmt>
       <edition>
         <date when="2025-09-23T10:55:28.776Z">23.9.2025 12:55:28</date>
-        <title>Corrections</title>
+        <title>GitHub version</title>
         <idno type="fileref">10.26321__a.facchinetti.01.2025.05</idno>
       </edition>
     </editionStmt>
@@ -37,7 +36,7 @@
       <idno type="DOI">10.26321/a.facchinetti.01.2025.05</idno>
     </publicationStmt>
     <sourceDesc>
-      <bibl>. (). Unknown Title. , (), . DOI: 10.26321/a.facchinetti.01.2025.05</bibl>
+      <bibl>10.26321/a.facchinetti.01.2025.05</bibl>
     </sourceDesc>
   </fileDesc>
   <encodingDesc>
@@ -60,6 +59,9 @@
     </change>
     <change when="2025-10-17T04:18:45.944Z" status="draft" who="#lfoppiano">
       <desc>Corrections</desc>
+    </change>
+    <change when="2026-01-13T20:08:11.866Z" status="published" who="#cboulanger">
+      <desc>GitHub version with xml schema header</desc>
     </change>
   </revisionDesc>
 </teiHeader>
@@ -289,4 +291,5 @@
 
 
 	</text>
+  
   </TEI>

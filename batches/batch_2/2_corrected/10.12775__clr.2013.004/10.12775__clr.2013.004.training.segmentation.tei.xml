@@ -1,56 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pdf-tei-editor.panya.de/api/files/872ab" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/grobid.training.segmentation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title level="a">Das Problem des Schadensersatzes für den sog. vertanen Urlaub in der Rechtsprechung der polnischen Gerichte</title>
-        <author>
-          <persName>
-            <forename>Mirosław</forename>
-            <surname>Bączyk</surname>
-          </persName>
-        </author>
-      </titleStmt>
-      <editionStmt>
-        <edition>
-          <date when="2025-09-16T17:55:25.056355Z">16.09.2025 17:55:25</date>
-          <title>grobid.training.segmentation [article/dh-law-footnotes]</title>
-          <idno type="fileref">10.12775__clr.2013.004</idno>
-        </edition>
-      </editionStmt>
-      <publicationStmt>
-        <publisher>Uniwersytet Mikolaja Kopernika/Nicolaus Copernicus University</publisher>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-        </availability>
-        <date type="publication">2013</date>
-        <idno type="DOI">10.12775/clr.2013.004</idno>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl>Mirosław Bączyk. (2013). Das Problem des Schadensersatzes für den sog. vertanen Urlaub in der Rechtsprechung der polnischen Gerichte. Comparative Law Review, 15(0), 73. DOI: 10.12775/clr.2013.004</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <appInfo>
-        <application version="1.0" ident="pdf-tei-editor" type="editor">
-          <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
-        </application>
-        <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-09-16T17:55:25.056355Z" type="extractor">
-          <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
-          <label type="revision">0707645</label>
-          <label type="flavor">article/dh-law-footnotes</label>
-          <label type="variant-id">grobid.training.segmentation</label>
-          <ref target="https://github.com/kermitt2/grobid"/>
-        </application>
-      </appInfo>
-    </encodingDesc>
-    <revisionDesc>
-      <change when="2025-09-16T17:55:25.056355Z" status="draft">
-        <desc>Generated with createTraining API</desc>
-      </change>
-    </revisionDesc>
-  </teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title level="a">Das Problem des Schadensersatzes für den sog. vertanen Urlaub in der Rechtsprechung der polnischen Gerichte</title>
+      <author>
+        <persName>
+          <forename>Mirosław</forename>
+          <surname>Bączyk</surname>
+        </persName>
+      </author>
+      <respStmt>
+        <persName xml:id="cboulanger">Christian Boulanger</persName>
+        <resp>Annotator</resp>
+      </respStmt>
+    </titleStmt>
+    <editionStmt>
+      <edition>
+        <date when="2025-09-16T17:55:25.056355Z">16.09.2025 17:55:25</date>
+        <title>GitHub Version</title>
+        <idno type="fileref">10.12775__clr.2013.004</idno>
+      </edition>
+    </editionStmt>
+    <publicationStmt>
+      <publisher>Uniwersytet Mikolaja Kopernika/Nicolaus Copernicus University</publisher>
+      <availability>
+        <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+      </availability>
+      <date type="publication">2013</date>
+      <idno type="DOI">10.12775/clr.2013.004</idno>
+    </publicationStmt>
+    <sourceDesc>
+      <bibl>Mirosław Bączyk. (2013). Das Problem des Schadensersatzes für den sog. vertanen Urlaub in der Rechtsprechung der polnischen Gerichte. Comparative Law Review, 15(0), 73. DOI: 10.12775/clr.2013.004</bibl>
+    </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+    <appInfo>
+      <application version="1.0" ident="pdf-tei-editor" type="editor">
+        <ref target="https://github.com/mpilhlt/pdf-tei-editor"/>
+      </application>
+      <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-09-16T17:55:25.056355Z" type="extractor">
+        <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+        <label type="revision">0707645</label>
+        <label type="flavor">article/dh-law-footnotes</label>
+        <label type="variant-id">grobid.training.segmentation</label>
+        <ref target="https://github.com/kermitt2/grobid"/>
+      </application>
+    </appInfo>
+  </encodingDesc>
+  <revisionDesc>
+    <change when="2025-09-16T17:55:25.056355Z" status="draft">
+      <desc>Generated with createTraining API</desc>
+    </change>
+    <change when="2026-01-13T19:56:09.634Z" status="published" who="#cboulanger">
+      <desc>Updated to GitHub version</desc>
+    </change>
+  </revisionDesc>
+</teiHeader>
   <text xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
 			<front>Comparative Law Review <lb/>15 2013 <lb/>Nicolaus Copernicus University <lb/>http://dx.doi.org/10.12775/CLR.2013.004 <lb/>Mirosław Bączyk  <lb/>DAS PROBLEM DES SCHADENERSATZES FÜR DEN <lb/>SOG. VERTANEN URLAUB IN DER RECHTSPRECHUNG <lb/>DER POLNISCHEN GERICHTE <lb/>Abstract <lb/>Der Tourismus ist heutzutage nicht nur ein wichtiger Bereich der gesellschaftlichen Aktivität, <lb/>aber auch ein wesentlicher Wirtschaftszweig, der zur Entwicklung anderer Branchen, (z.B. der <lb/>Transport-, Bank-, Gastronomie-, Hotelbranche und vieler anderen) beiträgt. In Europa und in Polen <lb/>auch erfolgte ein dynamische Entwicklung der touristischen Dienstleistungen. In der letztem Zeit <lb/>steigt die Zahl der Schadensersatzprozesse gegen Reisebüros (Reiseagenturen). In dem Artikel <lb/>konzentriert sich der Verfasser auf die Frage, ob im polnischen Recht es zulässig wäre, durch einen <lb/>Touristen (Reisenden) de lege lata Schmerzensgeld für den immateriellen Schaden (d.h. für den sog. <lb/>&quot;vertanen Urlaub&quot;) geltend zu machen. Ein besonderer Schaden besteht darin, dass das Reisebüro -<lb/>durch die Nicht-oder Schlechterfüllung des Reisevetrages -einen solchen Verlauf des Urlaubs oder <lb/>andere Form der Erholung des Kunden, die seinen berechtigten Erwartungen entsprechen würde, <lb/>nicht gewährleistet hat. <lb/>Die Rechtsprechung der ordentlichen Gerichte und des Obersten Gerichts suchte seit langem <lb/>nach einer entsprechenden Rechtsgrundlage der Haftung der Reisebüros für den sog. &quot;vertanen <lb/>Urlaub&quot;. Der Verfasser erklärt, dass der Beschluss des Obersten Gerichts vom 19. November 2010 <lb/>von wesentlicher Bedeutung in diesem Bereich ist. Das Oberste Gericht hat den Art. 11a des Gesetzes <lb/>vom 29. August 1997 als die Haftungsgrundlage der Reisebüros richtigerweise angenommen. Viele <lb/>wichtige praktische Probleme wären jedoch in der Zukunft zu klären (z.B. Voraussetzungen der <lb/>Schadenersatzhaftung, Beschränkungen der Haftung, die Höhe der zuerkannten Genugtuung für den <lb/>Reisende u.a.). <lb/>Keywords <lb/>vertaner Urlaub -Entschädigung -polnisches Recht <lb/></front>
     
@@ -185,4 +191,5 @@
 
 	</text>
 
-</TEI>
+
+  </TEI>

@@ -1,4 +1,5 @@
-<tei xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve">
+<?xml-model href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/grobid.training.segmentation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
   <fileDesc>
     <titleStmt>
@@ -10,25 +11,24 @@
         </persName>
       </author>
       <respStmt>
-        <persName xml:id="cb">Christian Boulanger</persName>
+        <persName xml:id="lfoppiano">Luca Foppiano</persName>
         <resp>Annotator</resp>
       </respStmt>
       <respStmt>
-        <persName xml:id="lf">Luca Foppiano</persName>
+        <persName xml:id="cboulanger">Christian Boulanger</persName>
         <resp>Annotator</resp>
       </respStmt>
     </titleStmt>
     <editionStmt>
       <edition>
-        <date when="2025-07-20T13:28:28.403Z">20.7.2025 15:28:28</date>
-        <title>Grobid document segmentation corrected</title>
+        <date when="2026-01-07T11:41:27.242Z">7.1.2026 12:41:27</date>
+        <title>GitHub Version</title>
+        <idno type="fileref">10.25364__01.10$3A$2023.2.1</idno>
       </edition>
     </editionStmt>
     <publicationStmt>
       <publisher>Universitätsbibliothek Graz</publisher>
-      <availability>
-        <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-      </availability>
+      <availability/>
       <date type="publication">2023</date>
       <idno type="DOI">10.25364/01.10:2023.2.1</idno>
     </publicationStmt>
@@ -38,15 +38,15 @@
   </fileDesc>
   <encodingDesc>
     <appInfo>
-      <application version="1.0" ident="grobid">
-        <label>https://grobid.readthedocs.io</label>
+      <application version="1.0" ident="pdf-tei-editor" type="editor">
+        <label>PDF-TEI-Editor</label>
       </application>
-      <application version="1.0" ident="pdf-tei-editor">
-        <label>https://github.com/mpilhlt/pdf-tei-editor</label>
-      </application>
-      <application version="1.0" ident="model">
-        <label>lfoppiano/grobid:latest-develop</label>
-        <desc>https://hub.docker.com/layers/lfoppiano/grobid/latest-develop/images/sha256-735fa2c8facb6f95adef5bf344f7223c2e20aadc9c048f624b83b19d3fbef07b</desc>
+      <application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-07T14:15:00.573667Z" type="extractor">
+        <label>A machine learning software for extracting information from scholarly documents</label>
+        <desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+        <label type="revision">e13aa19</label>
+        <label type="flavor">article/dh-law-footnotes</label>
+        <label type="variant-id">grobid.training.segmentation</label>
       </application>
     </appInfo>
   </encodingDesc>
@@ -54,11 +54,17 @@
     <change when="2025-07-12">
       <desc>Extracted 2025-07-12 15:11:19</desc>
     </change>
-    <change when="2025-07-20T16:41:35.708Z" status="draft" who="#lf">
+    <change when="2025-07-20T16:41:35.708Z" status="draft" who="#lfoppiano">
       <desc>First annotation</desc>
     </change>
-    <change when="2025-07-27T16:42:42.613Z" status="draft" who="#cb">
+    <change when="2025-07-27T16:42:42.613Z" status="draft" who="#cboulanger">
       <desc>Corrections + mixed-reference annotation</desc>
+    </change>
+    <change when="2025-07-15" status="published" who="#lfoppiano">
+      <desc>Published on GitHub</desc>
+    </change>
+    <change when="2026-01-07T11:43:49.666Z" status="published" who="#cboulanger">
+      <desc>Updated on GitHub</desc>
     </change>
   </revisionDesc>
 </teiHeader>
@@ -343,4 +349,5 @@
 		<listBibl>227 Vgl Luhmann, Ausdifferenzierung des Rechts (1999), 146, <lb/>228 Art 1 GRC. </listBibl>
 
 	</text>
-</tei>
+
+  </TEI>
