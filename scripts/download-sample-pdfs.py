@@ -9,6 +9,7 @@ This script processes the oa_law_review_samples_with_footnotes.csv file by:
 """
 
 import csv
+import json
 import os
 import sys
 from pathlib import Path
@@ -18,12 +19,15 @@ from urllib.parse import quote
 import time
 from collections import defaultdict
 
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 # Configuration
 CSV_FILE = "data/oa_law_review_samples_with_footnotes.csv"
 PDF_FOLDER = "pdf"
-PDFS_PER_JOURNAL = 2
-NUM_JOURNALS = 5
-TOTAL_PDFS = PDFS_PER_JOURNAL * NUM_JOURNALS
+TOTAL_PDFS = 10
 
 
 def ensure_pdf_folder():
@@ -76,25 +80,6 @@ def get_journal_download_stats(rows):
     return journal_stats
 
 
-def get_sorted_journals_by_priority(rows):
-    """
-    Get all journals sorted by download priority.
-    Prioritize journals without any downloads.
-
-    Returns:
-        List of journal names sorted by priority (fewest downloads first)
-    """
-    journal_stats = get_journal_download_stats(rows)
-
-    # Sort journals by number of downloads (ascending), then alphabetically
-    sorted_journals = sorted(
-        journal_stats.items(),
-        key=lambda x: (x[1]['downloaded'], x[0])
-    )
-
-    return [journal for journal, stats in sorted_journals]
-
-
 def encode_doi_for_filename(doi):
     """
     Encode a DOI for use as a filename.
@@ -125,6 +110,71 @@ def encode_doi_for_filename(doi):
     doi = quote(doi, safe='_-.')
 
     return doi
+
+
+def check_open_access(doi):
+    """
+    Check if a DOI is Open Access with a CC-BY license using the Unpaywall API.
+
+    Args:
+        doi: The DOI string (with or without prefix)
+
+    Returns:
+        True if the article is Open Access with CC-BY license, False otherwise
+    """
+    # Get email from environment variable
+    email = os.environ.get('UNPAYWALL_EMAIL')
+    if not email:
+        print("ERROR: UNPAYWALL_EMAIL environment variable not set")
+        sys.exit(1)
+
+    # Remove DOI prefix if present
+    if doi.startswith('https://doi.org/'):
+        doi = doi[16:]
+    elif doi.startswith('http://doi.org/'):
+        doi = doi[15:]
+
+    api_url = f"https://api.unpaywall.org/v2/{doi}?email={email}"
+
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (compatible; ResearchBot/1.0)'
+        }
+        request = Request(api_url, headers=headers)
+
+        with urlopen(request, timeout=10) as response:
+            data = json.loads(response.read().decode('utf-8'))
+
+            # Check if article is OA
+            is_oa = data.get('is_oa', False)
+            if not is_oa:
+                print(f"  ✗ Not Open Access according to Unpaywall")
+                return False
+
+            # Check oa_locations for CC-BY license
+            oa_locations = data.get('oa_locations', [])
+            for location in oa_locations:
+                license_info = location.get('license')
+                if license_info:
+                    # Only accept if license is cc-by
+                    if license_info == 'cc-by':
+                        return True
+                    else:
+                        print(f"  ✗ License is '{license_info}', not 'cc-by'")
+                        return False
+
+            # No license info found in any location, accept as OA
+            return True
+
+    except HTTPError as e:
+        print(f"  WARNING: Unpaywall API HTTP Error {e.code}: {e.reason}")
+        return True  # Assume OA if API fails
+    except URLError as e:
+        print(f"  WARNING: Unpaywall API URL Error: {e.reason}")
+        return True  # Assume OA if API fails
+    except Exception as e:
+        print(f"  WARNING: Unpaywall API Error: {str(e)}")
+        return True  # Assume OA if API fails
 
 
 def download_pdf(url, output_path, row_index):
@@ -177,16 +227,11 @@ def main():
     for journal, stats in sorted(journal_stats.items()):
         print(f"  {journal}: {stats['downloaded']}/{stats['total']} downloaded")
 
-    # Get all journals sorted by priority
-    journals_by_priority = get_sorted_journals_by_priority(rows)
-
     # Download PDFs
     downloads_successful = 0
     downloads_per_journal = defaultdict(int)
-    attempted_per_journal = defaultdict(int)
-    active_journals = set()
 
-    print(f"\nStarting downloads (target: {TOTAL_PDFS} PDFs, {PDFS_PER_JOURNAL} per journal)...")
+    print(f"\nStarting downloads (target: {TOTAL_PDFS} PDFs)...")
 
     # Keep trying until we have enough successful downloads or run out of PDFs
     for i, row in enumerate(rows):
@@ -195,36 +240,10 @@ def main():
 
         journal = row['journal']
 
-        # Skip if already downloaded or unavailable
+        # Skip if already downloaded, unavailable, or not Open Access
         download_status = row.get('downloaded', '').lower()
-        if download_status in ['yes', 'unavailable']:
+        if download_status in ['yes', 'unavailable', 'not_oa']:
             continue
-
-        # Dynamically determine if we should use this journal
-        # Add journals to active set as needed to reach our target
-        if journal not in active_journals:
-            # Check if we need more journals
-            if len(active_journals) < NUM_JOURNALS:
-                # Add this journal if it's in our priority list
-                if journal in journals_by_priority:
-                    active_journals.add(journal)
-            # If we have enough active journals but some haven't yielded enough downloads,
-            # we might need to add more
-            elif downloads_successful + (len(active_journals) * PDFS_PER_JOURNAL - sum(downloads_per_journal.values())) < TOTAL_PDFS:
-                # We're running short, add more journals
-                if journal in journals_by_priority and journal not in active_journals:
-                    active_journals.add(journal)
-                    print(f"\n  Adding journal to active set: {journal}")
-
-        # Skip if not in active journals
-        if journal not in active_journals:
-            continue
-
-        # Skip if we've already downloaded enough from this journal
-        if downloads_per_journal[journal] >= PDFS_PER_JOURNAL:
-            continue
-
-        attempted_per_journal[journal] += 1
 
         # Prepare filename using proper DOI encoding
         encoded_doi = encode_doi_for_filename(row['doi'])
@@ -233,6 +252,12 @@ def main():
 
         print(f"\n[{downloads_successful + 1}/{TOTAL_PDFS}] {journal}")
         print(f"  DOI: {row['doi']}")
+
+        # Check Open Access status via Unpaywall API
+        if not check_open_access(row['doi']):
+            row['downloaded'] = 'not_oa'
+            write_csv(CSV_FILE, rows, fieldnames)
+            continue
 
         # Download the PDF
         if download_pdf(row['oa_url'], output_path, i):
@@ -255,7 +280,6 @@ def main():
     print(f"\n{'='*60}")
     print(f"Download complete!")
     print(f"Successfully downloaded: {downloads_successful}/{TOTAL_PDFS} PDFs")
-    print(f"Active journals used: {len(active_journals)} - {sorted(active_journals)}")
     print(f"Downloads per journal: {dict(downloads_per_journal)}")
     print(f"PDFs saved to: {PDF_FOLDER}/")
     print(f"CSV updated: {CSV_FILE}")
