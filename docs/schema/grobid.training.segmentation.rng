@@ -35,6 +35,9 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
 
   <define name="fileDesc">
     <element name="fileDesc">
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
       <zeroOrMore>
         <choice>
           <ref name="editionStmt"/>
