@@ -217,13 +217,8 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
-  <!--
-    biblStruct definition is imported from shared fragment
-    to ensure consistency with canonical TEI structure
-    and avoid code duplication across schemas
-  -->
   <define name="biblStruct">
-    <externalRef href="biblStruct-fragment.rng"/>
+    <externalRef href="https://raw.githubusercontent.com/mpilhlt/grobid-footnote-flavour/refs/heads/main/docs/schema/TEI-biblStruct.rng"/>
   </define>
 
   <define name="encodingDesc">

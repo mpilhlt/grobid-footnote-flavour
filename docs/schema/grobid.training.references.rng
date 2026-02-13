@@ -183,8 +183,19 @@ to the beginning of your TEI document (after the XML declaration):
     <element name="sourceDesc">
       <zeroOrMore>
         <ref name="bibl"/>
+        <ref name="biblStruct"/>
       </zeroOrMore>
     </element>
+  </define>
+
+  <define name="bibl">
+    <element name="bibl">
+      <text/>
+    </element>
+  </define>
+
+  <define name="biblStruct">
+    <externalRef href="https://raw.githubusercontent.com/mpilhlt/grobid-footnote-flavour/refs/heads/main/docs/schema/TEI-biblStruct.rng"/>
   </define>
 
   <define name="bibl">
