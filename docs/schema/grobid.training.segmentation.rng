@@ -61,52 +61,6 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
-  <define name="title">
-    <element name="title">
-      <optional>
-        <attribute name="level"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-
-  <define name="author">
-    <element name="author">
-      <zeroOrMore>
-        <ref name="persName"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="persName">
-    <element name="persName">
-      <optional>
-        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
-      </optional>
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="forename"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="surname"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="forename">
-    <element name="forename">
-      <text/>
-    </element>
-  </define>
-
-  <define name="surname">
-    <element name="surname">
-      <text/>
-    </element>
-  </define>
-
   <define name="respStmt">
     <element name="respStmt">
       <zeroOrMore>
@@ -132,40 +86,6 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
-  <define name="edition">
-    <element name="edition">
-      <zeroOrMore>
-        <choice>
-          <ref name="date"/>
-          <ref name="idno"/>
-          <ref name="title"/>
-          <ref name="note"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="date">
-    <element name="date">
-      <optional>
-        <attribute name="type"/>
-      </optional>
-      <optional>
-        <attribute name="when"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-
-  <define name="idno">
-    <element name="idno">
-      <optional>
-        <attribute name="type"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-
   <define name="publicationStmt">
     <element name="publicationStmt">
       <zeroOrMore>
@@ -175,20 +95,6 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
           <ref name="idno"/>
           <ref name="publisher"/>
         </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="publisher">
-    <element name="publisher">
-      <text/>
-    </element>
-  </define>
-
-  <define name="availability">
-    <element name="availability">
-      <zeroOrMore>
-        <ref name="licence"/>
       </zeroOrMore>
     </element>
   </define>
@@ -215,10 +121,6 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     <element name="bibl">
       <text/>
     </element>
-  </define>
-
-  <define name="biblStruct">
-    <externalRef href="https://raw.githubusercontent.com/mpilhlt/grobid-footnote-flavour/refs/heads/main/docs/schema/TEI-biblStruct.rng"/>
   </define>
 
   <define name="encodingDesc">
@@ -260,16 +162,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       </zeroOrMore>
     </element>
   </define>
-
-  <define name="ref">
-    <element name="ref">
-      <optional>
-        <attribute name="target"/>
-      </optional>
-      <empty/>
-    </element>
-  </define>
-
+  
   <define name="desc">
     <element name="desc">
       <text/>
@@ -458,18 +351,372 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
-  <define name="note">
-    <element name="note">
+  <!-- ============================================================ -->
+  <!-- Main biblStruct Definition                                    -->
+  <!-- ============================================================ -->
+
+  <define name="biblStruct">
+    <element name="biblStruct">
       <optional>
-        <attribute name="place"/>
+        <attribute name="type"/>
       </optional>
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <group>
+        <!-- Zero or more analytic elements (for articles, chapters, etc.) -->
+        <zeroOrMore>
+          <ref name="analytic"/>
+        </zeroOrMore>
+        <!-- One or more monogr elements (for books, journals, etc.) -->
+        <oneOrMore>
+          <ref name="monogr"/>
+          <!-- Each monogr can optionally be followed by series elements -->
+          <zeroOrMore>
+            <ref name="series"/>
+          </zeroOrMore>
+        </oneOrMore>
+        <!-- Trailing elements -->
+        <zeroOrMore>
+          <choice>
+            <ref name="note"/>
+            <ref name="ptr"/>
+            <ref name="ref"/>
+            <ref name="idno"/>
+          </choice>
+        </zeroOrMore>
+      </group>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Bibliographic Level Elements                                  -->
+  <!-- ============================================================ -->
+
+  <define name="analytic">
+    <element name="analytic">
+      <zeroOrMore>
+        <choice>
+          <ref name="author"/>
+          <ref name="editor"/>
+          <ref name="title"/>
+          <ref name="meeting"/>
+          <ref name="date"/>
+          <ref name="idno"/>
+          <ref name="ptr"/>
+          <ref name="ref"/>
+          <ref name="availability"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="monogr">
+    <element name="monogr">
+      <zeroOrMore>
+        <choice>
+          <ref name="author"/>
+          <ref name="editor"/>
+          <ref name="title"/>
+          <ref name="imprint"/>
+          <ref name="biblScope"/>
+          <ref name="edition"/>
+          <ref name="date"/>
+          <ref name="idno"/>
+          <ref name="ptr"/>
+          <ref name="ref"/>
+          <ref name="availability"/>
+          <ref name="note"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="series">
+    <element name="series">
       <interleave>
         <text/>
         <zeroOrMore>
-          <ref name="lb"/>
+          <choice>
+            <ref name="title"/>
+            <ref name="editor"/>
+            <ref name="biblScope"/>
+            <ref name="idno"/>
+            <ref name="availability"/>
+          </choice>
         </zeroOrMore>
       </interleave>
     </element>
   </define>
+
+  <!-- ============================================================ -->
+  <!-- Responsibility Elements (Authors, Editors)                    -->
+  <!-- ============================================================ -->
+
+  <define name="author">
+    <element name="author">
+      <optional>
+        <attribute name="role"/>
+      </optional>
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="persName"/>
+            <ref name="forename"/>
+            <ref name="surname"/>
+            <ref name="middlename"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="editor">
+    <element name="editor">
+      <optional>
+        <attribute name="role"/>
+      </optional>
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="persName"/>
+            <ref name="forename"/>
+            <ref name="surname"/>
+            <ref name="middlename"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Personal Name Elements                                        -->
+  <!-- ============================================================ -->
+
+  <define name="persName">
+    <element name="persName">
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="forename"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="surname"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="middlename"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="forename">
+    <element name="forename">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="surname">
+    <element name="surname">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="middlename">
+    <element name="middlename">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Title Element                                                 -->
+  <!-- ============================================================ -->
+
+  <define name="title">
+    <element name="title">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="level">
+          <choice>
+            <value>a</value>  <!-- analytic -->
+            <value>m</value>  <!-- monographic -->
+            <value>j</value>  <!-- journal -->
+            <value>s</value>  <!-- series -->
+            <value>u</value>  <!-- unpublished -->
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Imprint and Publication Elements                              -->
+  <!-- ============================================================ -->
+
+  <define name="imprint">
+    <element name="imprint">
+      <zeroOrMore>
+        <choice>
+          <ref name="publisher"/>
+          <ref name="pubPlace"/>
+          <ref name="date"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="publisher">
+    <element name="publisher">
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="pubPlace">
+    <element name="pubPlace">
+      <text/>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Bibliographic Scope and Range Elements                        -->
+  <!-- ============================================================ -->
+
+  <define name="biblScope">
+    <element name="biblScope">
+      <optional>
+        <attribute name="unit"/>
+      </optional>
+      <optional>
+        <attribute name="from"/>
+      </optional>
+      <optional>
+        <attribute name="to"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Date and Identifier Elements                                  -->
+  <!-- ============================================================ -->
+
+  <define name="date">
+    <element name="date">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="when"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="idno">
+    <element name="idno">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Edition and Availability Elements                             -->
+  <!-- ============================================================ -->
+
+  <define name="edition">
+    <element name="edition">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="date"/>
+            <ref name="idno"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="availability">
+    <element name="availability">
+      <optional>
+        <attribute name="status"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Note and Reference Elements                                   -->
+  <!-- ============================================================ -->
+
+  <define name="note">
+    <element name="note">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="place"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="ptr">
+    <element name="ptr">
+      <attribute name="target"/>
+      <empty/>
+    </element>
+  </define>
+
+  <define name="ref">
+    <element name="ref">
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Meeting Element (for conference proceedings)                  -->
+  <!-- ============================================================ -->
+
+  <define name="meeting">
+    <element name="meeting">
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <text/>
+    </element>
+  </define>  
 
 </grammar>
