@@ -195,7 +195,7 @@ to the beginning of your TEI document (after the XML declaration):
   </define>
 
   <define name="biblStruct">
-    <externalRef href="https://raw.githubusercontent.com/mpilhlt/grobid-footnote-flavour/refs/heads/main/docs/schema/TEI-biblStruct.rng"/>
+    <externalRef href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/TEI-biblStruct.rng"/>
   </define>
 
   <define name="bibl">
