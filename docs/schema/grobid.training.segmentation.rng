@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!--
 This schema validates GROBID *.traning.segmentation.tei.xml files
 -->
@@ -162,7 +161,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       </zeroOrMore>
     </element>
   </define>
-  
+
   <define name="desc">
     <element name="desc">
       <text/>
