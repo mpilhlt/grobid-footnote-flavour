@@ -1,13 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!--
-This schema validates GROBID *.traning.references.tei.xml files
+This schema validates GROBID *.training.references.tei.xml training files
 -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
   ns="http://www.tei-c.org/ns/1.0"
 >
   <start>
     <ref name="TEI"/>
   </start>
+
+  <define name="TEI">
+    <element name="TEI">
+      <zeroOrMore>
+        <choice>
+          <ref name="teiHeader"/>
+          <ref name="text"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- TEI Header Definition                                        -->
+  <!-- ============================================================ -->
+
+  <define name="teiHeader">
+    <element name="teiHeader">
+      <zeroOrMore>
+        <choice>
+          <ref name="encodingDesc"/>
+          <ref name="fileDesc"/>
+          <ref name="revisionDesc"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="fileDesc">
+    <element name="fileDesc">
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="editionStmt"/>
+          <ref name="publicationStmt"/>
+          <ref name="sourceDesc"/>
+          <ref name="titleStmt"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="titleStmt">
+    <element name="titleStmt">
+      <zeroOrMore>
+        <choice>
+          <ref name="author"/>
+          <ref name="respStmt"/>
+          <ref name="title"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="respStmt">
+    <element name="respStmt">
+      <zeroOrMore>
+        <choice>
+          <ref name="persName"/>
+          <ref name="resp"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="resp">
+    <element name="resp">
+      <text/>
+    </element>
+  </define>
+
+  <define name="editionStmt">
+    <element name="editionStmt">
+      <zeroOrMore>
+        <ref name="edition"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="publicationStmt">
+    <element name="publicationStmt">
+      <zeroOrMore>
+        <choice>
+          <ref name="availability"/>
+          <ref name="date"/>
+          <ref name="idno"/>
+          <ref name="publisher"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="licence">
+    <element name="licence">
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+
+  <define name="sourceDesc">
+    <element name="sourceDesc">
+      <choice>
+        <ref name="sourceDescBibl"/>
+        <ref name="biblStruct"/>
+        <group>
+          <ref name="sourceDescBibl"/>
+          <ref name="biblStruct"/>
+        </group>
+      </choice>
+    </element>
+  </define>
+
+  <define name="sourceDescBibl">
+    <element name="bibl">
+      <text/>
+    </element>
+  </define>
+
+  <define name="encodingDesc">
+    <element name="encodingDesc">
+      <zeroOrMore>
+        <ref name="appInfo"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="appInfo">
+    <element name="appInfo">
+      <zeroOrMore>
+        <ref name="application"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="application">
+    <element name="application">
+      <optional>
+        <attribute name="ident"/>
+      </optional>
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="version"/>
+      </optional>
+      <optional>
+        <attribute name="when"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="desc"/>
+          <ref name="label"/>
+          <ref name="ref"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="desc">
+    <element name="desc">
+      <text/>
+    </element>
+  </define>
+
+  <define name="revisionDesc">
+    <element name="revisionDesc">
+      <zeroOrMore>
+        <ref name="change"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="change">
+    <element name="change">
+      <optional>
+        <attribute name="status"/>
+      </optional>
+      <optional>
+        <attribute name="when"/>
+      </optional>
+      <optional>
+        <attribute name="who"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="desc"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
 
   <!-- ============================================================ -->
   <!-- Main biblStruct Definition                                    -->
@@ -17,6 +215,9 @@ This schema validates GROBID *.traning.references.tei.xml files
     <element name="biblStruct">
       <optional>
         <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="status"/>
       </optional>
       <optional>
         <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
@@ -46,10 +247,6 @@ This schema validates GROBID *.traning.references.tei.xml files
       </group>
     </element>
   </define>
-
-  <!-- ============================================================ -->
-  <!-- Bibliographic Level Elements                                  -->
-  <!-- ============================================================ -->
 
   <define name="analytic">
     <element name="analytic">
@@ -107,10 +304,6 @@ This schema validates GROBID *.traning.references.tei.xml files
     </element>
   </define>
 
-  <!-- ============================================================ -->
-  <!-- Responsibility Elements (Authors, Editors)                    -->
-  <!-- ============================================================ -->
-
   <define name="author">
     <element name="author">
       <optional>
@@ -154,10 +347,6 @@ This schema validates GROBID *.traning.references.tei.xml files
       </interleave>
     </element>
   </define>
-
-  <!-- ============================================================ -->
-  <!-- Personal Name Elements                                        -->
-  <!-- ============================================================ -->
 
   <define name="persName">
     <element name="persName">
@@ -206,10 +395,6 @@ This schema validates GROBID *.traning.references.tei.xml files
     </element>
   </define>
 
-  <!-- ============================================================ -->
-  <!-- Title Element                                                 -->
-  <!-- ============================================================ -->
-
   <define name="title">
     <element name="title">
       <optional>
@@ -229,10 +414,6 @@ This schema validates GROBID *.traning.references.tei.xml files
       <text/>
     </element>
   </define>
-
-  <!-- ============================================================ -->
-  <!-- Imprint and Publication Elements                              -->
-  <!-- ============================================================ -->
 
   <define name="imprint">
     <element name="imprint">
@@ -261,10 +442,6 @@ This schema validates GROBID *.traning.references.tei.xml files
     </element>
   </define>
 
-  <!-- ============================================================ -->
-  <!-- Bibliographic Scope and Range Elements                        -->
-  <!-- ============================================================ -->
-
   <define name="biblScope">
     <element name="biblScope">
       <optional>
@@ -279,10 +456,6 @@ This schema validates GROBID *.traning.references.tei.xml files
       <text/>
     </element>
   </define>
-
-  <!-- ============================================================ -->
-  <!-- Date and Identifier Elements                                  -->
-  <!-- ============================================================ -->
 
   <define name="date">
     <element name="date">
@@ -305,19 +478,16 @@ This schema validates GROBID *.traning.references.tei.xml files
     </element>
   </define>
 
-  <!-- ============================================================ -->
-  <!-- Edition and Availability Elements                             -->
-  <!-- ============================================================ -->
-
   <define name="edition">
     <element name="edition">
       <interleave>
         <text/>
         <zeroOrMore>
-          <choice>
+          <interleave>
+            <ref name="title"/>
             <ref name="date"/>
             <ref name="idno"/>
-          </choice>
+          </interleave>
         </zeroOrMore>
       </interleave>
     </element>
@@ -332,8 +502,18 @@ This schema validates GROBID *.traning.references.tei.xml files
     </element>
   </define>
 
+  <define name="meeting">
+    <element name="meeting">
+      <optional>
+        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+
   <!-- ============================================================ -->
-  <!-- Note and Reference Elements                                   -->
+  <!-- General purpose child elements                               -->
   <!-- ============================================================ -->
 
   <define name="note">
@@ -344,7 +524,12 @@ This schema validates GROBID *.traning.references.tei.xml files
       <optional>
         <attribute name="place"/>
       </optional>
-      <text/>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb" />
+        </zeroOrMore>
+      </interleave>
     </element>
   </define>
 
@@ -364,209 +549,6 @@ This schema validates GROBID *.traning.references.tei.xml files
     </element>
   </define>
 
-  <!-- ============================================================ -->
-  <!-- Meeting Element (for conference proceedings)                  -->
-  <!-- ============================================================ -->
-
-  <define name="meeting">
-    <element name="meeting">
-      <optional>
-        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-
-  <define name="TEI">
-    <element name="TEI">
-      <zeroOrMore>
-        <choice>
-          <ref name="teiHeader"/>
-          <ref name="text"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="teiHeader">
-    <element name="teiHeader">
-      <zeroOrMore>
-        <choice>
-          <ref name="encodingDesc"/>
-          <ref name="fileDesc"/>
-          <ref name="revisionDesc"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="fileDesc">
-    <element name="fileDesc">
-      <zeroOrMore>
-        <choice>
-          <ref name="editionStmt"/>
-          <ref name="publicationStmt"/>
-          <ref name="sourceDesc"/>
-          <ref name="titleStmt"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="titleStmt">
-    <element name="titleStmt">
-      <zeroOrMore>
-        <choice>
-          <ref name="author"/>
-          <ref name="title"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="editionStmt">
-    <element name="editionStmt">
-      <zeroOrMore>
-        <ref name="edition"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-
-  <define name="publicationStmt">
-    <element name="publicationStmt">
-      <zeroOrMore>
-        <choice>
-          <ref name="availability"/>
-          <ref name="date"/>
-          <ref name="idno"/>
-          <ref name="publisher"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="licence">
-    <element name="licence">
-      <optional>
-        <attribute name="target"/>
-      </optional>
-      <empty/>
-    </element>
-  </define>
-
-  <define name="sourceDesc">
-    <element name="sourceDesc">
-      <zeroOrMore>
-        <ref name="bibl"/>
-        <ref name="biblStruct"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="bibl">
-    <element name="bibl">
-      <text/>
-    </element>
-  </define>
-
-  <define name="biblStruct">
-    <externalRef href="https://mpilhlt.github.io/grobid-footnote-flavour/schema/TEI-biblStruct.rng"/>
-  </define>
-
-  <define name="bibl">
-    <element name="bibl">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="author"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="biblScope"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="date"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="editor"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="idno"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="note"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="ptr"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="pubPlace"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="publisher"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="title"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="encodingDesc">
-    <element name="encodingDesc">
-      <zeroOrMore>
-        <ref name="appInfo"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="appInfo">
-    <element name="appInfo">
-      <zeroOrMore>
-        <ref name="application"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="application">
-    <element name="application">
-      <optional>
-        <attribute name="ident"/>
-      </optional>
-      <optional>
-        <attribute name="type"/>
-      </optional>
-      <optional>
-        <attribute name="version"/>
-      </optional>
-      <optional>
-        <attribute name="when"/>
-      </optional>
-      <zeroOrMore>
-        <choice>
-          <ref name="desc"/>
-          <ref name="label"/>
-          <ref name="ref"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="ref">
-    <element name="ref">
-      <optional>
-        <attribute name="target"/>
-      </optional>
-      <empty/>
-    </element>
-  </define>
-
-  <define name="desc">
-    <element name="desc">
-      <text/>
-    </element>
-  </define>
-
   <define name="label">
     <element name="label">
       <optional>
@@ -576,30 +558,16 @@ This schema validates GROBID *.traning.references.tei.xml files
     </element>
   </define>
 
-  <define name="revisionDesc">
-    <element name="revisionDesc">
-      <zeroOrMore>
-        <ref name="change"/>
-      </zeroOrMore>
+  <define name="lb">
+    <element name="lb">
+      <empty/>
     </element>
-  </define>
+  </define>  
 
-  <define name="change">
-    <element name="change">
-      <optional>
-        <attribute name="status"/>
-      </optional>
-      <optional>
-        <attribute name="when"/>
-      </optional>
-      <optional>
-        <attribute name="who"/>
-      </optional>      
-      <zeroOrMore>
-        <ref name="desc"/>
-      </zeroOrMore>
-    </element>
-  </define>
+
+  <!-- ============================================================ -->
+  <!-- training.references.referenceSegmenter main elements         -->
+  <!-- ============================================================ -->
 
   <define name="text">
     <element name="text">
@@ -608,86 +576,24 @@ This schema validates GROBID *.traning.references.tei.xml files
       </optional>
       <interleave>
         <text/>
-        <zeroOrMore>
-          <ref name="body"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="front"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="back"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="listBibl"/>
-        </zeroOrMore>
+        <oneOrMore>
+          <ref name="bibl" />
+        </oneOrMore>
       </interleave>
     </element>
   </define>
 
-  <define name="front">
-    <element name="front">
-      <empty/>
-    </element>
-  </define>
-
-  <define name="body">
-    <element name="body">
-      <empty/>
-    </element>
-  </define>
-
-  <define name="back">
-    <element name="back">
-      <zeroOrMore>
-        <ref name="listBibl"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="listBibl">
-    <element name="listBibl">
-      <zeroOrMore>
-        <ref name="bibl"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="editor">
-    <element name="editor">
-      <text/>
-    </element>
-  </define>
-
-  <define name="biblScope">
-    <element name="biblScope">
-      <optional>
-        <attribute name="unit"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-
-  <define name="pubPlace">
-    <element name="pubPlace">
-      <text/>
-    </element>
-  </define>
-
-  <define name="note">
-    <element name="note">
-      <optional>
-        <attribute name="type"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-
-  <define name="ptr">
-    <element name="ptr">
-      <optional>
-        <attribute name="type"/>
-      </optional>
-      <text/>
+  <define name="bibl">
+    <element name="bibl">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="label"/>
+            <ref name="lb"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
     </element>
   </define>
 

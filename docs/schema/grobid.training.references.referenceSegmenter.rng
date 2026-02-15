@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!--
-This schema validates GROBID *.traning.segmentation.tei.xml files
+This schema validates GROBID *.training.references.referenceSegmenter.tei.xml training files
 -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -511,6 +511,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
+
   <!-- ============================================================ -->
   <!-- General purpose child elements                               -->
   <!-- ============================================================ -->
@@ -565,7 +566,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
 
 
   <!-- ============================================================ -->
-  <!-- training.segmentation main elements                          -->
+  <!-- training.references.referenceSegmenter main elements         -->
   <!-- ============================================================ -->
 
   <define name="text">
@@ -575,136 +576,21 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       </optional>
       <interleave>
         <text/>
-        <zeroOrMore>
-          <ref name="titlePage" />
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="toc" />
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="div" />
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="body"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="front"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="listBibl"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="note"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
+        <oneOrMore>
+          <ref name="bibl" />
+        </oneOrMore>
       </interleave>
     </element>
   </define>
 
-  <define name="titlePage">
-    <element name="titlePage">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>      
-    </element>
-  </define>
-
-  <define name="toc">
-    <element name="toc">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="div">
-    <element name="div">
+  <define name="bibl">
+    <element name="bibl">
       <optional>
-        <attribute name="type">
-          <choice>
-            <value>toc</value>
-            <value>acknowledgement</value>
-            <value>availability</value>
-            <value>funding</value>
-            <value>annex</value>
-            <value>conflict</value>
-          </choice>
-        </attribute>
+        <ref name="label"/>
       </optional>
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
 
-  <define name="front">
-    <element name="front">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>
+      <text/>
     </element>
-  </define>
-
-  <define name="page">
-    <element name="page">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="body">
-    <element name="body">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="listBibl">
-    <element name="listBibl">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
+  </define>  
 
 </grammar>
