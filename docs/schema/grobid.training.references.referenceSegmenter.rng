@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!--
-This schema validates GROBID *.traning.segmentation.tei.xml files
+This schema validates GROBID *.training.references.referenceSegmenter.tei.xml training files
 -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -46,7 +46,9 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <zeroOrMore>
         <choice>
           <ref name="editionStmt"/>
+          <ref name="licence"/>
           <ref name="publicationStmt"/>
+          <ref name="ptr"/>
           <ref name="sourceDesc"/>
           <ref name="titleStmt"/>
         </choice>
@@ -98,6 +100,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
           <ref name="availability"/>
           <ref name="date"/>
           <ref name="idno"/>
+          <ref name="ptr"/>
           <ref name="publisher"/>
         </choice>
       </zeroOrMore>
@@ -517,6 +520,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
+
   <!-- ============================================================ -->
   <!-- General purpose child elements                               -->
   <!-- ============================================================ -->
@@ -529,12 +533,12 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <optional>
         <attribute name="place"/>
       </optional>
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb" />
-        </zeroOrMore>
-      </interleave>
+      <zeroOrMore>
+        <choice>
+          <ref name="lb"/>
+          <text/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 
@@ -571,7 +575,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
 
 
   <!-- ============================================================ -->
-  <!-- training.segmentation main elements                          -->
+  <!-- training.references.referenceSegmenter main elements         -->
   <!-- ============================================================ -->
 
   <define name="text">
@@ -579,137 +583,31 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <optional>
         <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
       </optional>
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="titlePage" />
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="toc" />
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="div" />
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="body"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="front"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="listBibl"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="note"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="titlePage">
-    <element name="titlePage">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>      
-    </element>
-  </define>
-
-  <define name="toc">
-    <element name="toc">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="div">
-    <element name="div">
-      <optional>
-        <attribute name="type">
-          <choice>
-            <value>toc</value>
-            <value>acknowledgement</value>
-            <value>availability</value>
-            <value>funding</value>
-            <value>annex</value>
-            <value>conflict</value>
-          </choice>
-        </attribute>
-      </optional>
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="front">
-    <element name="front">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-        <zeroOrMore>
-          <ref name="page"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="page">
-    <element name="page">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="body">
-    <element name="body">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb"/>
-        </zeroOrMore>
-      </interleave>
+      <ref name="listBibl" />
     </element>
   </define>
 
   <define name="listBibl">
     <element name="listBibl">
-      <interleave>
-        <text/>
-        <zeroOrMore>
+      <zeroOrMore>
+        <choice>
+          <ref name="bibl"/>
           <ref name="lb"/>
-        </zeroOrMore>
-      </interleave>
+          <text/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="bibl">
+    <element name="bibl">
+      <zeroOrMore>
+        <choice>
+          <ref name="label"/>
+          <ref name="lb"/>
+          <text/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 
