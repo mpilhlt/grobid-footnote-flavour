@@ -46,7 +46,9 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
       <zeroOrMore>
         <choice>
           <ref name="editionStmt"/>
+          <ref name="licence"/>
           <ref name="publicationStmt"/>
+          <ref name="ptr"/>
           <ref name="sourceDesc"/>
           <ref name="titleStmt"/>
         </choice>
@@ -98,6 +100,7 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
           <ref name="availability"/>
           <ref name="date"/>
           <ref name="idno"/>
+          <ref name="ptr"/>
           <ref name="publisher"/>
         </choice>
       </zeroOrMore>
@@ -115,14 +118,14 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
 
   <define name="sourceDesc">
     <element name="sourceDesc">
-      <choice>
-        <ref name="sourceDescBibl"/>
-        <ref name="biblStruct"/>
-        <group>
+      <zeroOrMore>
+        <choice>
           <ref name="sourceDescBibl"/>
           <ref name="biblStruct"/>
-        </group>
-      </choice>
+          <ref name="licence"/>
+          <ref name="ptr"/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 
@@ -422,6 +425,7 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
           <ref name="publisher"/>
           <ref name="pubPlace"/>
           <ref name="date"/>
+          <ref name="biblScope"/>
         </choice>
       </zeroOrMore>
     </element>
@@ -498,7 +502,12 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
       <optional>
         <attribute name="status"/>
       </optional>
-      <text/>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="licence"/>
+        </zeroOrMore>
+      </interleave>
     </element>
   </define>
 
@@ -524,12 +533,12 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
       <optional>
         <attribute name="place"/>
       </optional>
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="lb" />
-        </zeroOrMore>
-      </interleave>
+      <zeroOrMore>
+        <choice>
+          <ref name="lb"/>
+          <text/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 
@@ -574,23 +583,32 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
       <optional>
         <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
       </optional>
-      <interleave>
-        <text/>
-        <oneOrMore>
-          <ref name="bibl" />
-        </oneOrMore>
-      </interleave>
+      <ref name="listBibl" />
+    </element>
+  </define>
+
+  <define name="listBibl">
+    <element name="listBibl">
+      <zeroOrMore>
+        <choice>
+          <ref name="bibl"/>
+          <ref name="lb"/>
+          <text/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 
   <define name="bibl">
     <element name="bibl">
-      <optional>
-        <ref name="label"/>
-      </optional>
-
-      <text/>
+      <zeroOrMore>
+        <choice>
+          <ref name="label"/>
+          <ref name="lb"/>
+          <text/>
+        </choice>
+      </zeroOrMore>
     </element>
-  </define>  
+  </define>
 
 </grammar>

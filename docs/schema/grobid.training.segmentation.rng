@@ -115,14 +115,14 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
 
   <define name="sourceDesc">
     <element name="sourceDesc">
-      <choice>
-        <ref name="sourceDescBibl"/>
-        <ref name="biblStruct"/>
-        <group>
+      <zeroOrMore>
+        <choice>
           <ref name="sourceDescBibl"/>
           <ref name="biblStruct"/>
-        </group>
-      </choice>
+          <ref name="licence"/>
+          <ref name="ptr"/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 
@@ -422,6 +422,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
           <ref name="publisher"/>
           <ref name="pubPlace"/>
           <ref name="date"/>
+          <ref name="biblScope"/>
         </choice>
       </zeroOrMore>
     </element>
@@ -498,7 +499,12 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <optional>
         <attribute name="status"/>
       </optional>
-      <text/>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="licence"/>
+        </zeroOrMore>
+      </interleave>
     </element>
   </define>
 
