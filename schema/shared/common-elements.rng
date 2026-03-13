@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Shared common inline elements: lb, ptr, ref, label.
+  Included by all top-level grobid training schemas.
+-->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  ns="http://www.tei-c.org/ns/1.0">
+
+  <define name="lb">
+    <element name="lb">
+      <empty/>
+    </element>
+  </define>
+
+  <define name="ptr">
+    <element name="ptr">
+      <attribute name="target"/>
+      <empty/>
+    </element>
+  </define>
+
+  <define name="ref">
+    <element name="ref">
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="label">
+    <element name="label">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+</grammar>

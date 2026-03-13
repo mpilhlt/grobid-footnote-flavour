@@ -1,30 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--
-This schema validates GROBID *.training.references.referenceSegmenter.tei.xml training files
--->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0"
-  xmlns:xml="http://www.w3.org/XML/1998/namespace"
-  ns="http://www.tei-c.org/ns/1.0"
->
-  <start>
-    <ref name="TEI"/>
-  </start>
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- AUTO-GENERATED — do not edit directly.
+     Source:      schema/grobid.training.references.referenceSegmenter.rng
+     Regenerate:  python scripts/build-schema.py -->
 
-  <define name="TEI">
-    <element name="TEI">
-      <zeroOrMore>
-        <choice>
-          <ref name="teiHeader"/>
-          <ref name="text"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <!-- ============================================================ -->
-  <!-- TEI Header Definition                                        -->
-  <!-- ============================================================ -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.tei-c.org/ns/1.0">
 
   <define name="teiHeader">
     <element name="teiHeader">
@@ -46,9 +25,7 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
       <zeroOrMore>
         <choice>
           <ref name="editionStmt"/>
-          <ref name="licence"/>
           <ref name="publicationStmt"/>
-          <ref name="ptr"/>
           <ref name="sourceDesc"/>
           <ref name="titleStmt"/>
         </choice>
@@ -100,19 +77,9 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
           <ref name="availability"/>
           <ref name="date"/>
           <ref name="idno"/>
-          <ref name="ptr"/>
           <ref name="publisher"/>
         </choice>
       </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="licence">
-    <element name="licence">
-      <optional>
-        <attribute name="target"/>
-      </optional>
-      <empty/>
     </element>
   </define>
 
@@ -211,7 +178,7 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
 
 
   <!-- ============================================================ -->
-  <!-- Main biblStruct Definition                                    -->
+  <!-- biblStruct and child elements                                -->
   <!-- ============================================================ -->
 
   <define name="biblStruct">
@@ -241,7 +208,7 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
         <!-- Trailing elements -->
         <zeroOrMore>
           <choice>
-            <ref name="note"/>
+            <ref name="bibl-struct_note"/>
             <ref name="ptr"/>
             <ref name="ref"/>
             <ref name="idno"/>
@@ -284,7 +251,7 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
           <ref name="ptr"/>
           <ref name="ref"/>
           <ref name="availability"/>
-          <ref name="note"/>
+          <ref name="bibl-struct_note"/>
         </choice>
       </zeroOrMore>
     </element>
@@ -306,6 +273,10 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
       </interleave>
     </element>
   </define>
+
+  <!-- ============================================================ -->
+  <!-- Person and name elements                                     -->
+  <!-- ============================================================ -->
 
   <define name="author">
     <element name="author">
@@ -398,6 +369,10 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
     </element>
   </define>
 
+  <!-- ============================================================ -->
+  <!-- Title, imprint, and publication elements                     -->
+  <!-- ============================================================ -->
+
   <define name="title">
     <element name="title">
       <optional>
@@ -406,11 +381,11 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
       <optional>
         <attribute name="level">
           <choice>
-            <value>a</value>  <!-- analytic -->
-            <value>m</value>  <!-- monographic -->
-            <value>j</value>  <!-- journal -->
-            <value>s</value>  <!-- series -->
-            <value>u</value>  <!-- unpublished -->
+            <value datatypeLibrary="">a</value>  <!-- analytic -->
+            <value datatypeLibrary="">m</value>  <!-- monographic -->
+            <value datatypeLibrary="">j</value>  <!-- journal -->
+            <value datatypeLibrary="">s</value>  <!-- series -->
+            <value datatypeLibrary="">u</value>  <!-- unpublished -->
           </choice>
         </attribute>
       </optional>
@@ -511,6 +486,15 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
     </element>
   </define>
 
+  <define name="licence">
+    <element name="licence">
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+
   <define name="meeting">
     <element name="meeting">
       <optional>
@@ -520,25 +504,29 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
     </element>
   </define>
 
-
   <!-- ============================================================ -->
-  <!-- General purpose child elements                               -->
+  <!-- Disambiguated note variant for biblStruct context           -->
+  <!-- bibl-struct_note: <note @type?> used inside biblStruct/monogr -->
   <!-- ============================================================ -->
 
-  <define name="note">
+  <define name="bibl-struct_note">
     <element name="note">
       <optional>
         <attribute name="type"/>
       </optional>
-      <optional>
-        <attribute name="place"/>
-      </optional>
-      <zeroOrMore>
-        <choice>
+      <interleave>
+        <text/>
+        <zeroOrMore>
           <ref name="lb"/>
-          <text/>
-        </choice>
-      </zeroOrMore>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+
+  <define name="lb">
+    <element name="lb">
+      <empty/>
     </element>
   </define>
 
@@ -567,15 +555,25 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
     </element>
   </define>
 
-  <define name="lb">
-    <element name="lb">
-      <empty/>
-    </element>
-  </define>  
 
+
+  <start>
+    <ref name="TEI"/>
+  </start>
+
+  <define name="TEI">
+    <element name="TEI">
+      <zeroOrMore>
+        <choice>
+          <ref name="teiHeader"/>
+          <ref name="text"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
 
   <!-- ============================================================ -->
-  <!-- training.references.referenceSegmenter main elements         -->
+  <!-- training.references.referenceSegmenter main elements        -->
   <!-- ============================================================ -->
 
   <define name="text">
@@ -583,7 +581,7 @@ This schema validates GROBID *.training.references.referenceSegmenter.tei.xml tr
       <optional>
         <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
       </optional>
-      <ref name="listBibl" />
+      <ref name="listBibl"/>
     </element>
   </define>
 

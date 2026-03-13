@@ -12,3 +12,8 @@ dependencies = [
     "requests>=2.32.4",
     "tqdm>=4.67.1",
 ]
+
+[dependency-groups]
+dev = [
+    "rnginline>=0.0.3",
+]

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!--
+  This schema validates GROBID *.training.references.tei.xml training files.
+  Composed from shared modules; run scripts/build-schema.py to produce the
+  standalone flattened version in docs/schema/.
+-->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  ns="http://www.tei-c.org/ns/1.0">
+
+  <include href="shared/tei-header.rng"/>
+  <include href="shared/bibl-struct.rng"/>
+  <include href="shared/common-elements.rng"/>
+
+  <start>
+    <ref name="TEI"/>
+  </start>
+
+  <define name="TEI">
+    <element name="TEI">
+      <zeroOrMore>
+        <choice>
+          <ref name="teiHeader"/>
+          <ref name="text"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- training.references main elements                            -->
+  <!-- ============================================================ -->
+
+  <define name="text">
+    <element name="text">
+      <optional>
+        <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <interleave>
+        <text/>
+        <oneOrMore>
+          <ref name="bibl"/>
+        </oneOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="bibl">
+    <element name="bibl">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="label"/>
+            <ref name="lb"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+</grammar>

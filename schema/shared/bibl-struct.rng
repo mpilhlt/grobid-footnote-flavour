@@ -1,181 +1,20 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!-- AUTO-GENERATED — do not edit directly.
-     Source:      schema/grobid.training.references.rng
-     Regenerate:  python scripts/build-schema.py -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Shared bibliographic structure definitions.
+  Authoritative source: grobid.training.segmentation.rng
+  Included by all top-level grobid training schemas.
 
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.tei-c.org/ns/1.0">
+  Disambiguation: bibl-struct_note is the <note> variant used inside
+  biblStruct/monogr (optional @type, no @place). Top-level schemas that
+  need a different <note> variant (e.g. segmentation_note) define their
+  own prefixed pattern.
 
-  <define name="teiHeader">
-    <element name="teiHeader">
-      <zeroOrMore>
-        <choice>
-          <ref name="encodingDesc"/>
-          <ref name="fileDesc"/>
-          <ref name="revisionDesc"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="fileDesc">
-    <element name="fileDesc">
-      <optional>
-        <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
-      </optional>
-      <zeroOrMore>
-        <choice>
-          <ref name="editionStmt"/>
-          <ref name="publicationStmt"/>
-          <ref name="sourceDesc"/>
-          <ref name="titleStmt"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="titleStmt">
-    <element name="titleStmt">
-      <zeroOrMore>
-        <choice>
-          <ref name="author"/>
-          <ref name="respStmt"/>
-          <ref name="title"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="respStmt">
-    <element name="respStmt">
-      <zeroOrMore>
-        <choice>
-          <ref name="persName"/>
-          <ref name="resp"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="resp">
-    <element name="resp">
-      <text/>
-    </element>
-  </define>
-
-  <define name="editionStmt">
-    <element name="editionStmt">
-      <zeroOrMore>
-        <ref name="edition"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="publicationStmt">
-    <element name="publicationStmt">
-      <zeroOrMore>
-        <choice>
-          <ref name="availability"/>
-          <ref name="date"/>
-          <ref name="idno"/>
-          <ref name="publisher"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="sourceDesc">
-    <element name="sourceDesc">
-      <zeroOrMore>
-        <choice>
-          <ref name="sourceDescBibl"/>
-          <ref name="biblStruct"/>
-          <ref name="licence"/>
-          <ref name="ptr"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="sourceDescBibl">
-    <element name="bibl">
-      <text/>
-    </element>
-  </define>
-
-  <define name="encodingDesc">
-    <element name="encodingDesc">
-      <zeroOrMore>
-        <ref name="appInfo"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="appInfo">
-    <element name="appInfo">
-      <zeroOrMore>
-        <ref name="application"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="application">
-    <element name="application">
-      <optional>
-        <attribute name="ident"/>
-      </optional>
-      <optional>
-        <attribute name="type"/>
-      </optional>
-      <optional>
-        <attribute name="version"/>
-      </optional>
-      <optional>
-        <attribute name="when"/>
-      </optional>
-      <zeroOrMore>
-        <choice>
-          <ref name="desc"/>
-          <ref name="label"/>
-          <ref name="ref"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="desc">
-    <element name="desc">
-      <text/>
-    </element>
-  </define>
-
-  <define name="revisionDesc">
-    <element name="revisionDesc">
-      <zeroOrMore>
-        <ref name="change"/>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="change">
-    <element name="change">
-      <optional>
-        <attribute name="status"/>
-      </optional>
-      <optional>
-        <attribute name="when"/>
-      </optional>
-      <optional>
-        <attribute name="who"/>
-      </optional>
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <ref name="desc"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
+  External references (resolved when included in a top-level schema):
+    ptr, ref, lb  <- from shared/common-elements.rng
+-->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  ns="http://www.tei-c.org/ns/1.0">
 
   <!-- ============================================================ -->
   <!-- biblStruct and child elements                                -->
@@ -381,11 +220,11 @@
       <optional>
         <attribute name="level">
           <choice>
-            <value datatypeLibrary="">a</value>  <!-- analytic -->
-            <value datatypeLibrary="">m</value>  <!-- monographic -->
-            <value datatypeLibrary="">j</value>  <!-- journal -->
-            <value datatypeLibrary="">s</value>  <!-- series -->
-            <value datatypeLibrary="">u</value>  <!-- unpublished -->
+            <value>a</value>  <!-- analytic -->
+            <value>m</value>  <!-- monographic -->
+            <value>j</value>  <!-- journal -->
+            <value>s</value>  <!-- series -->
+            <value>u</value>  <!-- unpublished -->
           </choice>
         </attribute>
       </optional>
@@ -518,87 +357,6 @@
         <text/>
         <zeroOrMore>
           <ref name="lb"/>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-
-
-  <define name="lb">
-    <element name="lb">
-      <empty/>
-    </element>
-  </define>
-
-  <define name="ptr">
-    <element name="ptr">
-      <attribute name="target"/>
-      <empty/>
-    </element>
-  </define>
-
-  <define name="ref">
-    <element name="ref">
-      <optional>
-        <attribute name="target"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-
-  <define name="label">
-    <element name="label">
-      <optional>
-        <attribute name="type"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-
-
-
-  <start>
-    <ref name="TEI"/>
-  </start>
-
-  <define name="TEI">
-    <element name="TEI">
-      <zeroOrMore>
-        <choice>
-          <ref name="teiHeader"/>
-          <ref name="text"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <!-- ============================================================ -->
-  <!-- training.references main elements                            -->
-  <!-- ============================================================ -->
-
-  <define name="text">
-    <element name="text">
-      <optional>
-        <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
-      </optional>
-      <interleave>
-        <text/>
-        <oneOrMore>
-          <ref name="bibl"/>
-        </oneOrMore>
-      </interleave>
-    </element>
-  </define>
-
-  <define name="bibl">
-    <element name="bibl">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <choice>
-            <ref name="label"/>
-            <ref name="lb"/>
-          </choice>
         </zeroOrMore>
       </interleave>
     </element>

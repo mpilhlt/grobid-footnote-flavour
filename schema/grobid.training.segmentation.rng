@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!--
+  This schema validates GROBID *.training.segmentation.tei.xml files.
+  Composed from shared modules; run scripts/build-schema.py to produce the
+  standalone flattened version in docs/schema/.
+-->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  ns="http://www.tei-c.org/ns/1.0">
+
+  <include href="shared/tei-header.rng"/>
+  <include href="shared/bibl-struct.rng"/>
+  <include href="shared/common-elements.rng"/>
+
+  <start>
+    <ref name="TEI"/>
+  </start>
+
+  <define name="TEI">
+    <element name="TEI">
+      <zeroOrMore>
+        <choice>
+          <ref name="teiHeader"/>
+          <ref name="text"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- training.segmentation main elements                          -->
+  <!-- ============================================================ -->
+
+  <define name="text">
+    <element name="text">
+      <optional>
+        <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="titlePage"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="toc"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="div"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="body"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="front"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="listBibl"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="segmentation_note"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="titlePage">
+    <element name="titlePage">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="toc">
+    <element name="toc">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="div">
+    <element name="div">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>toc</value>
+            <value>acknowledgement</value>
+            <value>availability</value>
+            <value>funding</value>
+            <value>annex</value>
+            <value>conflict</value>
+          </choice>
+        </attribute>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="front">
+    <element name="front">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="page"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="page">
+    <element name="page">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="body">
+    <element name="body">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="listBibl">
+    <element name="listBibl">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Disambiguated note variant for segmentation text context    -->
+  <!-- segmentation_note: <note @place="headnote"|"footnote">      -->
+  <!-- ============================================================ -->
+
+  <define name="segmentation_note">
+    <element name="note">
+      <attribute name="place">
+        <choice>
+          <value>headnote</value>
+          <value>footnote</value>
+        </choice>
+      </attribute>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+</grammar>

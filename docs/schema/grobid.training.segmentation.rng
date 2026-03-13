@@ -1,30 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://relaxng.org/relaxng.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--
-This schema validates GROBID *.traning.segmentation.tei.xml files
--->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0"
-  xmlns:xml="http://www.w3.org/XML/1998/namespace"
-  ns="http://www.tei-c.org/ns/1.0"
->
-  <start>
-    <ref name="TEI"/>
-  </start>
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- AUTO-GENERATED — do not edit directly.
+     Source:      schema/grobid.training.segmentation.rng
+     Regenerate:  python scripts/build-schema.py -->
 
-  <define name="TEI">
-    <element name="TEI">
-      <zeroOrMore>
-        <choice>
-          <ref name="teiHeader"/>
-          <ref name="text"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>
-
-  <!-- ============================================================ -->
-  <!-- TEI Header Definition                                        -->
-  <!-- ============================================================ -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.tei-c.org/ns/1.0">
 
   <define name="teiHeader">
     <element name="teiHeader">
@@ -101,15 +80,6 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
           <ref name="publisher"/>
         </choice>
       </zeroOrMore>
-    </element>
-  </define>
-
-  <define name="licence">
-    <element name="licence">
-      <optional>
-        <attribute name="target"/>
-      </optional>
-      <empty/>
     </element>
   </define>
 
@@ -208,7 +178,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
 
 
   <!-- ============================================================ -->
-  <!-- Main biblStruct Definition                                    -->
+  <!-- biblStruct and child elements                                -->
   <!-- ============================================================ -->
 
   <define name="biblStruct">
@@ -238,7 +208,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
         <!-- Trailing elements -->
         <zeroOrMore>
           <choice>
-            <ref name="note"/>
+            <ref name="bibl-struct_note"/>
             <ref name="ptr"/>
             <ref name="ref"/>
             <ref name="idno"/>
@@ -281,7 +251,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
           <ref name="ptr"/>
           <ref name="ref"/>
           <ref name="availability"/>
-          <ref name="note"/>
+          <ref name="bibl-struct_note"/>
         </choice>
       </zeroOrMore>
     </element>
@@ -303,6 +273,10 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       </interleave>
     </element>
   </define>
+
+  <!-- ============================================================ -->
+  <!-- Person and name elements                                     -->
+  <!-- ============================================================ -->
 
   <define name="author">
     <element name="author">
@@ -395,6 +369,10 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
+  <!-- ============================================================ -->
+  <!-- Title, imprint, and publication elements                     -->
+  <!-- ============================================================ -->
+
   <define name="title">
     <element name="title">
       <optional>
@@ -403,11 +381,11 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <optional>
         <attribute name="level">
           <choice>
-            <value>a</value>  <!-- analytic -->
-            <value>m</value>  <!-- monographic -->
-            <value>j</value>  <!-- journal -->
-            <value>s</value>  <!-- series -->
-            <value>u</value>  <!-- unpublished -->
+            <value datatypeLibrary="">a</value>  <!-- analytic -->
+            <value datatypeLibrary="">m</value>  <!-- monographic -->
+            <value datatypeLibrary="">j</value>  <!-- journal -->
+            <value datatypeLibrary="">s</value>  <!-- series -->
+            <value datatypeLibrary="">u</value>  <!-- unpublished -->
           </choice>
         </attribute>
       </optional>
@@ -508,6 +486,15 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
+  <define name="licence">
+    <element name="licence">
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+
   <define name="meeting">
     <element name="meeting">
       <optional>
@@ -518,23 +505,28 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
   </define>
 
   <!-- ============================================================ -->
-  <!-- General purpose child elements                               -->
+  <!-- Disambiguated note variant for biblStruct context           -->
+  <!-- bibl-struct_note: <note @type?> used inside biblStruct/monogr -->
   <!-- ============================================================ -->
 
-  <define name="note">
+  <define name="bibl-struct_note">
     <element name="note">
       <optional>
         <attribute name="type"/>
       </optional>
-      <optional>
-        <attribute name="place"/>
-      </optional>
       <interleave>
         <text/>
         <zeroOrMore>
-          <ref name="lb" />
+          <ref name="lb"/>
         </zeroOrMore>
       </interleave>
+    </element>
+  </define>
+
+
+  <define name="lb">
+    <element name="lb">
+      <empty/>
     </element>
   </define>
 
@@ -563,12 +555,22 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
     </element>
   </define>
 
-  <define name="lb">
-    <element name="lb">
-      <empty/>
-    </element>
-  </define>  
 
+
+  <start>
+    <ref name="TEI"/>
+  </start>
+
+  <define name="TEI">
+    <element name="TEI">
+      <zeroOrMore>
+        <choice>
+          <ref name="teiHeader"/>
+          <ref name="text"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
 
   <!-- ============================================================ -->
   <!-- training.segmentation main elements                          -->
@@ -582,13 +584,13 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <interleave>
         <text/>
         <zeroOrMore>
-          <ref name="titlePage" />
+          <ref name="titlePage"/>
         </zeroOrMore>
         <zeroOrMore>
-          <ref name="toc" />
+          <ref name="toc"/>
         </zeroOrMore>
         <zeroOrMore>
-          <ref name="div" />
+          <ref name="div"/>
         </zeroOrMore>
         <zeroOrMore>
           <ref name="body"/>
@@ -603,7 +605,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
           <ref name="listBibl"/>
         </zeroOrMore>
         <zeroOrMore>
-          <ref name="note"/>
+          <ref name="segmentation_note"/>
         </zeroOrMore>
         <zeroOrMore>
           <ref name="page"/>
@@ -622,7 +624,7 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
         <zeroOrMore>
           <ref name="page"/>
         </zeroOrMore>
-      </interleave>      
+      </interleave>
     </element>
   </define>
 
@@ -645,12 +647,12 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
       <optional>
         <attribute name="type">
           <choice>
-            <value>toc</value>
-            <value>acknowledgement</value>
-            <value>availability</value>
-            <value>funding</value>
-            <value>annex</value>
-            <value>conflict</value>
+            <value datatypeLibrary="">toc</value>
+            <value datatypeLibrary="">acknowledgement</value>
+            <value datatypeLibrary="">availability</value>
+            <value datatypeLibrary="">funding</value>
+            <value datatypeLibrary="">annex</value>
+            <value datatypeLibrary="">conflict</value>
           </choice>
         </attribute>
       </optional>
@@ -704,6 +706,28 @@ This schema validates GROBID *.traning.segmentation.tei.xml files
 
   <define name="listBibl">
     <element name="listBibl">
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="lb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <!-- ============================================================ -->
+  <!-- Disambiguated note variant for segmentation text context    -->
+  <!-- segmentation_note: <note @place="headnote"|"footnote">      -->
+  <!-- ============================================================ -->
+
+  <define name="segmentation_note">
+    <element name="note">
+      <attribute name="place">
+        <choice>
+          <value datatypeLibrary="">headnote</value>
+          <value datatypeLibrary="">footnote</value>
+        </choice>
+      </attribute>
       <interleave>
         <text/>
         <zeroOrMore>
