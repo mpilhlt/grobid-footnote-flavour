@@ -70,6 +70,12 @@
     </element>
   </define>
 
+  <define name="edition">
+    <element name="edition">
+      <text/>
+    </element>
+  </define>
+
   <define name="publicationStmt">
     <element name="publicationStmt">
       <zeroOrMore>
@@ -77,6 +83,7 @@
           <ref name="availability"/>
           <ref name="date"/>
           <ref name="idno"/>
+          <ref name="ptr"/>
           <ref name="publisher"/>
         </choice>
       </zeroOrMore>
@@ -170,9 +177,21 @@
       <interleave>
         <text/>
         <zeroOrMore>
+          <ref name="note"/>
+        </zeroOrMore>
+        <zeroOrMore>
           <ref name="desc"/>
         </zeroOrMore>
       </interleave>
+    </element>
+  </define>
+
+  <define name="note">
+    <element name="note">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
     </element>
   </define>
 
@@ -245,7 +264,7 @@
           <ref name="title"/>
           <ref name="imprint"/>
           <ref name="biblScope"/>
-          <ref name="edition"/>
+          <ref name="bibl-struct_edition"/>
           <ref name="date"/>
           <ref name="idno"/>
           <ref name="ptr"/>
@@ -457,18 +476,9 @@
     </element>
   </define>
 
-  <define name="edition">
+  <define name="bibl-struct_edition">
     <element name="edition">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <interleave>
-            <ref name="title"/>
-            <ref name="date"/>
-            <ref name="idno"/>
-          </interleave>
-        </zeroOrMore>
-      </interleave>
+      <text/>
     </element>
   </define>
 

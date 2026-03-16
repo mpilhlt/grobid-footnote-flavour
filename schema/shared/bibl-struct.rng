@@ -84,7 +84,7 @@
           <ref name="title"/>
           <ref name="imprint"/>
           <ref name="biblScope"/>
-          <ref name="edition"/>
+          <ref name="bibl-struct_edition"/>
           <ref name="date"/>
           <ref name="idno"/>
           <ref name="ptr"/>
@@ -296,18 +296,9 @@
     </element>
   </define>
 
-  <define name="edition">
+  <define name="bibl-struct_edition">
     <element name="edition">
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <interleave>
-            <ref name="title"/>
-            <ref name="date"/>
-            <ref name="idno"/>
-          </interleave>
-        </zeroOrMore>
-      </interleave>
+      <text/>
     </element>
   </define>
 

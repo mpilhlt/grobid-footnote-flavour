@@ -78,6 +78,12 @@
     </element>
   </define>
 
+  <define name="edition">
+    <element name="edition">
+      <text/>
+    </element>
+  </define>
+
   <define name="publicationStmt">
     <element name="publicationStmt">
       <zeroOrMore>
@@ -85,6 +91,7 @@
           <ref name="availability"/>
           <ref name="date"/>
           <ref name="idno"/>
+          <ref name="ptr"/>
           <ref name="publisher"/>
         </choice>
       </zeroOrMore>
@@ -178,9 +185,21 @@
       <interleave>
         <text/>
         <zeroOrMore>
+          <ref name="note"/>
+        </zeroOrMore>
+        <zeroOrMore>
           <ref name="desc"/>
         </zeroOrMore>
       </interleave>
+    </element>
+  </define>
+
+  <define name="note">
+    <element name="note">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
     </element>
   </define>
 
