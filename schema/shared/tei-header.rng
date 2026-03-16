@@ -80,7 +80,15 @@
 
   <define name="edition">
     <element name="edition">
-      <text/>
+      <interleave>
+        <zeroOrMore>
+          <interleave>
+            <ref name="title"/>
+            <ref name="date"/>
+            <ref name="idno"/>
+          </interleave>
+        </zeroOrMore>
+      </interleave>
     </element>
   </define>
 
