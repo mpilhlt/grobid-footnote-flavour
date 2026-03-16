@@ -73,12 +73,13 @@
   <define name="edition">
     <element name="edition">
       <interleave>
+        <text/>
         <zeroOrMore>
-          <interleave>
+          <choice>
             <ref name="title"/>
             <ref name="date"/>
             <ref name="idno"/>
-          </interleave>
+          </choice>
         </zeroOrMore>
       </interleave>
     </element>
