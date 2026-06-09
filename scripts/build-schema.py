@@ -10,7 +10,6 @@ For each top-level schema in schema/ (not shared/):
   4. Write the result to docs/schema/ with an auto-generated header comment.
 """
 
-import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
@@ -43,7 +42,10 @@ HEADER_TEMPLATE = (
 
 def flatten(src: Path) -> etree._Element:
     """Inline all <include> elements and return the flattened XML element."""
-    inliner = rnginline.Inliner()
+    # rnginline._get_cwd() asserts the path ends with "/" which fails on Windows.
+    # Pass the base URI explicitly so that code path is never reached.
+    base_uri = src.parent.as_uri() + "/"
+    inliner = rnginline.Inliner(default_base_uri=base_uri)
     root = inliner.inline(path=src, create_validator=False)
     remove_divs(root)
     return root
@@ -99,19 +101,12 @@ def check_duplicates(root: etree._Element, out_name: str) -> bool:
     return False
 
 
-def validate_jing(path: Path) -> None:
-    """Run jing validation if jing is available on PATH."""
+def validate_schema(path: Path) -> None:
+    """Validate the generated schema using lxml's RelaxNG parser."""
     try:
-        result = subprocess.run(
-            ["jing", str(path)],
-            capture_output=True,
-            text=True,
-        )
-        if result.returncode != 0:
-            print(f"WARNING: jing reported errors in {path.name}:")
-            print(result.stdout or result.stderr)
-    except FileNotFoundError:
-        print("WARNING: jing not found on PATH — skipping RNG validation")
+        etree.RelaxNG(file=str(path))
+    except etree.RelaxNGParseError as e:
+        print(f"WARNING: RelaxNG parse error in {path.name}: {e}")
 
 
 def serialize(root: etree._Element, stem: str) -> str:
@@ -147,7 +142,7 @@ def main() -> None:
 
         xml_text = serialize(root, src.stem)
         out.write_text(xml_text, encoding="utf-8")
-        validate_jing(out)
+        validate_schema(out)
 
     if errors:
         sys.exit(1)

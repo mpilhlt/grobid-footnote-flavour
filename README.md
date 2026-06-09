@@ -34,7 +34,6 @@ schema/
 After editing any file under `schema/`, regenerate and commit the flattened schemas:
 
 ```bash
-brew install jing-trang    # first time only (macOS); provides the `jing` RNG validator
 uv sync --group dev        # first time only
 uv run python scripts/build-schema.py
 git add docs/schema/
