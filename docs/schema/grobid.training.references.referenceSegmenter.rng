@@ -618,6 +618,11 @@
 
   <define name="bibl">
     <element name="bibl">
+      <optional>
+        <attribute name="type">
+          <value datatypeLibrary="">footnote</value>
+        </attribute>
+      </optional>
       <zeroOrMore>
         <choice>
           <ref name="label"/>

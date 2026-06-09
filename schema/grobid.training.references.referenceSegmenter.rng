@@ -55,6 +55,11 @@
 
   <define name="bibl">
     <element name="bibl">
+      <optional>
+        <attribute name="type">
+          <value>footnote</value>
+        </attribute>
+      </optional>
       <zeroOrMore>
         <choice>
           <ref name="label"/>
