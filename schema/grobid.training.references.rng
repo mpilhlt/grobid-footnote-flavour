@@ -37,12 +37,19 @@
       <optional>
         <attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
       </optional>
-      <interleave>
-        <text/>
-        <oneOrMore>
-          <ref name="bibl"/>
-        </oneOrMore>
-      </interleave>
+      <optional>
+        <element name="front"><empty/></element>
+      </optional>
+      <optional>
+        <element name="body"><empty/></element>
+      </optional>
+      <element name="back">
+        <element name="listBibl">
+          <oneOrMore>
+            <ref name="bibl"/>
+          </oneOrMore>
+        </element>
+      </element>
     </element>
   </define>
 
