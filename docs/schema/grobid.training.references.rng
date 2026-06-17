@@ -624,9 +624,52 @@
           <choice>
             <ref name="label"/>
             <ref name="lb"/>
+            <ref name="author"/>
+            <ref name="orgName"/>
+            <ref name="title"/>
+            <ref name="date"/>
+            <ref name="biblScope"/>
+            <ref name="publisher"/>
+            <ref name="pubPlace"/>
+            <ref name="editor"/>
+            <ref name="references_ptr"/>
+            <ref name="idno"/>
+            <ref name="references_note"/>
           </choice>
         </zeroOrMore>
       </interleave>
+    </element>
+  </define>
+
+  <define name="orgName">
+    <element name="orgName">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- <ptr type="web"> contains the URL as text content -->
+  <define name="references_ptr">
+    <element name="ptr">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- <note> and <note type="report"> for misc. reference annotations -->
+  <define name="references_note">
+    <element name="note">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
     </element>
   </define>
 
