@@ -632,6 +632,7 @@
             <ref name="publisher"/>
             <ref name="pubPlace"/>
             <ref name="editor"/>
+            <ref name="references_edition"/>
             <ref name="references_ptr"/>
             <ref name="idno"/>
             <ref name="references_note"/>
@@ -649,6 +650,15 @@
       <text/>
     </element>
   </define>
+
+  <define name="references_edition">
+    <element name="edition">
+      <optional>
+        <attribute name="n"/>
+      </optional>
+      <text/>
+    </element>
+  </define>  
 
   <!-- <ptr type="web"> contains the URL as text content -->
   <define name="references_ptr">
