@@ -73,6 +73,8 @@
             <ref name="references_ptr"/>
             <ref name="idno"/>
             <ref name="references_note"/>
+            <ref name="references_seg"/>
+            <ref name="references_ref"/>
           </choice>
         </zeroOrMore>
       </interleave>
@@ -115,6 +117,43 @@
     <element name="note">
       <optional>
         <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- <seg type="signal"> marks an introductory citation signal that
+       governs the reference, e.g. "See", "See also", "Cf.", "But see",
+       "Contra", "Accord", "E.g." (common in legal/footnote citations). -->
+  <define name="references_seg">
+    <element name="seg">
+      <optional>
+        <attribute name="type">
+          <value>signal</value>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- <ref type="anaphoric|cataphoric"> marks a positional cross-reference
+       to another reference/footnote:
+         anaphoric  -> points backward, e.g. "ibid.", "id.", "op. cit.",
+                       "supra note 5"
+         cataphoric -> points forward, e.g. "infra", "see note 12 below"
+       @target optionally holds the resolved pointer. -->
+  <define name="references_ref">
+    <element name="ref">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>anaphoric</value>
+            <value>cataphoric</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="target"/>
       </optional>
       <text/>
     </element>
