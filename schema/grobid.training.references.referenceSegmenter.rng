@@ -57,7 +57,11 @@
     <element name="bibl">
       <optional>
         <attribute name="type">
-          <value>footnote</value>
+          <choice>
+            <value>footnote</value>
+            <value>legislation</value>
+            <value>decision</value>
+          </choice>
         </attribute>
       </optional>
       <zeroOrMore>

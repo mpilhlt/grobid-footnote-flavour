@@ -417,6 +417,12 @@
           </choice>
         </attribute>
       </optional>
+      <!-- @key: short resolvable key for a named work, e.g. a statute
+           abbreviation (key="UrhG"), so it can later be linked to an
+           external norm/case database. -->
+      <optional>
+        <attribute name="key"/>
+      </optional>
       <text/>
     </element>
   </define>
@@ -620,7 +626,11 @@
     <element name="bibl">
       <optional>
         <attribute name="type">
-          <value datatypeLibrary="">footnote</value>
+          <choice>
+            <value datatypeLibrary="">footnote</value>
+            <value datatypeLibrary="">legislation</value>
+            <value datatypeLibrary="">decision</value>
+          </choice>
         </attribute>
       </optional>
       <zeroOrMore>

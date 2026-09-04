@@ -55,6 +55,15 @@
 
   <define name="bibl">
     <element name="bibl">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>footnote</value>
+            <value>legislation</value>
+            <value>decision</value>
+          </choice>
+        </attribute>
+      </optional>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -66,6 +75,7 @@
             <ref name="title"/>
             <ref name="date"/>
             <ref name="biblScope"/>
+            <ref name="references_citedRange"/>
             <ref name="publisher"/>
             <ref name="pubPlace"/>
             <ref name="editor"/>
@@ -84,7 +94,42 @@
   <define name="orgName">
     <element name="orgName">
       <optional>
-        <attribute name="type"/>
+        <attribute name="type">
+          <choice>
+            <value>court</value>
+            <value>jurisdiction</value>
+            <value>institution</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- <citedRange unit="..."> marks a pinpoint into the cited work, as
+       opposed to <biblScope>, which carries the container work's own
+       extent (reporter volume/issue/page). Used for statute section/
+       subsection (§ 19a, Abs. 2) and for a court decision's marginal
+       number (Tz./Rn./Rdnr.), which is not a page number. -->
+  <define name="references_citedRange">
+    <element name="citedRange">
+      <attribute name="unit">
+        <choice>
+          <value>section</value>
+          <value>sub-section</value>
+          <value>sentence</value>
+          <value>number</value>
+          <value>letter</value>
+          <value>margin</value>
+          <value>recital</value>
+          <value>page</value>
+        </choice>
+      </attribute>
+      <optional>
+        <attribute name="from"/>
+      </optional>
+      <optional>
+        <attribute name="to"/>
       </optional>
       <text/>
     </element>

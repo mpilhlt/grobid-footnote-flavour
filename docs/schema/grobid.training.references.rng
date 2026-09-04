@@ -417,6 +417,12 @@
           </choice>
         </attribute>
       </optional>
+      <!-- @key: short resolvable key for a named work, e.g. a statute
+           abbreviation (key="UrhG"), so it can later be linked to an
+           external norm/case database. -->
+      <optional>
+        <attribute name="key"/>
+      </optional>
       <text/>
     </element>
   </define>
@@ -618,6 +624,15 @@
 
   <define name="bibl">
     <element name="bibl">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value datatypeLibrary="">footnote</value>
+            <value datatypeLibrary="">legislation</value>
+            <value datatypeLibrary="">decision</value>
+          </choice>
+        </attribute>
+      </optional>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -629,6 +644,7 @@
             <ref name="title"/>
             <ref name="date"/>
             <ref name="biblScope"/>
+            <ref name="references_citedRange"/>
             <ref name="publisher"/>
             <ref name="pubPlace"/>
             <ref name="editor"/>
@@ -647,7 +663,42 @@
   <define name="orgName">
     <element name="orgName">
       <optional>
-        <attribute name="type"/>
+        <attribute name="type">
+          <choice>
+            <value datatypeLibrary="">court</value>
+            <value datatypeLibrary="">jurisdiction</value>
+            <value datatypeLibrary="">institution</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- <citedRange unit="..."> marks a pinpoint into the cited work, as
+       opposed to <biblScope>, which carries the container work's own
+       extent (reporter volume/issue/page). Used for statute section/
+       subsection (§ 19a, Abs. 2) and for a court decision's marginal
+       number (Tz./Rn./Rdnr.), which is not a page number. -->
+  <define name="references_citedRange">
+    <element name="citedRange">
+      <attribute name="unit">
+        <choice>
+          <value datatypeLibrary="">section</value>
+          <value datatypeLibrary="">sub-section</value>
+          <value datatypeLibrary="">sentence</value>
+          <value datatypeLibrary="">number</value>
+          <value datatypeLibrary="">letter</value>
+          <value datatypeLibrary="">margin</value>
+          <value datatypeLibrary="">recital</value>
+          <value datatypeLibrary="">page</value>
+        </choice>
+      </attribute>
+      <optional>
+        <attribute name="from"/>
+      </optional>
+      <optional>
+        <attribute name="to"/>
       </optional>
       <text/>
     </element>

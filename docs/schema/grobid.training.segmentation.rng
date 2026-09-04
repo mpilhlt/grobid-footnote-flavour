@@ -417,6 +417,12 @@
           </choice>
         </attribute>
       </optional>
+      <!-- @key: short resolvable key for a named work, e.g. a statute
+           abbreviation (key="UrhG"), so it can later be linked to an
+           external norm/case database. -->
+      <optional>
+        <attribute name="key"/>
+      </optional>
       <text/>
     </element>
   </define>
