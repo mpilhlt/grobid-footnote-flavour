@@ -73,7 +73,7 @@
             <ref name="author"/>
             <ref name="orgName"/>
             <ref name="title"/>
-            <ref name="date"/>
+            <ref name="references_date"/>
             <ref name="biblScope"/>
             <ref name="references_citedRange"/>
             <ref name="publisher"/>
@@ -96,9 +96,14 @@
       <optional>
         <attribute name="type">
           <choice>
+            <!-- legal (new, #41) -->
             <value>court</value>
             <value>jurisdiction</value>
+            <!-- pre-existing, in use in batches/**/*.training.references.tei.xml -->
             <value>institution</value>
+            <value>collaboration</value>
+            <value>department</value>
+            <value>laboratory</value>
           </choice>
         </attribute>
       </optional>
@@ -130,6 +135,32 @@
       </optional>
       <optional>
         <attribute name="to"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- Local override of the shared bibl-struct <date>: constrains @type
+       to the values meaningful for a footnote-embedded reference. Kept
+       separate from the generic shared/bibl-struct.rng "date" (used in
+       teiHeader/publicationStmt and other biblStruct contexts), so that
+       "decision"/"enacted" don't leak into unrelated header/citation
+       dates. -->
+  <define name="references_date">
+    <element name="date">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <!-- pre-existing, in use in batches/**/*.training.references.tei.xml -->
+            <value>publication</value>
+            <!-- legal (new, #41): decision date / statute enactment date -->
+            <value>decision</value>
+            <value>enacted</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="when"/>
       </optional>
       <text/>
     </element>
