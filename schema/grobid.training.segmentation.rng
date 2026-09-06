@@ -7,6 +7,7 @@
 -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
   ns="http://www.tei-c.org/ns/1.0">
 
   <include href="shared/tei-header.rng"/>
@@ -72,6 +73,7 @@
 
   <define name="titlePage">
     <element name="titlePage">
+      <a:documentation>Cover page</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -103,12 +105,34 @@
       <optional>
         <attribute name="type">
           <choice>
-            <value>toc</value>
-            <value>acknowledgement</value>
-            <value>availability</value>
-            <value>funding</value>
-            <value>annex</value>
-            <value>conflict</value>
+            <group>
+              <a:documentation>Table of contents</a:documentation>
+              <value>toc</value>
+            </group>
+            <group>
+              <a:documentation>Acknowledgement statement in the annex</a:documentation>
+              <value>acknowledgement</value>
+            </group>
+            <group>
+              <a:documentation>Data/code availability statement</a:documentation>
+              <value>availability</value>
+            </group>
+            <group>
+              <a:documentation>Funding information annex</a:documentation>
+              <value>funding</value>
+            </group>
+            <group>
+              <a:documentation>Any other annex section</a:documentation>
+              <value>annex</value>
+            </group>
+            <group>
+              <a:documentation>Conflict of interest statement</a:documentation>
+              <value>conflict</value>
+            </group>
+            <group>
+              <a:documentation>Author contribution statement</a:documentation>
+              <value>contribution</value>
+            </group>
           </choice>
         </attribute>
       </optional>
@@ -126,6 +150,7 @@
 
   <define name="front">
     <element name="front">
+      <a:documentation>Document header / front matter</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -140,6 +165,7 @@
 
   <define name="page">
     <element name="page">
+      <a:documentation>Page number indicator</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -151,6 +177,7 @@
 
   <define name="body">
     <element name="body">
+      <a:documentation>The main body of the document</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -162,6 +189,7 @@
 
   <define name="listBibl">
     <element name="listBibl">
+      <a:documentation>Bibliographical section</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -180,8 +208,14 @@
     <element name="note">
       <attribute name="place">
         <choice>
-          <value>headnote</value>
-          <value>footnote</value>
+          <group>
+            <a:documentation>Page header / running head</a:documentation>
+            <value>headnote</value>
+          </group>
+          <group>
+            <a:documentation>Page footer or numbered footnote</a:documentation>
+            <value>footnote</value>
+          </group>
         </choice>
       </attribute>
       <interleave>

@@ -3,7 +3,7 @@
      Source:      schema/grobid.training.segmentation.rng
      Regenerate:  python scripts/build-schema.py -->
 
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.tei-c.org/ns/1.0">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" ns="http://www.tei-c.org/ns/1.0">
 
   <define name="teiHeader">
     <element name="teiHeader">
@@ -308,6 +308,7 @@
 
   <define name="author">
     <element name="author">
+      <a:documentation>Complete sequence of author names</a:documentation>
       <optional>
         <attribute name="role"/>
       </optional>
@@ -330,6 +331,7 @@
 
   <define name="editor">
     <element name="editor">
+      <a:documentation>Sequence of editor names</a:documentation>
       <optional>
         <attribute name="role"/>
       </optional>
@@ -442,6 +444,7 @@
 
   <define name="publisher">
     <element name="publisher">
+      <a:documentation>Publisher name; also used for corporate authors such as web pages</a:documentation>
       <optional>
         <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
       </optional>
@@ -451,6 +454,7 @@
 
   <define name="pubPlace">
     <element name="pubPlace">
+      <a:documentation>Publication place or location of publishing institution</a:documentation>
       <text/>
     </element>
   </define>
@@ -573,6 +577,7 @@
 
   <define name="label">
     <element name="label">
+      <a:documentation>Reference number or footnote marker (e.g. [1], ¹)</a:documentation>
       <optional>
         <attribute name="type"/>
       </optional>
@@ -641,6 +646,7 @@
 
   <define name="titlePage">
     <element name="titlePage">
+      <a:documentation>Cover page</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -672,12 +678,34 @@
       <optional>
         <attribute name="type">
           <choice>
-            <value datatypeLibrary="">toc</value>
-            <value datatypeLibrary="">acknowledgement</value>
-            <value datatypeLibrary="">availability</value>
-            <value datatypeLibrary="">funding</value>
-            <value datatypeLibrary="">annex</value>
-            <value datatypeLibrary="">conflict</value>
+            <group>
+              <a:documentation>Table of contents</a:documentation>
+              <value datatypeLibrary="">toc</value>
+            </group>
+            <group>
+              <a:documentation>Acknowledgement statement in the annex</a:documentation>
+              <value datatypeLibrary="">acknowledgement</value>
+            </group>
+            <group>
+              <a:documentation>Data/code availability statement</a:documentation>
+              <value datatypeLibrary="">availability</value>
+            </group>
+            <group>
+              <a:documentation>Funding information annex</a:documentation>
+              <value datatypeLibrary="">funding</value>
+            </group>
+            <group>
+              <a:documentation>Any other annex section</a:documentation>
+              <value datatypeLibrary="">annex</value>
+            </group>
+            <group>
+              <a:documentation>Conflict of interest statement</a:documentation>
+              <value datatypeLibrary="">conflict</value>
+            </group>
+            <group>
+              <a:documentation>Author contribution statement</a:documentation>
+              <value datatypeLibrary="">contribution</value>
+            </group>
           </choice>
         </attribute>
       </optional>
@@ -695,6 +723,7 @@
 
   <define name="front">
     <element name="front">
+      <a:documentation>Document header / front matter</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -709,6 +738,7 @@
 
   <define name="page">
     <element name="page">
+      <a:documentation>Page number indicator</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -720,6 +750,7 @@
 
   <define name="body">
     <element name="body">
+      <a:documentation>The main body of the document</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -731,6 +762,7 @@
 
   <define name="listBibl">
     <element name="listBibl">
+      <a:documentation>Bibliographical section</a:documentation>
       <interleave>
         <text/>
         <zeroOrMore>
@@ -749,8 +781,14 @@
     <element name="note">
       <attribute name="place">
         <choice>
-          <value datatypeLibrary="">headnote</value>
-          <value datatypeLibrary="">footnote</value>
+          <group>
+            <a:documentation>Page header / running head</a:documentation>
+            <value datatypeLibrary="">headnote</value>
+          </group>
+          <group>
+            <a:documentation>Page footer or numbered footnote</a:documentation>
+            <value datatypeLibrary="">footnote</value>
+          </group>
         </choice>
       </attribute>
       <interleave>

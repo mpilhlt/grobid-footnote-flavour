@@ -3,7 +3,7 @@
      Source:      schema/grobid.training.references.rng
      Regenerate:  python scripts/build-schema.py -->
 
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.tei-c.org/ns/1.0">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" ns="http://www.tei-c.org/ns/1.0">
 
   <define name="teiHeader">
     <element name="teiHeader">
@@ -308,6 +308,7 @@
 
   <define name="author">
     <element name="author">
+      <a:documentation>Complete sequence of author names</a:documentation>
       <optional>
         <attribute name="role"/>
       </optional>
@@ -330,6 +331,7 @@
 
   <define name="editor">
     <element name="editor">
+      <a:documentation>Sequence of editor names</a:documentation>
       <optional>
         <attribute name="role"/>
       </optional>
@@ -442,6 +444,7 @@
 
   <define name="publisher">
     <element name="publisher">
+      <a:documentation>Publisher name; also used for corporate authors such as web pages</a:documentation>
       <optional>
         <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"/>
       </optional>
@@ -451,6 +454,7 @@
 
   <define name="pubPlace">
     <element name="pubPlace">
+      <a:documentation>Publication place or location of publishing institution</a:documentation>
       <text/>
     </element>
   </define>
@@ -573,6 +577,7 @@
 
   <define name="label">
     <element name="label">
+      <a:documentation>Reference number or footnote marker (e.g. [1], ¹)</a:documentation>
       <optional>
         <attribute name="type"/>
       </optional>
@@ -624,12 +629,22 @@
 
   <define name="bibl">
     <element name="bibl">
+      <a:documentation>An individual bibliographic reference</a:documentation>
       <optional>
         <attribute name="type">
           <choice>
-            <value datatypeLibrary="">footnote</value>
-            <value datatypeLibrary="">legislation</value>
-            <value datatypeLibrary="">decision</value>
+            <group>
+              <a:documentation>A note or comment that is not a bibliographic reference</a:documentation>
+              <value datatypeLibrary="">footnote</value>
+            </group>
+            <group>
+              <a:documentation>A statute / legislation citation</a:documentation>
+              <value datatypeLibrary="">legislation</value>
+            </group>
+            <group>
+              <a:documentation>A court ruling / judicial decision citation</a:documentation>
+              <value datatypeLibrary="">decision</value>
+            </group>
           </choice>
         </attribute>
       </optional>
@@ -641,16 +656,16 @@
             <ref name="lb"/>
             <ref name="author"/>
             <ref name="orgName"/>
-            <ref name="title"/>
+            <ref name="references_title"/>
             <ref name="references_date"/>
-            <ref name="biblScope"/>
+            <ref name="references_biblScope"/>
             <ref name="references_citedRange"/>
             <ref name="publisher"/>
             <ref name="pubPlace"/>
             <ref name="editor"/>
             <ref name="references_edition"/>
             <ref name="references_ptr"/>
-            <ref name="idno"/>
+            <ref name="references_idno"/>
             <ref name="references_note"/>
             <ref name="references_seg"/>
             <ref name="references_ref"/>
@@ -662,15 +677,22 @@
 
   <define name="orgName">
     <element name="orgName">
+      <a:documentation>Institution for theses or technical reports</a:documentation>
       <optional>
         <attribute name="type">
           <choice>
             <!-- legal (new, #41) -->
-            <value datatypeLibrary="">court</value>
+            <group>
+              <a:documentation>Court issuing a decision</a:documentation>
+              <value datatypeLibrary="">court</value>
+            </group>
             <value datatypeLibrary="">jurisdiction</value>
             <!-- pre-existing, in use in batches/**/*.training.references.tei.xml -->
             <value datatypeLibrary="">institution</value>
-            <value datatypeLibrary="">collaboration</value>
+            <group>
+              <a:documentation>Project-based collaboration acting as an author group</a:documentation>
+              <value datatypeLibrary="">collaboration</value>
+            </group>
             <value datatypeLibrary="">department</value>
             <value datatypeLibrary="">laboratory</value>
           </choice>
@@ -687,16 +709,41 @@
        number (Tz./Rn./Rdnr.), which is not a page number. -->
   <define name="references_citedRange">
     <element name="citedRange">
+      <a:documentation>Pinpoint into a statute or decision (section, subsection, marginal number, etc.)</a:documentation>
       <attribute name="unit">
         <choice>
-          <value datatypeLibrary="">section</value>
-          <value datatypeLibrary="">sub-section</value>
-          <value datatypeLibrary="">sentence</value>
-          <value datatypeLibrary="">number</value>
-          <value datatypeLibrary="">letter</value>
-          <value datatypeLibrary="">margin</value>
-          <value datatypeLibrary="">recital</value>
-          <value datatypeLibrary="">page</value>
+          <group>
+            <a:documentation>Numbered section, e.g. § 19a</a:documentation>
+            <value datatypeLibrary="">section</value>
+          </group>
+          <group>
+            <a:documentation>Subsection, e.g. Abs. 2</a:documentation>
+            <value datatypeLibrary="">sub-section</value>
+          </group>
+          <group>
+            <a:documentation>Sentence within a subsection, e.g. Satz 2</a:documentation>
+            <value datatypeLibrary="">sentence</value>
+          </group>
+          <group>
+            <a:documentation>Numbered item, e.g. Nr. 3</a:documentation>
+            <value datatypeLibrary="">number</value>
+          </group>
+          <group>
+            <a:documentation>Lettered item, e.g. lit. b</a:documentation>
+            <value datatypeLibrary="">letter</value>
+          </group>
+          <group>
+            <a:documentation>Marginal number, e.g. Rn./Tz. 12</a:documentation>
+            <value datatypeLibrary="">margin</value>
+          </group>
+          <group>
+            <a:documentation>Recital of an EU legal act</a:documentation>
+            <value datatypeLibrary="">recital</value>
+          </group>
+          <group>
+            <a:documentation>Pinpoint by printed page number</a:documentation>
+            <value datatypeLibrary="">page</value>
+          </group>
         </choice>
       </attribute>
       <optional>
@@ -717,14 +764,24 @@
        dates. -->
   <define name="references_date">
     <element name="date">
+      <a:documentation>Publication date sequence</a:documentation>
       <optional>
         <attribute name="type">
           <choice>
             <!-- pre-existing, in use in batches/**/*.training.references.tei.xml -->
-            <value datatypeLibrary="">publication</value>
+            <group>
+              <a:documentation>Date of publication</a:documentation>
+              <value datatypeLibrary="">publication</value>
+            </group>
             <!-- legal (new, #41): decision date / statute enactment date -->
-            <value datatypeLibrary="">decision</value>
-            <value datatypeLibrary="">enacted</value>
+            <group>
+              <a:documentation>Date a court decision was issued</a:documentation>
+              <value datatypeLibrary="">decision</value>
+            </group>
+            <group>
+              <a:documentation>Date a statute was enacted</a:documentation>
+              <value datatypeLibrary="">enacted</value>
+            </group>
           </choice>
         </attribute>
       </optional>
@@ -737,6 +794,7 @@
 
   <define name="references_edition">
     <element name="edition">
+      <a:documentation>Edition of a publication</a:documentation>
       <optional>
         <attribute name="n"/>
       </optional>
@@ -744,11 +802,150 @@
     </element>
   </define>
 
+  <!-- references_idno: local override of the shared bib-struct <idno>,
+       scoped to this flat <bibl> content model, so a curated identifier
+       type list doesn't leak into teiHeader/biblStruct idno usage
+       elsewhere. Includes ISSN (in use in existing training data) alongside
+       the legal-citation identifier types from #41. -->
+  <define name="references_idno">
+    <element name="idno">
+      <a:documentation>Document or serial identifier.</a:documentation>
+      <optional>
+        <attribute name="type">
+          <choice>
+            <group>
+              <a:documentation>Digital Object Identifier</a:documentation>
+              <value datatypeLibrary="">DOI</value>
+            </group>
+            <group>
+              <a:documentation>Serial (journal) identifier</a:documentation>
+              <value datatypeLibrary="">ISSN</value>
+            </group>
+            <group>
+              <a:documentation>arXiv preprint identifier</a:documentation>
+              <value datatypeLibrary="">arXiv</value>
+            </group>
+            <group>
+              <a:documentation>Technical/institutional report number</a:documentation>
+              <value datatypeLibrary="">report</value>
+            </group>
+            <group>
+              <a:documentation>Court docket number</a:documentation>
+              <value datatypeLibrary="">docket</value>
+            </group>
+            <group>
+              <a:documentation>European Case Law Identifier</a:documentation>
+              <value datatypeLibrary="">ECLI</value>
+            </group>
+            <group>
+              <a:documentation>EU CELEX document identifier</a:documentation>
+              <value datatypeLibrary="">CELEX</value>
+            </group>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- references_biblScope: local override of the shared bib-struct
+       <biblScope>, scoped to this flat <bibl> content model. -->
+  <define name="references_biblScope">
+    <element name="biblScope">
+      <a:documentation>Volume/issue/page extent of the containing work.</a:documentation>
+      <optional>
+        <attribute name="unit">
+          <choice>
+            <group>
+              <a:documentation>Full page range of the article</a:documentation>
+              <value datatypeLibrary="">page</value>
+            </group>
+            <group>
+              <a:documentation>Volume number</a:documentation>
+              <value datatypeLibrary="">volume</value>
+            </group>
+            <group>
+              <a:documentation>Issue / number</a:documentation>
+              <value datatypeLibrary="">issue</value>
+            </group>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="from"/>
+      </optional>
+      <optional>
+        <attribute name="to"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+  <!-- references_title: local override of the shared bib-struct <title>,
+       scoped to this flat <bibl> content model. Unlike the shared title
+       (used by teiHeader/titleStmt and biblStruct, where a title's level
+       is legitimately unset), a title inside a flat bibliographic
+       reference always classifies as one of the presets below, so —
+       unlike the shared define — this one is not left with two
+       independent optional attributes: level+type are grouped into named
+       presets, since "type=legislation" only ever co-occurs with
+       "level=m", never independently. -->
+  <define name="references_title">
+    <element name="title">
+      <a:documentation>Title of the cited work.</a:documentation>
+      <optional>
+        <attribute name="key">
+          <a:documentation>Short resolvable key for a named work, e.g. a
+            statute abbreviation (key="UrhG"), so it can later be linked to
+            an external norm/case database.</a:documentation>
+        </attribute>
+      </optional>
+      <choice>
+        <group>
+          <a:documentation>Article or chapter title (analytics)</a:documentation>
+          <attribute name="level"><value datatypeLibrary="">a</value></attribute>
+        </group>
+        <group>
+          <a:documentation>Journal title</a:documentation>
+          <attribute name="level"><value datatypeLibrary="">j</value></attribute>
+        </group>
+        <group>
+          <a:documentation>Monograph, proceedings, book, or thesis title</a:documentation>
+          <attribute name="level"><value datatypeLibrary="">m</value></attribute>
+        </group>
+        <group>
+          <a:documentation>Series title</a:documentation>
+          <attribute name="level"><value datatypeLibrary="">s</value></attribute>
+        </group>
+        <group>
+          <a:documentation>Unpublished work title</a:documentation>
+          <attribute name="level"><value datatypeLibrary="">u</value></attribute>
+        </group>
+        <group>
+          <a:documentation>Title of a statute / legislative act</a:documentation>
+          <attribute name="level"><value datatypeLibrary="">m</value></attribute>
+          <attribute name="type"><value datatypeLibrary="">legislation</value></attribute>
+        </group>
+        <group>
+          <a:documentation>Case name of a court ruling</a:documentation>
+          <attribute name="level"><value datatypeLibrary="">a</value></attribute>
+          <attribute name="type"><value datatypeLibrary="">caseName</value></attribute>
+        </group>
+      </choice>
+      <text/>
+    </element>
+  </define>
+
   <!-- <ptr type="web"> contains the URL as text content -->
   <define name="references_ptr">
     <element name="ptr">
+      <a:documentation>Web URL (exclude prefixes like 'URL:' and trailing periods).</a:documentation>
       <optional>
-        <attribute name="type"/>
+        <attribute name="type">
+          <choice>
+            <value datatypeLibrary="">web</value>
+          </choice>
+        </attribute>
       </optional>
       <optional>
         <attribute name="target"/>
@@ -760,8 +957,16 @@
   <!-- <note> and <note type="report"> for misc. reference annotations -->
   <define name="references_note">
     <element name="note">
+      <a:documentation>Any note not covered by another tag.</a:documentation>
       <optional>
-        <attribute name="type"/>
+        <attribute name="type">
+          <choice>
+            <group>
+              <a:documentation>Type of report or thesis (e.g. 'Ph.D. thesis', 'Technical Report')</a:documentation>
+              <value datatypeLibrary="">report</value>
+            </group>
+          </choice>
+        </attribute>
       </optional>
       <text/>
     </element>
@@ -774,7 +979,10 @@
     <element name="seg">
       <optional>
         <attribute name="type">
-          <value datatypeLibrary="">signal</value>
+          <group>
+            <a:documentation>Discourse signal word introducing or framing a citation (e.g. 'see', 'vgl.', 'cf.')</a:documentation>
+            <value datatypeLibrary="">signal</value>
+          </group>
         </attribute>
       </optional>
       <text/>
@@ -792,8 +1000,14 @@
       <optional>
         <attribute name="type">
           <choice>
-            <value datatypeLibrary="">anaphoric</value>
-            <value datatypeLibrary="">cataphoric</value>
+            <group>
+              <a:documentation>Points backward, e.g. "ibid.", "id.", "op. cit.", "supra note 5"</a:documentation>
+              <value datatypeLibrary="">anaphoric</value>
+            </group>
+            <group>
+              <a:documentation>Points forward, e.g. "infra", "see note 12 below"</a:documentation>
+              <value datatypeLibrary="">cataphoric</value>
+            </group>
           </choice>
         </attribute>
       </optional>
